@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola do Lucas</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleLogin.css">
     <link rel="icon" href="./assets/images/icon.png">
 </head>
+
 <body>
-    
+
+    <div class="conteinerLogin">
+        
+        <div class="login">
+            <img src="./assets/images/logo.png" alt="Escola do Lucas">
+            
+            <form method="GET"> <!-- colocar a action aqui e metodo GET esta somente para teste -->
+                <input type="text" name="usuario" id="usuario" placeholder="Usuário">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <input type="submit" id="acessar" value="Acessar">
+            </form>
+
+            <P>Esqueci minha senha</P>
+        </div>
+        
+        <div class="ilustracao">
+            <img id="ilustracaoImg" src="./assets/images/loginBoy.png" alt="ilustração">
+        </div>
+
+    </div>
+
     <script src="./script/login.js"></script>
 </body>
+
 </html>
