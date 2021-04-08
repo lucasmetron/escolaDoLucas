@@ -99,6 +99,55 @@ P{
     text-align: center;
 }
 
+@media screen and (max-width: 1166px)  {
+    #ilustracaoImg{
+        width: 450px;
+    }
+}
+
+@media screen and (max-width:889px) {
+    #logoLucas{
+        width: 250px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    input[type=text],[type=password] {
+        width: 50%;
+    }
+
+
+    #ilustracaoImg{
+        width: 350px;
+    }
+
+    input[type=text]{
+        background-position-x: 7%;
+        background-size:15px;
+    }
+    
+    input[type=password]{
+        background-position-x: 7%;
+        background-size: 10px;
+    }
+
+    input[type=submit]{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 30px;
+        padding-left: 30px;
+        font-size: 1.8rem;
+    }
+
+    P{
+        font-size: 0.9rem;
+    }
+
+
+}
+
+
+
 
 
 
