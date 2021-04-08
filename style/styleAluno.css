@@ -29,12 +29,6 @@ body{
     color: #5D5D5D;
 }
 
-.conteinerAluno{
-    width: 100%;
-    height: 100vh;
-    /* background-color: magenta; */
-}
-
 #floatLeft{
     float: left;
     margin-top: 25px;
@@ -49,10 +43,72 @@ body{
     width: 150px;
 }
 
+.conteinerAluno{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+   
+}
+
+.alunoSaudacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: crimson;
+}
+
+.bolaAluno{
+    background-color: chartreuse;
+   
+}
+
+#fotoAlunoId{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+.todasFuncoes{
+    background-color: purple;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #duvidasTag{
     position: sticky;
     float: right;
     bottom: 20px;
     right: 20px;
 }
+
 
