@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/eLogo.png">
     <title>Escola do Lucas</title>
     <link rel="stylesheet" href="./style/styleLogin.css">
     <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
-    <link rel="icon" href="./assets/images/icon.png">
+    
 
 <body>
 
     <div class="conteinerLogin">
         
         <div class="login">
-            <img src="./assets/images/logo.png" alt="Escola do Lucas">
+            <img id="logoLucas" src="./assets/images/logo.png" alt="Escola do Lucas">
             
             <form method="GET" action=""> <!-- colocar a action aqui e metodo GET esta somente para teste -->
                 <input type="text" name="usuario" id="usuario"><br>
@@ -23,7 +24,7 @@
                 <input type="submit" id="acessar" value="ACESSAR"><br>
             </form>
 
-            <P>Esqueci minha senha</P>
+            <P onclick="aviso()">Esqueci minha senha</P>
         </div>
         
         <div class="ilustracao">
