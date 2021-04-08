@@ -313,6 +313,7 @@ P{
         width: 100%;
         height:max-content;
         overflow:auto;
+        background-color: magenta;
     }
     
     .login{
