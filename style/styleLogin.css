@@ -311,9 +311,8 @@ P{
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-        height:max-content;
+        height:min-content;
         overflow:auto;
-        background-color: magenta;
     }
     
     .login{
