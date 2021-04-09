@@ -16,10 +16,10 @@
 </head>
 
 <body>
-    <p id="floatLeft"> ARÉA DO ESTUDANTE</p>
-    <img id="floatRight" src="/assets/images/logo.png" alt="Escola do Lucas">
-    <div class="conteinerAluno">
 
+    <div class="conteinerAluno">
+        <p id="floatLeft"> Área do estudante</p>
+        <img id="floatRight" src="/assets/images/logo.png" alt="Escola do Lucas">
 
         <div class="alunoSaudacao">
 
@@ -27,7 +27,7 @@
                 <img id="fotoAlunoId" src="/assets/images/alunoMeio.jpg" alt="Foto do Aluno">
             </div>
 
-            <div>
+            <div id="ola">
                 <h1>Olá,<span style="color:#FECF00"> Lucas Rosa</span>!</h1>
             </div>
 
@@ -35,34 +35,45 @@
 
         <div class="todasFuncoes">
 
-            <div id="notas" class="notas">
-                <img src="/assets/images/notas.png" alt="notas">
+            <div id="notas" class="funcoes notas">
+                <div class="bolaFuncoes">
+                    <img src="/assets/images/notas.png" alt="notas">
+                </div>
                 <p>Notas</p>
             </div>
 
-            <div id="faltas" class="faltas">
-                <img src="/assets/images/faltas.png" alt="faltas">
+            <div id="faltas" class="faltas funcoes">
+                <div class="bolaFuncoes">
+                    <img  src="/assets/images/faltas.png" alt="faltas">
+                </div>
+
                 <p>Faltas</p>
-            </div id="notas" class="notas">
+            </div>
 
-            <div id="advertencias" class="advertencias">
-                <img src="/assets/images/advertencia.png" alt="advertencias">
+            <div id="advertencias" class="advertencias funcoes">
+                <div class="bolaFuncoes">
+                    <img  src="/assets/images/advertencia.png" alt="advertencias">
+                </div>
+
                 <p>Advertencias <br> e suspensões</p>
-            </div id="notas" class="notas">
+            </div>
 
-            <div id="material" class="material">
-                <img src="/assets/images/materiaAtividade.png" alt="material">
+            <div id="material" class="material funcoes">
+                <div  class="bolaFuncoes">
+                    <img id="centralizador" src="/assets/images/materiaAtividade.png" alt="material">
+                </div>
+
                 <p>Material <br> e atividades</p>
             </div>
 
         </div>
 
+        <p id="duvidasTag"> <img src="/assets/images/duvidas.png" alt="balão de duvidas"> Dúvidas</p>
 
-       
     </div>
 
-     <p id="duvidasTag"> <img src="/assets/images/duvidas.png" alt="balão de duvidas"> Dúvidas</p>
     
+
     <script src="/script/aluno.js"></script>
 </body>
 
