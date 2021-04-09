@@ -75,7 +75,7 @@ input[type=submit]{
     outline: none;
     
 
-    transition-property: padding-right padding-left ;
+    transition-property: padding-right padding-left;
     transition-duration: 0.5s;
 }
 

@@ -97,6 +97,7 @@ body{
     /* background-color: red; */
     box-sizing: border-box;
     height: 100%;
+   
 }
 
 .bolaFuncoes{
@@ -107,7 +108,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    cursor: pointer;
+
+   transition-property: background-color;
+   transition-duration: 0.5s;
+}
+
+.bolaFuncoes:hover{
+    background-color: #494949;   
 }
 
 p{
