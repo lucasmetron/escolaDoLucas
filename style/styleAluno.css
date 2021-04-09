@@ -69,13 +69,33 @@ body{
 
 .bolaAluno{
     /* background-color: chartreuse; */
-   
+    display: inline-block;
 }
 
 #fotoAlunoId{
     border-radius: 100px;
     width: 200px;
     height: 200px;
+}
+
+#engrenagemBola{
+    background-color: #FECE01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    margin-left: 70%;
+    transform: translateY(-45px);
+    cursor: pointer;
+
+    transition: background-color;
+    transition-duration: 0.5s;
+}
+
+#engrenagemBola:hover{
+    background-color: #494949;
 }
 
 #ola{
@@ -133,6 +153,13 @@ p{
     cursor: pointer;
     font-size: 12px;
     font-family: lemonLight;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+#duvidasTag:hover{
+    background-position:#494949 ;
 }
 
 @media screen and (min-width: 1700px) and (max-width: 1990px) {

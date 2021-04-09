@@ -23,8 +23,18 @@
 
         <div class="alunoSaudacao">
 
-            <div class="bolaAluno">
-                <img id="fotoAlunoId" src="/assets/images/alunoMeio.jpg" alt="Foto do Aluno">
+            <div id="bolaAluno" class="bolaAluno">
+
+                <img id="fotoAlunoId" src="/assets/images/eLogo.png" alt="Foto do Aluno">
+
+                <div id="engrenagemBola" class="engrenagemBola"
+                    onmouseover="mudaImg('engrenagemBola','/assets/images/fotoEngrenagemYellow.png')"
+                    onmouseout="voltaImg('engrenagemBola','/assets/images/fotoEngrenagem.png')">
+
+                    <img id="engrenagem" class="engrenagem" src="/assets/images/fotoEngrenagem.png" alt="alterar foto">
+
+                </div>
+
             </div>
 
             <div id="ola">
@@ -36,30 +46,38 @@
         <div class="todasFuncoes">
 
             <div id="notas" class="notas funcoes">
-                <div id="notasBola" class="bolaFuncoes" onmouseover="mudaImg('notasBola','/assets/images/notasYellow.png')" onmouseout="voltaImg('notasBola','/assets/images/notas.png')" >
+                <div id="notasBola" class="bolaFuncoes"
+                    onmouseover="mudaImg('notasBola','/assets/images/notasYellow.png')"
+                    onmouseout="voltaImg('notasBola','/assets/images/notas.png')">
                     <img id="imgEstrelas" src="/assets/images/notas.png" alt="notas">
                 </div>
                 <p>Notas</p>
             </div>
 
-            <div class="faltas funcoes" >
-                <div id="faltasBolas" class="bolaFuncoes" onmouseover="mudaImg('faltasBolas','/assets/images/faltasYellow.png')" onmouseout="voltaImg('faltasBolas','/assets/images/faltas.png')">
-                    <img  src="/assets/images/faltas.png" alt="faltas">
+            <div class="faltas funcoes">
+                <div id="faltasBolas" class="bolaFuncoes"
+                    onmouseover="mudaImg('faltasBolas','/assets/images/faltasYellow.png')"
+                    onmouseout="voltaImg('faltasBolas','/assets/images/faltas.png')">
+                    <img src="/assets/images/faltas.png" alt="faltas">
                 </div>
 
                 <p>Faltas</p>
             </div>
 
             <div class="advertencias funcoes">
-                <div id="advertenciasBolas" class="bolaFuncoes"  onmouseover="mudaImg('advertenciasBolas','/assets/images/advertenciaYellow.png')" onmouseout="voltaImg('advertenciasBolas','/assets/images/advertencia.png')">
-                    <img  src="/assets/images/advertencia.png" alt="advertencias">
+                <div id="advertenciasBolas" class="bolaFuncoes"
+                    onmouseover="mudaImg('advertenciasBolas','/assets/images/advertenciaYellow.png')"
+                    onmouseout="voltaImg('advertenciasBolas','/assets/images/advertencia.png')">
+                    <img src="/assets/images/advertencia.png" alt="advertencias">
                 </div>
 
                 <p>Advertencias <br> e suspensões</p>
             </div>
 
             <div class="material funcoes">
-                <div id="materialBolas" class="bolaFuncoes" onmouseover="mudaImg('materialBolas','/assets/images/materialAtividadeYellow.png')" onmouseout="voltaImg('materialBolas','/assets/images/materialAtividade.png')">
+                <div id="materialBolas" class="bolaFuncoes"
+                    onmouseover="mudaImg('materialBolas','/assets/images/materialAtividadeYellow.png')"
+                    onmouseout="voltaImg('materialBolas','/assets/images/materialAtividade.png')">
                     <img id="centralizador" src="/assets/images/materialAtividade.png" alt="material">
                 </div>
 
@@ -72,7 +90,7 @@
 
     </div>
 
-    
+
 
     <script src="/script/aluno.js"></script>
 </body>
