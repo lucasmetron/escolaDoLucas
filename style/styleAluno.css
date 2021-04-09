@@ -242,6 +242,13 @@ p{
 }
 
 @media screen and (max-width: 640px) {
+    
+    #floatRight{
+        position: absolute;
+        top:20px;
+        right: 30px;
+        width: 110px;
+    }
 
     .conteinerAluno{
         width: 100%;
