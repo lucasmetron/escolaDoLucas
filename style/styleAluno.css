@@ -145,22 +145,16 @@ p{
     transform: translateX(5px);
 }
 
-#duvidasTag{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 12px;
-    font-family: lemonLight;
-
-    transition-property: background-color;
-    transition-duration: 0.5s;
+.balaoDuvida{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
 }
 
-#duvidasTag:hover{
-    background-position:#494949 ;
+#duvidas{
+    font-weight: 700;
+    font-size: 15px;
 }
-
 
 
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
@@ -368,16 +362,6 @@ p{
         background-position:#494949 ;
     }
 
-
-
-
-
-
-
-
-
-
-
     
     .todasFuncoes{
         width: 100%;
@@ -391,5 +375,15 @@ p{
         margin-top: 15px;
         margin-bottom: 15px;
        
+    }
+
+    .balaoDuvida{
+        bottom: 15px;
+        right: 5px;
+    }
+    
+    #duvidas{
+        font-weight: 700;
+        font-size: 10px;
     }
 }
