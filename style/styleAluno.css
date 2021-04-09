@@ -34,10 +34,8 @@ body{
     position: absolute;
     top:30px;
     left: 30px;
-    font-size: 1rem;
     font-family: lemonLight;
     font-size: 10px;
-    /* letter-spacing: 10px; */
 }
 
 #floatRight{
@@ -140,6 +138,7 @@ body{
 
 p{
     font-size: 1.1rem;
+    font-weight: 900;
 }
 
 #centralizador{
@@ -162,6 +161,82 @@ p{
     background-position:#494949 ;
 }
 
+
+
+/* --------------------------------RESPOSIVIDADE-------------------------------- */
+
 @media screen and (min-width: 1700px) and (max-width: 1990px) {
     
+    #floatLeft{
+        
+        top:60px;
+        left: 60px;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    
+    #floatRight{
+        position: absolute;
+        top:30px;
+        right: 60px;
+        width: 300px;
+    }
+
+    #fotoAlunoId{
+        border-radius: 200px;
+        width: 300px;
+        height: 300px;
+    }
+    
+    #engrenagemBola{
+        width: 60px;
+        height: 60px;
+        border-radius: 35px;
+        margin-left: 70%;
+        transform: translateY(-70px);
+    }
+    
+    
+    #ola{
+        font-family: lemonLight;
+        margin-top: -40px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .todasFuncoes{
+        margin-top: 80px;
+    }
+    
+    
+    .bolaFuncoes{
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        margin-bottom: 30px;
+    }
+
+    
+    p{
+        font-size: 1.8rem;;
+    }
+    
+    #centralizador{
+        transform: translateX(5px);
+    }
+    
+    #duvidasTag{
+        bottom: 40px;
+        right: 40px;
+        font-size: 24px;
+    
+        transition-property: background-color;
+        transition-duration: 0.5s;
+    }
+    
+    #balaoDuvida{
+        width: 90px;
+    }
 }
