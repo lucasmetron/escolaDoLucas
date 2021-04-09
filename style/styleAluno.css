@@ -165,7 +165,7 @@ p{
 
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
-@media screen and (min-width: 1700px) and (max-width: 1990px) {
+@media screen and (min-width: 1800px) and (max-width: 1990px) {
     
     #floatLeft{
         
@@ -238,5 +238,22 @@ p{
     
     #balaoDuvida{
         width: 90px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    .todasFuncoes{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+
+    .funcoes{
+        
+        margin-top: 15px;
+        margin-bottom: 15px;
+       
     }
 }
