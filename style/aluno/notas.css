@@ -39,7 +39,7 @@
 .mostradorNotas{
     /* background-color: hotpink; */
     display: grid;
-    grid-template: 2fr 1fr 1fr 1fr 1fr 1fr / 2fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template: 2fr repeat(5, 1fr)/ 2fr repeat(5, 1fr);
     gap: 5px;
     text-align: center;
     overflow: auto;
@@ -51,51 +51,33 @@
     margin-bottom: 5px;
     
 }
-/* 
 
-.cabecalhoNotas{
-    background-color: gray;
-    display: grid;
-    grid-template-columns: 2fr repeat(5,1fr);
-    grid-template-areas: 'disciplina b1 b2 b3 b4 media' , 'quadroNotas quadroNotas quadroNotas quadroNotas quadroNotas quadroNotas';
+
+
+@media (max-width: 640px) {
+
+    #xNotas{
+        width: 30px;
+        height: 30px;
+    }
     
-}
+    h1{
+        font-size:  1.5rem;
+    }
 
-.disciplina{
-    grid-area: disciplina;
-}
-
-.b1{
-    grid-area: b1;
-}
-
-.b2{
-    grid-area: b2;
-}
-.b3{
-    grid-area: b3;
-}
-.b4{
-    grid-area: b4;
-}
-
-.media{
-    grid-area: media;
-}
-
-.quadroNotas{
-    grid-area: quadroNotas;
+    .fundoBranco{
+        width: 100vw;
+        height: 100vh;
+       
+    }
     
+    #conteinerVerNotas{
+        background-color: #ffeea9;   
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        padding: 50px;
+      
+    
+    }
 }
-
-
- */
-
-/* .quadroNotas{
-    background-color: green;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px;
-  
-} */
-

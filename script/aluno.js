@@ -20,8 +20,8 @@ let mostraEsconde = {
     },
     
     esconde : ()=>{
-        let tela = $('.fundoBranco')
-        tela.hide(500)
+        let tela = document.querySelector('.fundoBranco')
+        tela.classList.toggle('active')
         console.log(tela)
     },
 
