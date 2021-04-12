@@ -86,50 +86,95 @@
             </div>
 
         </div>
+        <div class="fundoBranco">
+            <div id="conteinerVerNotas">
+                <div class="cabecalho">
+                    <h1> ESSAS SÃO SUAS NOTAS:</h1>
+                    <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraOuEsconde()">
+                </div>
 
-        <div id="conteinerVerNotas"> 
-            <div class="cabecalho">
-                <h1> ESSAS SÃO SUAS NOTAS</h1>
-                <img src="/assets/images/xYellow.png" alt="">
-            </div>
+                <div id="mostradorNotas" class="mostradorNotas">
 
-            <div id="mostraNotas" class="conteinerMostraNotas">
-                <div>
-                    <h2>Disciplina</h3>
-                    <h4>1º Bimestre</h4>
-                    <h4>2º Bimestre</h4>
-                    <h4>3º Bimestre</h4>
-                    <h4>4º Bimestre</h4>
-                    <h4>Media</h4>
-                    <div id="campoDisciplina" class="campo"></div>
-                    <div id="campo1Bi" class="campo"></div>
-                    <div id="campo2Bi" class="campo"></div>
-                    <div id="campo3Bi" class="campo"></div>
-                    <div id="campo4Bi" class="campo"></div>
-                    <div id="campoMedia" class="campo"></div>
+                    <h3 class="disciplina">Disciplina</h3>
+                    <h4 class="b1">1º Bimestre</h4>
+                    <h4 class="b2">2º Bimestre</h4>
+                    <h4 class="b3">3º Bimestre</h4>
+                    <h4 class="b4">4º Bimestre</h4>
+                    <h4 class="media">Média</h4>
+
+                    <div id="campoDisciplina" class="campo">Matemática</div>
+                    <div id="campo1Bi" class="campo">8</div>
+                    <div id="campo2Bi" class="campo">9</div>
+                    <div id="campo3Bi" class="campo">10</div>
+                    <div id="campo4Bi" class="campo">5</div>
+                    <div id="campoMedia" class="campo">Null</div>
+
+                    <div id="campoDisciplina" class="campo">Português</div>
+                    <div id="campo1Bi" class="campo">8</div>
+                    <div id="campo2Bi" class="campo">4</div>
+                    <div id="campo3Bi" class="campo">5</div>
+                    <div id="campo4Bi" class="campo">3</div>
+                    <div id="campoMedia" class="campo">Null</div>
+
+                    <div id="campoDisciplina" class="campo">Ciências</div>
+                    <div id="campo1Bi" class="campo">4</div>
+                    <div id="campo2Bi" class="campo">9</div>
+                    <div id="campo3Bi" class="campo">10</div>
+                    <div id="campo4Bi" class="campo">6</div>
+                    <div id="campoMedia" class="campo">Null</div>
+
+                    <div id="campoDisciplina" class="campo">Geografia</div>
+                    <div id="campo1Bi" class="campo">5</div>
+                    <div id="campo2Bi" class="campo">6</div>
+                    <div id="campo3Bi" class="campo">3</div>
+                    <div id="campo4Bi" class="campo">8</div>
+                    <div id="campoMedia" class="campo">Null</div>
+
+                    <div id="campoDisciplina" class="campo">História</div>
+                    <div id="campo1Bi" class="campo">5</div>
+                    <div id="campo2Bi" class="campo">6</div>
+                    <div id="campo3Bi" class="campo">9</div>
+                    <div id="campo4Bi" class="campo">7</div>
+                    <div id="campoMedia" class="campo">Null</div>
+                    
+                    <div id="campoDisciplina" class="campo">Redação</div>
+                    <div id="campo1Bi" class="campo">7</div>
+                    <div id="campo2Bi" class="campo">6</div>
+                    <div id="campo3Bi" class="campo">8</div>
+                    <div id="campo4Bi" class="campo">4</div>
+                    <div id="campoMedia" class="campo">Null</div>
+
                 </div>
             </div>
+
+
+            <div id="verFaltas">
+
+            </div>
+
+            <div id="verAdvertencias">
+
+            </div>
+
+            <div id="verMaterial">
+
+            </div>
+
         </div>
 
-        <div id="verFaltas"> 
-
+        <div id="balaoDuvida" class="balaoDuvida">
+            <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
         </div>
 
-        <div id="verAdvertencias"> 
-            
-        </div>
+        <script>
+            let mostraOuEsconde = () => {
+                let tela = $('balaoDuvidas')
+                tela.hide()
+                console.log(tela)
+            }
+        </script>
 
-        <div id="verMaterial"> 
-
-        </div>
-
-    </div>
-
-    <div id="balaoDuvida" class="balaoDuvida">
-        <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
-    </div>
-
-    <script src="/script/aluno.js"></script>
+        <script src="/script/aluno.js"></script>
 </body>
 
 </html>
