@@ -13,14 +13,14 @@ let voltaImg = (id,img) =>{
 
 let mostraEsconde = {
 
-    mostra: ()=>{
-        let tela = document.querySelector('.fundoBranco')
+    mostra: (modal)=>{
+        let tela = document.querySelector(modal)
         tela.classList.toggle('active')
         console.log(tela)
     },
     
-    esconde : ()=>{
-        let tela = document.querySelector('.fundoBranco')
+    esconde : (modal)=>{
+        let tela = document.querySelector(modal)
         tela.classList.toggle('active')
         console.log(tela)
     },

@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="/style/aluno/styleAluno.css">
     <link rel="stylesheet" href="/style/aluno/notas.css">
+    <link rel="stylesheet" href="/style/aluno/faltas.css">
     <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -46,7 +47,7 @@
 
         <div class="todasFuncoes">
 
-            <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra()">
+            <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra('.modalNotas')">
                 <div id="notasBola" class="bolaFuncoes"
                     onmouseover="mudaImg('notasBola','/assets/images/notasYellow.png')"
                     onmouseout="voltaImg('notasBola','/assets/images/notas.png')">
@@ -55,7 +56,7 @@
                 <p>Notas</p>
             </div>
 
-            <div class="faltas funcoes">
+            <div id="faltas" class="faltas funcoes" onclick="mostraEsconde.mostra('.modalFaltas')">
                 <div id="faltasBolas" class="bolaFuncoes"
                     onmouseover="mudaImg('faltasBolas','/assets/images/faltasYellow.png')"
                     onmouseout="voltaImg('faltasBolas','/assets/images/faltas.png')">
@@ -87,11 +88,13 @@
 
 
         </div>
-        <div class="fundoBranco active">
+
+
+        <div class="modalNotas active">
             <div id="conteinerVerNotas">
                 <div class="cabecalho">
                     <h1> ESSAS SÃO SUAS NOTAS:</h1>
-                    <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde()">
+                    <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalNotas')">
                 </div>
 
                 <div id="mostradorNotas" class="mostradorNotas">
@@ -137,13 +140,6 @@
                     <div id="campo3Bi" class="campo">9</div>
                     <div id="campo4Bi" class="campo">7</div>
                     <div id="campoMedia" class="campo">6.75</div>
-                    
-                    <div id="campoDisciplina" class="campo">Redação</div>
-                    <div id="campo1Bi" class="campo">7</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">8</div>
-                    <div id="campo4Bi" class="campo">4</div>
-                    <div id="campoMedia" class="campo">6.25</div>
 
                     <div id="campoDisciplina" class="campo">Redação</div>
                     <div id="campo1Bi" class="campo">7</div>
@@ -156,22 +152,73 @@
 
             </div>
 
-
-            <div id="verFaltas">
-
-            </div>
-
-            <div id="verAdvertencias">
-
-            </div>
-
-            <div id="verMaterial">
-
-            </div>
-
-            
-
         </div>
+
+        <div class="modalFaltas active">
+            <div id="conteinerVerFaltas">
+                <div class="cabecalho">
+                    <h1> ESSAS SÃO SUAS FALTAS:</h1>
+                    <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalFaltas')">
+                </div>
+
+                <div id="mostradorFaltas" class="mostradorFaltas">
+
+                    <h3 class="disciplina">Disciplina</h3>
+                    <h4 class="b1">1º Bimestre</h4>
+                    <h4 class="b2">2º Bimestre</h4>
+                    <h4 class="b3">3º Bimestre</h4>
+                    <h4 class="b4">4º Bimestre</h4>
+                    <h4 class="media">Total</h4>
+
+                    <div id="campoDisciplina" class="campo">Matemática</div>
+                    <div id="campo1Bi" class="campo">8</div>
+                    <div id="campo2Bi" class="campo">9</div>
+                    <div id="campo3Bi" class="campo">10</div>
+                    <div id="campo4Bi" class="campo">5</div>
+                    <div id="campoMedia" class="campo">8</div>
+
+                    <div id="campoDisciplina" class="campo">Português</div>
+                    <div id="campo1Bi" class="campo">8</div>
+                    <div id="campo2Bi" class="campo">4</div>
+                    <div id="campo3Bi" class="campo">5</div>
+                    <div id="campo4Bi" class="campo">3</div>
+                    <div id="campoMedia" class="campo">5</div>
+
+                    <div id="campoDisciplina" class="campo">Ciências</div>
+                    <div id="campo1Bi" class="campo">4</div>
+                    <div id="campo2Bi" class="campo">9</div>
+                    <div id="campo3Bi" class="campo">10</div>
+                    <div id="campo4Bi" class="campo">6</div>
+                    <div id="campoMedia" class="campo">7</div>
+
+                    <div id="campoDisciplina" class="campo">Geografia</div>
+                    <div id="campo1Bi" class="campo">5</div>
+                    <div id="campo2Bi" class="campo">6</div>
+                    <div id="campo3Bi" class="campo">3</div>
+                    <div id="campo4Bi" class="campo">8</div>
+                    <div id="campoMedia" class="campo">5</div>
+
+                    <div id="campoDisciplina" class="campo">História</div>
+                    <div id="campo1Bi" class="campo">5</div>
+                    <div id="campo2Bi" class="campo">6</div>
+                    <div id="campo3Bi" class="campo">9</div>
+                    <div id="campo4Bi" class="campo">7</div>
+                    <div id="campoMedia" class="campo">6</div>
+
+                    <div id="campoDisciplina" class="campo">Redação</div>
+                    <div id="campo1Bi" class="campo">7</div>
+                    <div id="campo2Bi" class="campo">6</div>
+                    <div id="campo3Bi" class="campo">8</div>
+                    <div id="campo4Bi" class="campo">4</div>
+                    <div id="campoMedia" class="campo">6</div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+
+        
 
         <div id="balaoDuvida" class="balaoDuvida">
             <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
