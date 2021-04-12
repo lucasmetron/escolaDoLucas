@@ -46,7 +46,7 @@
 
         <div class="todasFuncoes">
 
-            <div id="notas" class="notas funcoes">
+            <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra()">
                 <div id="notasBola" class="bolaFuncoes"
                     onmouseover="mudaImg('notasBola','/assets/images/notasYellow.png')"
                     onmouseout="voltaImg('notasBola','/assets/images/notas.png')">
@@ -85,12 +85,13 @@
                 <p>Material <br> e atividades</p>
             </div>
 
+
         </div>
-        <div class="fundoBranco">
+        <div class="fundoBranco active">
             <div id="conteinerVerNotas">
                 <div class="cabecalho">
                     <h1> ESSAS SÃO SUAS NOTAS:</h1>
-                    <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraOuEsconde()">
+                    <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde()">
                 </div>
 
                 <div id="mostradorNotas" class="mostradorNotas">
@@ -145,6 +146,7 @@
                     <div id="campoMedia" class="campo">6.25</div>
 
                 </div>
+
             </div>
 
 
@@ -160,19 +162,21 @@
 
             </div>
 
+            
+
         </div>
 
         <div id="balaoDuvida" class="balaoDuvida">
             <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
         </div>
 
-        <script>
+        <!-- <script>
             let mostraOuEsconde = () => {
-                let tela = $('fundoBranco').
-                tela.hide()
-                console.log(tela)
+                let tela = $('titulo');
+                tela.hide();
+                console.log(tela);
             }
-        </script>
+        </script> -->
 
         <script src="/script/aluno.js"></script>
 </body>

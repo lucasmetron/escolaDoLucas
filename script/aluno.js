@@ -9,3 +9,25 @@ let voltaImg = (id,img) =>{
     image.setAttribute('src',img)
     // console.log(image)
 }
+
+
+let mostraEsconde = {
+
+    mostra: ()=>{
+        let tela = document.querySelector('.fundoBranco')
+        tela.classList.toggle('active')
+        console.log(tela)
+    },
+    
+    esconde : ()=>{
+        let tela = $('.fundoBranco')
+        tela.hide(500)
+        console.log(tela)
+    },
+
+
+}
+
+
+
+

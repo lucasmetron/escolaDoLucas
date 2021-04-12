@@ -10,6 +10,10 @@
    
 }
 
+.fundoBranco.active{
+    display: none;
+}
+
 #conteinerVerNotas{
     background-color: #ffeea9;   
     position: absolute;
