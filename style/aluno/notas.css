@@ -39,7 +39,8 @@
     /* background-color: hotpink; */
     display: grid;
     grid-template: 2fr repeat(5, 1fr)/ 2fr repeat(5, 1fr);
-    gap: 5px;
+    column-gap: 5px;
+    row-gap: 5px;
     text-align: center;
     overflow: auto;
 
@@ -48,7 +49,6 @@
 .campo{
     background-color: white;
     padding: 8px;
-    margin-bottom: 5px;
     
 }
 

@@ -38,7 +38,8 @@
     /* background-color: hotpink; */
     display: grid;
     grid-template: repeat(4, 1fr) /repeat(4, 1fr);
-    gap: 5px;
+    row-gap: 5px;
+    column-gap: 5px;
     text-align: center;
     overflow: auto;
 
@@ -46,8 +47,8 @@
 
 
 .campoMaterial{
-    margin-bottom: 5px;
-    height: 25px;
+    height: 100%;
+
 }
 
 .amareloMaterial{

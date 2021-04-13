@@ -172,7 +172,7 @@ p{
 }
 
 .mostraBalao{
-    background-color: #FFEEA9;;   
+    background-color: #FECE00;;   
     position: absolute;
     width: 70%;
     height: 70%;
@@ -187,12 +187,13 @@ p{
 }
 .formTamanho{
     /* background-color: blue; */
+    margin-top: -15px;
     height: 100%;
     width: 100%;
 }
 
 .formTamanho > h1{
-    margin-bottom: 15px;
+    margin-top: 0px;
 }
 
 .formTamanho > textarea{
@@ -202,6 +203,35 @@ p{
 
 }
 
+select{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+select:focus{
+   background-color: #FFEEA9;
+   color: #494949;
+   border: solid 1px gray;
+}
+
+
+.formTamanho > input, p{
+    margin-top: 10px;
+    display: inline-block;
+    
+}
+
+.formTamanho > p{
+    width: 5%;
+}
+
+.formTamanho > input{
+    width: 40%;
+    padding: 5px;
+    
+}
 
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
