@@ -55,6 +55,13 @@
     background-color: #FECE00;
     font-weight: 900;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+.amarelo:hover{
+    background-color: #494949;
+    color: #FECE00;
 }
 
 
