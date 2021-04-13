@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/style/aluno/faltas.css">
     <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
     <link rel="stylesheet" href="/style/aluno/advertencias.css">
+    <link rel="stylesheet" href="/style/aluno/material.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
@@ -77,7 +78,7 @@
                 <p>Advertencias <br> e suspensões</p>
             </div>
 
-            <div class="material funcoes">
+            <div class="material funcoes" onclick="mostraEsconde.mostra('.modalMaterial')">
                 <div id="materialBolas" class="bolaFuncoes"
                     onmouseover="mudaImg('materialBolas','/assets/images/materialAtividadeYellow.png')"
                     onmouseout="voltaImg('materialBolas','/assets/images/materialAtividade.png')">
@@ -89,6 +90,9 @@
 
 
         </div>
+
+
+        <!-- ----------------------------------- INICIO TELAS OCULTAS ----------------------------------- -->
 
 
         <div class="modalNotas active">
@@ -280,17 +284,47 @@
             </div>
         </div>
 
+        <div class="modalMaterial active">
+
+            <div id="conteinerVerMaterial">
+                <div class="cabecalho">
+                    <h1> MATERIAIS E ATIVIDADES:</h1>
+                    <img id="xNotas" src="/assets/images/xYellow.png" alt="X"
+                        onclick="mostraEsconde.esconde('.modalMaterial')">
+                </div>
+
+                <div id="mostradorMaterial" class="mostradorMaterial">
+
+                    <div id="tituloMaterial" class="campoMaterial">Gabarito da prova 2</div>
+                    <div id="materiaMaterial" class="campoMaterial">Geografia</div>
+                    <div id="professorMaterial" class="campoMaterial">Professor Gilberto Santos</div>
+                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
+
+                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Geurra Fria</div>
+                    <div id="materiaMaterial" class="campoMaterial">História</div>
+                    <div id="professorMaterial" class="campoMaterial">Professor Wanderson Abreu</div>
+                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
+
+                    <div id="tituloMaterial" class="campoMaterial">Material para revisão</div>
+                    <div id="materiaMaterial" class="campoMaterial">Matemática</div>
+                    <div id="professorMaterial" class="campoMaterial">Professor Professora Rosa Torres</div>
+                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
+
+                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Elétrons e Nêutrons</div>
+                    <div id="materiaMaterial" class="campoMaterial">Química</div>
+                    <div id="professorMaterial" class="campoMaterial">Professor Alex Paxeco</div>
+                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ----------------------------------- FIM TELAS OCULTAS ------------------------------------- -->
+
         <div id="balaoDuvida" class="balaoDuvida">
             <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
         </div>
-
-        <!-- <script>
-            let mostraOuEsconde = () => {
-                let tela = $('titulo');
-                tela.hide();
-                console.log(tela);
-            }
-        </script> -->
 
         <script src="/script/aluno.js"></script>
 </body>

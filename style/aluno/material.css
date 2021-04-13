@@ -1,4 +1,4 @@
-.modalAdvertencias{
+.modalMaterial{
     background-color: rgba(255, 255, 255, 0.699);
     width: 100%;
     height: 100%;
@@ -9,12 +9,12 @@
     box-sizing: content-box;
 }
 
-.modalAdvertencias.active{
+.modalMaterial.active{
     display: none;
 }
 
-#conteinerVerAdvertencias{
-    background-color: #FFEEA9;   
+#conteinerVerMaterial{
+    background-color: #E2E2E2;   
     position: absolute;
     width: 70%;
     height: 70%;
@@ -33,25 +33,25 @@
 }
 
 
-.mostradorAdvertencias{
-    height: 70%;
+.mostradorMaterial{
+
     /* background-color: hotpink; */
     display: grid;
-    grid-template: 2fr 1fr 1.5fr 1.5fr/ 2fr 1fr 1.5fr 1.5fr;
+    grid-template: repeat(4, 1fr) /repeat(4, 1fr);
     gap: 5px;
     text-align: center;
     overflow: auto;
 
 }
 
-.campo{
-    background-color: white;
-    padding: 8px;
+
+.campoMaterial{
     margin-bottom: 5px;
-    
+    height: 25px;
 }
 
-.amarelo{
+.amareloMaterial{
+    height: 100%;
     background-color: #FECE00;
     font-weight: 900;
     cursor: pointer;
@@ -78,13 +78,13 @@
         font-size:  1.5rem;
     }
 
-    .modalAdvertencias{
+    .modalMaterial{
         width: 100vw;
         height: 100vh;
        
     }
     
-    #conteinerVerAdvertencias{
+    #conteinerVerMaterial{
         padding: 50px 25px 25px;    
     }
 }
