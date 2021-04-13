@@ -68,6 +68,11 @@
 
 
 @media (max-width: 640px) {
+    
+    .modalMaterial{
+        width: 100vw;
+        height: 100vh ;
+    }
 
     #xNotasAd{
         width: 30px;
@@ -85,6 +90,22 @@
     }
     
     #conteinerVerMaterial{
-        padding: 50px 25px 25px;    
+        padding: 50px 10px 50px 10px;    
+    }
+
+    .campoMaterial{
+        font-size: 0.8rem;
+        margin-bottom: 30px;
+    }
+
+    #conteinerVerMaterial{
+
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .amareloMaterial{
+        height: 40%;
+        padding: 10px;
     }
 }
