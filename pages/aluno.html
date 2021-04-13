@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/style/aluno/notas.css">
     <link rel="stylesheet" href="/style/aluno/faltas.css">
     <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
+    <link rel="stylesheet" href="/style/aluno/advertencias.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
@@ -66,7 +67,7 @@
                 <p>Faltas</p>
             </div>
 
-            <div class="advertencias funcoes">
+            <div class="advertencias funcoes" onclick="mostraEsconde.mostra('.modalAdvertencias')">
                 <div id="advertenciasBolas" class="bolaFuncoes"
                     onmouseover="mudaImg('advertenciasBolas','/assets/images/advertenciaYellow.png')"
                     onmouseout="voltaImg('advertenciasBolas','/assets/images/advertencia.png')">
@@ -232,11 +233,45 @@
                     <h4 class="b2">Consequência</h4>
                     <h4 class="b3">Assinatura Responsável</h4>
 
+                    <div id="campoMotivo" class="campo">Não fez dever de casa</div>
+                    <div id="campoData" class="campo">05/03/2021</div>
+                    <div id="campoConsequencia" class="campo">Advertência</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
+
+                    <div id="campoMotivo" class="campo">Agrediu colega</div>
+                    <div id="campoData" class="campo">10/04/2021</div>
+                    <div id="campoConsequencia" class="campo">Suspenção 3 dias</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
+
+                    <div id="campoMotivo" class="campo">Não veio a aula</div>
+                    <div id="campoData" class="campo">05/02/2021</div>
+                    <div id="campoConsequencia" class="campo">Registro</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
+
+                    <div id="campoMotivo" class="campo">Não fez dever de casa</div>
+                    <div id="campoData" class="campo">06/03/2021</div>
+                    <div id="campoConsequencia" class="campo">Advertência</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
+
                     <div id="campoMotivo" class="campo">Agrediu colega</div>
                     <div id="campoData" class="campo">10/04/2021</div>
                     <div id="campoConsequencia" class="campo">Suspenção</div>
-                    <div id="campoAssinatura" class="campoAmarelo">Clique aqui</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
 
+                    <div id="campoMotivo" class="campo">Desrespeitou o professor</div>
+                    <div id="campoData" class="campo">07/02/2021</div>
+                    <div id="campoConsequencia" class="campo">Suspenção 1 dia</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
+
+                    <div id="campoMotivo" class="campo">Não fez dever de casa</div>
+                    <div id="campoData" class="campo">21/03/2021</div>
+                    <div id="campoConsequencia" class="campo">Advertência</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
+
+                    <div id="campoMotivo" class="campo">Faltou aula</div>
+                    <div id="campoData" class="campo">01/04/2021</div>
+                    <div id="campoConsequencia" class="campo">Registro</div>
+                    <div id="campoAssinatura" class="campo amarelo">Clique aqui</div>
                    
         </div>
         
