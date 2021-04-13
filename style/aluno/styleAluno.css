@@ -172,7 +172,7 @@ p{
 }
 
 .mostraBalao{
-    background-color: #FECE00;;   
+    background-color: #FECE00;  
     position: absolute;
     width: 70%;
     height: 70%;
@@ -232,7 +232,57 @@ select:focus{
     padding: 5px;
     
 }
+/* ----------------- GRID AREA DO FORMULARIO DÚVIDAS ----------------- */
+.ajustaForm{
+    /* background-color: lightcoral; */
+    display: grid;
+    grid-template-areas: 'n1 t1'
+                         'n2 t2'
+                         'b1 b1';
+    row-gap:15px;
+    column-gap: 10px;
+    width: 100%;
+}
 
+#nomeTexto{
+    grid-area: n1;
+}
+
+#nomeInput{
+    grid-area: n2;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+#turmaTexto{
+    grid-area: t1;
+}
+
+#turmaInput{
+    grid-area: t2;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+#bt{
+    grid-area: b1;
+    border: none;
+    background-color: #494949;
+    color: white;
+    padding: 5px;
+    font-weight: 900;
+
+    transition-property: color background-color;
+    transition-duration: 0.5s;
+}
+
+#bt:hover{
+    background-color: #FFEEA9;
+    color:#494949 ;
+    width: 1fr;
+}
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
 @media screen and (min-width: 1800px) and (max-width: 1990px) {
