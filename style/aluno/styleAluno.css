@@ -158,7 +158,48 @@ p{
 }
 
 .modalBalao{
-    
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalBalao.active{
+    display: none;
+}
+
+.mostraBalao{
+    background-color: #FFEEA9;;   
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.xBalao{
+    cursor: pointer;
+}
+.formTamanho{
+    /* background-color: blue; */
+    height: 100%;
+    width: 100%;
+}
+
+.formTamanho > h1{
+    margin-bottom: 15px;
+}
+
+.formTamanho > textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+
 }
 
 
