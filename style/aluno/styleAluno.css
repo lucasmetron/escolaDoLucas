@@ -149,11 +149,16 @@ p{
     position: fixed;
     bottom: 15px;
     right: 15px;
+    cursor: pointer;
 }
 
 #duvidas{
     font-weight: 700;
     font-size: 15px;
+}
+
+.modalBalao{
+    
 }
 
 
