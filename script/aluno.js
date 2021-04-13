@@ -16,18 +16,17 @@ let mostraEsconde = {
     mostra: (modal)=>{
         let tela = document.querySelector(modal)
         tela.classList.toggle('active')
-        console.log(tela)
+        // console.log(tela)
     },
     
     esconde : (modal)=>{
         let tela = document.querySelector(modal)
         tela.classList.toggle('active')
-        console.log(tela)
+        // console.log(tela)
     },
 
 
 }
-
 
 
 

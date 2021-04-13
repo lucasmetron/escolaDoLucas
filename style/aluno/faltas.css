@@ -7,7 +7,9 @@
     align-items: center;
     justify-content: center;
     box-sizing: content-box;
-   
+
+    transition-property: display;
+    transition-duration: 1s;
 }
 
 .modalFaltas.active{
