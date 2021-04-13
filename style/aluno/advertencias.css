@@ -28,7 +28,7 @@
     margin-bottom: 50px;
 }
 
-#xNotas{
+#xNotasAd{
     cursor: pointer;
 }
 
@@ -58,12 +58,18 @@
 }
 
 
-
+@media (max-width: 1077px) {
+    
+    #xNotasAd{
+        width: 30px;
+        height: 30px;
+    }
+}
 
 
 @media (max-width: 640px) {
 
-    #xNotas{
+    #xNotasAd{
         width: 30px;
         height: 30px;
     }
