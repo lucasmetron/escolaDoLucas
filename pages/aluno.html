@@ -322,8 +322,31 @@
 
         <!-- ----------------------------------- FIM TELAS OCULTAS ------------------------------------- -->
 
-        <div id="balaoDuvida" class="balaoDuvida">
+        <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.balaoDuvida')">
             <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
+        </div>
+
+        <div class="modalBalao active">
+
+            <form method="GET" action="">
+                <h1>Dúvidas:</h1>
+                <p>Dúvida</p>
+                <textarea name="mensagem" id="mensagem" cols="50" rows="10"
+                    placeholder="Escreva sua dúvida..."></textarea>
+                <p>Professor:</p>
+                <select name="professor" id="professor">
+                    <option value="Carlos"> Carlos</option>
+                    <option value="Ricardo">Ricardo</option>
+                    <option value="Fabricio">Fabricio</option>
+                    <option value="Matheus">Matheus</option>
+                </select>
+                <p>Nome:</p>
+                <input type="text" name="nome">
+                <p>Turma:</p>
+                <input type="text" name="turma">
+                <input type="submit" value="Enviar">
+            </form>
+
         </div>
 
         <script src="/script/aluno.js"></script>
