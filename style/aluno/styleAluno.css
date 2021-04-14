@@ -172,7 +172,7 @@ p{
 }
 
 .mostraBalao{
-    background-color: #FECE00;  
+    background-color: #FFEEA9;  
     position: absolute;
     width: 70%;
     height: 70%;
@@ -200,7 +200,7 @@ p{
     width: 100%;
     border: none;
     outline: none;
-
+    color: gray;
 }
 
 select{
@@ -208,10 +208,10 @@ select{
     outline: none;
     border: none;
     padding: 5px;
+    color: gray;
 }
 
 select:focus{
-   background-color: #FFEEA9;
    color: #494949;
    border: solid 1px gray;
 }
@@ -237,11 +237,10 @@ select:focus{
     /* background-color: lightcoral; */
     display: grid;
     grid-template-areas: 'n1 t1'
-                         'n2 t2'
-                         'b1 b1';
-    row-gap:15px;
-    column-gap: 10px;
+                         'n2 t2';;
     width: 100%;
+    box-sizing: border-box;
+    column-gap: 5px;
 }
 
 #nomeTexto{
@@ -249,10 +248,14 @@ select:focus{
 }
 
 #nomeInput{
+    width: 100%;
     grid-area: n2;
     outline: none;
     border: none;
-    padding: 5px;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    color: gray;
+    
 }
 
 #turmaTexto{
@@ -260,18 +263,20 @@ select:focus{
 }
 
 #turmaInput{
+    width: 100%;
     grid-area: t2;
     outline: none;
     border: none;
-    padding: 5px;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    color: gray;
 }
 
 #bt{
-    grid-area: b1;
     border: none;
-    background-color: #494949;
+    background-color: #FECE00;
     color: white;
-    padding: 5px;
+    padding: 10px 20px 10px 20px;
     font-weight: 900;
 
     transition-property: color background-color;
@@ -279,9 +284,13 @@ select:focus{
 }
 
 #bt:hover{
-    background-color: #FFEEA9;
-    color:#494949 ;
+    background-color: #494949;
+    color:#FECE00 ;
     width: 1fr;
+}
+
+.centralizador{
+    text-align: center;
 }
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
@@ -511,5 +520,11 @@ select:focus{
     #duvidas{
         font-weight: 700;
         font-size: 10px;
+    }
+
+    .mostraBalao{
+
+        height:auto;
+   
     }
 }
