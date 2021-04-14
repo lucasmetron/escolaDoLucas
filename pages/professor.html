@@ -48,10 +48,11 @@
         </div>
 
         <div class="todasFuncoes">
-            
+
             <div id="cadastrarAluno" class="cadastrarAluno funcoes"
                 onclick="mostraEsconde.mostra('.modalCadastrarAluno')">
-                <div id="cadastrarAlunoBola" class="bolaFuncoes" onmouseover="mudaImg('cadastrarAlunoBola','/assets/images/cadAlunoYellow.png')"
+                <div id="cadastrarAlunoBola" class="bolaFuncoes"
+                    onmouseover="mudaImg('cadastrarAlunoBola','/assets/images/cadAlunoYellow.png')"
                     onmouseout="voltaImg('cadastrarAlunoBola','/assets/images/cadAlunoGray.png')">
                     <img class="imgCadAluno" src="/assets/images/cadAlunoGray.png" alt="Cadastrar Aluno">
                 </div>
@@ -107,9 +108,8 @@
         <div class="modalNotas active">
             <div id="conteinerVerNotas">
 
-                <img id="xNotas" src="/assets/images/xYellow.png" alt=""
-                onclick="mostraEsconde.esconde('.modalNotas')">
-                
+                <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalNotas')">
+
                 <div class="cabecalho">
                     <h1> LANÇAMENTO DE NOTAS:</h1>
                 </div>
@@ -118,8 +118,22 @@
 
                     <form method="GET" action="">
 
+                        <p>Ano/Turma:</p>
+                        <select name="anoTurma" id="anoTurma" size="1" required>
+                            <option value="">Selecione a Turma</option>
+                            <option value="1a">1º A</option>
+                            <option value="1b">1º B</option>
+                            <option value="2a">2º A</option>
+                            <option value="2b">2º B</option>
+                            <option value="3a">3º A</option>
+                            <option value="3b">3º B</option>
+                            <option value="4a">4º A</option>
+                            <option value="4b">4º B</option>
+                        </select>
+
                         <p>Nome do aluno(a):</p>
-                        <select name="nomeAlunoNota" id="nomeAlunoNota">
+                        <select name="nomeAlunoNota" id="nomeAlunoNota" required>
+                            <option value="">Selecione o Aluno</option>
                             <option value="joaoPedro">João Pedro</option>
                             <option value="pedroHenrique">Pedro Henrique</option>
                             <option value="lucianaOliveira">Luciana Oliveira</option>
@@ -128,16 +142,18 @@
                         </select>
 
                         <p>Disciplina:</p>
-                        <select name="disciplinaAluno" id="disciplinaAluno">
+                        <select name="disciplinaAluno" id="disciplinaAluno" required>
+                            <option value="">Selecione a Disciplina</option>
                             <option value="Matemática">Matemática</option>
                             <option value="Português">Português</option>
                             <option value="Geografia">Geografia</option>
                             <option value="História">História</option>
                             <option value="Ciências">Ciências</option>
                         </select>
-                        
+
                         <p>Bimestre:</p>
-                        <select name="bimestre" id="bimestre">
+                        <select name="bimestre" id="bimestre" required>
+                            <option value="">Selecione o Bimestre</option>
                             <option value="1">1ºBimestre</option>
                             <option value="1">2ºBimestre</option>
                             <option value="1">3ºBimestre</option>
@@ -145,9 +161,12 @@
                         </select>
 
                         <p>Nota:</p><br>
-                        <input type="number" name="notaLancada" max="10"><br>
-
-                        <input type="submit" value="SALVAR">
+                            <input type="number" name="notaLancada" max="10"><br>
+                        
+                        <div class="centralizador">
+                            <input type="submit" value="SALVAR">
+                        </div>
+                        
                     </form>
 
 
@@ -183,7 +202,7 @@
 
                 <div id="mostradorAdvertencias" class="mostradorAdvertencias">
 
-                
+
 
                 </div>
             </div>
@@ -250,5 +269,6 @@
 
         <script src="/script/aluno.js"></script>
 </body>
+
 
 </html>

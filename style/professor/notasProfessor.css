@@ -10,9 +10,9 @@
    
 }
 
-/* .modalNotas.active{
+.modalNotas.active{
     display: none;
-} */
+}
 
 #conteinerVerNotas{
     background-color: #ffeea9;   
@@ -23,7 +23,7 @@
 }
 
 .cabecalho{
-    background-color: blue;
+    /* background-color: blue; */
     margin-top: 50px;
 }
 
@@ -35,14 +35,39 @@
 
 .mostradorNotas{
 
+    /* background-color: green; */
 
 }
 
-.campo{
-    background-color: white;
-    padding: 8px;
-    
+form input[type='number']{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+
+form input[type="submit"]{
+    background-color:#FECE00;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+    /* transition-property: background-color color; */
+    transition: ease 0.5s;
+}
+
+form input[type="submit"]:hover{
+    background-color: #494949;
+    color:#FECE00;
+}
+
+
+
 
 
 

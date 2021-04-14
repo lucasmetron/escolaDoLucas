@@ -295,7 +295,8 @@ select{
 }
 
 .centralizador{
-    text-align: center;
+    margin-top: 15px;
+    text-align:center ;
 }
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
@@ -533,3 +534,4 @@ select{
    
     }
 }
+
