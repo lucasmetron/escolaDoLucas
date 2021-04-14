@@ -66,7 +66,9 @@ form input[type="submit"]:hover{
     color:#FECE00;
 }
 
-
+form > select{
+    background-color: white;
+}
 
 
 
