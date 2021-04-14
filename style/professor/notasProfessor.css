@@ -67,6 +67,11 @@
     color:#FECE00;
 }
 
+.centralizador{
+    margin-top: 15px;
+    text-align: center;
+}
+
 form > select{
     background-color: white;
 }

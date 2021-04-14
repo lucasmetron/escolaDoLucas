@@ -238,8 +238,7 @@ select{
     
 }
 /* ----------------- GRID AREA DO FORMULARIO DÚVIDAS ----------------- */
-.ajustaForm{
-    /* background-color: lightcoral; */
+/* .ajustaForm{
     display: grid;
     grid-template-areas: 'n1 t1'
                          'n2 t2';;
@@ -297,7 +296,7 @@ select{
 .centralizador{
     margin-top: 15px;
     text-align:center ;
-}
+} */
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
 @media screen and (min-width: 1800px) and (max-width: 1990px) {
