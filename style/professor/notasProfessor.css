@@ -39,7 +39,8 @@
 
 }
 
-form input[type='number']{
+#formNotas > input[type='number']{
+
     width: 100%;
     outline: none;
     border: none;
@@ -47,7 +48,7 @@ form input[type='number']{
     padding-bottom: 5px;
 }
 
-form input[type="submit"]{
+#formNotas input[type="submit"]{
     background-color:#FECE00;
     text-align: center;
     padding: 10px 20px;
@@ -61,7 +62,7 @@ form input[type="submit"]{
     transition: ease 0.5s;
 }
 
-form input[type="submit"]:hover{
+#formNotas input[type="submit"]:hover{
     background-color: #494949;
     color:#FECE00;
 }
