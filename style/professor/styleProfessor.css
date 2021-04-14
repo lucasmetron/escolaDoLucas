@@ -1,0 +1,525 @@
+@font-face {
+    font-family: lemonLight;
+    src: url(/assets/fonts/LEMONMILK-Light.otf);
+}
+
+@font-face {
+    font-family: lemonRegular;
+    src: url(/assets/fonts/LEMONMILK-Regular.otf);
+}
+
+
+@font-face {
+    font-family: lemonMedium;
+    src: url(/assets/fonts/LEMONMILK-Medium.otf);
+}
+
+@font-face {
+    font-family: lemonBold;
+    src: url(/assets/fonts/LEMONMILK-Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #FFEEA9;
+    font-family: bilo, sans-serif;
+    color: #5D5D5D;
+}
+
+#floatLeft{
+    position: absolute;
+    top:30px;
+    left: 30px;
+    font-family: lemonLight;
+    font-size: 10px;
+}
+
+#floatRight{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    width: 150px;
+}
+
+.conteinerAluno{
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+   
+}
+
+.alunoSaudacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: crimson; */
+}
+
+.bolaAluno{
+    /* background-color: chartreuse; */
+    display: inline-block;
+}
+
+#fotoAlunoId{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+#engrenagemBola{
+    background-color: #FECE01;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    margin-left: 70%;
+    transform: translateY(-45px);
+    cursor: pointer;
+
+    transition: background-color;
+    transition-duration: 0.5s;
+}
+
+#engrenagemBola:hover{
+    background-color: #494949;
+}
+
+#ola{
+    font-family: lemonLight;
+}
+
+.todasFuncoes{
+    /* background-color: purple; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.funcoes{
+    text-align: center;
+    /* background-color: red; */
+    box-sizing: border-box;
+    height: 100%;
+   
+}
+
+.bolaFuncoes{
+    background-color: #FECE00;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+   transition-property: background-color;
+   transition-duration: 0.5s;
+}
+
+.bolaFuncoes:hover{
+    background-color: #494949;   
+}
+
+p{
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+#centralizador{
+    transform: translateX(5px);
+}
+
+.balaoDuvida{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#duvidas{
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.modalBalao{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalBalao.active{
+    display: none;
+}
+
+.mostraBalao{
+    background-color: #FFEEA9;  
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.xBalao{
+    cursor: pointer;
+}
+.formTamanho{
+    /* background-color: blue; */
+    margin-top: -15px;
+    height: 100%;
+    width: 100%;
+}
+
+.formTamanho > h1{
+    margin-top: 0px;
+}
+
+.formTamanho > textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: gray;
+}
+
+select{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 5px;
+    color: gray;
+}
+
+
+.formTamanho > input, p{
+    margin-top: 10px;
+    display: inline-block;
+    
+}
+
+.formTamanho > p{
+    width: 5%;
+}
+
+.formTamanho > input{
+    width: 40%;
+    padding: 5px;
+    
+}
+/* ----------------- GRID AREA DO FORMULARIO DÚVIDAS ----------------- */
+.ajustaForm{
+    /* background-color: lightcoral; */
+    display: grid;
+    grid-template-areas: 'n1 t1'
+                         'n2 t2';;
+    width: 100%;
+    box-sizing: border-box;
+    column-gap: 5px;
+}
+
+#nomeTexto{
+    grid-area: n1;
+}
+
+#nomeInput{
+    width: 100%;
+    grid-area: n2;
+    outline: none;
+    border: none;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    color: gray;
+    
+}
+
+#turmaTexto{
+    grid-area: t1;
+}
+
+#turmaInput{
+    width: 100%;
+    grid-area: t2;
+    outline: none;
+    border: none;
+    padding-top: 5px ;
+    padding-bottom: 5px;
+    color: gray;
+}
+
+#bt{
+    border: none;
+    background-color: #FECE00;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-weight: 900;
+
+    transition-property: color background-color;
+    transition-duration: 0.5s;
+}
+
+#bt:hover{
+    background-color: #494949;
+    color:#FECE00 ;
+    width: 1fr;
+}
+
+.centralizador{
+    text-align: center;
+}
+/* --------------------------------RESPOSIVIDADE-------------------------------- */
+
+@media screen and (min-width: 1800px) and (max-width: 1990px) {
+    
+    #floatLeft{
+        
+        top:60px;
+        left: 60px;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    
+    #floatRight{
+        position: absolute;
+        top:30px;
+        right: 60px;
+        width: 300px;
+    }
+
+    #fotoAlunoId{
+        border-radius: 200px;
+        width: 300px;
+        height: 300px;
+    }
+    
+    #engrenagemBola{
+        width: 60px;
+        height: 60px;
+        border-radius: 35px;
+        margin-left: 70%;
+        transform: translateY(-70px);
+    }
+    
+    
+    #ola{
+        font-family: lemonLight;
+        margin-top: -40px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .todasFuncoes{
+        margin-top: 80px;
+    }
+    
+    
+    .bolaFuncoes{
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        margin-bottom: 30px;
+    }
+
+    
+    p{
+        font-size: 1.8rem;;
+    }
+    
+    #centralizador{
+        transform: translateX(5px);
+    }
+    
+    #duvidasTag{
+        bottom: 40px;
+        right: 40px;
+        font-size: 24px;
+    
+        transition-property: background-color;
+        transition-duration: 0.5s;
+    }
+    
+    #balaoDuvida{
+        width: 90px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    #floatRight{
+        position: absolute;
+        top:20px;
+        right: 30px;
+        width: 110px;
+    }
+
+    .conteinerAluno{
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+       
+    }
+
+
+    .alunoSaudacao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+        /* background-color: crimson; */
+    }
+    
+    .bolaAluno{
+        /* background-color: chartreuse; */
+        display: inline-block;
+    }
+    
+    #fotoAlunoId{
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    #engrenagemBola{
+        background-color: #FECE01;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 30px;
+        margin-left: 70%;
+        transform: translateY(-45px);
+        cursor: pointer;
+    
+        transition: background-color;
+        transition-duration: 0.5s;
+    }
+    
+    #engrenagemBola:hover{
+        background-color: #494949;
+    }
+    
+    #ola{
+        font-family: lemonLight;
+    }
+    
+    .todasFuncoes{
+        /* background-color: purple; */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+    
+    .funcoes{
+        text-align: center;
+        /* background-color: red; */
+        box-sizing: border-box;
+        height: 100%;
+       
+    }
+    
+    .bolaFuncoes{
+        background-color: #FECE00;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+       transition-property: background-color;
+       transition-duration: 0.5s;
+    }
+    
+    .bolaFuncoes:hover{
+        background-color: #494949;   
+    }
+    
+    p{
+        font-size: 1.1rem;
+        font-weight: 900;
+    }
+    
+    #centralizador{
+        transform: translateX(5px);
+    }
+    
+    #duvidasTag{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: lemonLight;
+    
+        transition-property: background-color;
+        transition-duration: 0.5s;
+    }
+    
+    #duvidasTag:hover{
+        background-position:#494949 ;
+    }
+
+    
+    .todasFuncoes{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 50px;
+    }
+
+    .funcoes{
+        
+        margin-top: 15px;
+        margin-bottom: 15px;
+       
+    }
+
+    .balaoDuvida{
+        bottom: 15px;
+        right: 5px;
+    }
+    
+    #duvidas{
+        font-weight: 700;
+        font-size: 10px;
+    }
+
+    .mostraBalao{
+
+        height:auto;
+   
+    }
+}

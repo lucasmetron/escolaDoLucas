@@ -1,0 +1,77 @@
+.modalNotas{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+   
+}
+
+.modalNotas.active{
+    display: none;
+}
+
+#conteinerVerNotas{
+    background-color: #ffeea9;   
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    padding: 50px;
+}
+
+.cabecalho{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#xNotas{
+    cursor: pointer;
+}
+
+
+.mostradorNotas{
+    height: 70%;
+    /* background-color: hotpink; */
+    display: grid;
+    grid-template: 2fr repeat(5, 1fr)/ 2fr repeat(5, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    text-align: center;
+    overflow: auto;
+
+}
+
+.campo{
+    background-color: white;
+    padding: 8px;
+    
+}
+
+
+
+@media (max-width: 640px) {
+
+    #xNotas{
+        width: 30px;
+        height: 30px;
+    }
+    
+    h1{
+        font-size:  1.5rem;
+    }
+
+    .modalNotas{
+        width: 100vw;
+        height: 100vh;
+       
+    }
+    
+    #conteinerVerNotas{
+        padding: 50px 25px 25px;    
+    }
+}

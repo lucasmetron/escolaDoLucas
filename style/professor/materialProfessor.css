@@ -1,0 +1,121 @@
+.modalMaterial{
+    background-color: rgba(255, 255, 255, 0.699);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+}
+
+.modalMaterial.active{
+    display: none;
+}
+
+#conteinerVerMaterial{
+    background-color: #E2E2E2;   
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    padding: 50px;
+}
+
+.cabecalho{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+#xNotasAd{
+    cursor: pointer;
+}
+
+
+.mostradorMaterial{
+
+    /* background-color: hotpink; */
+    display: grid;
+    grid-template: repeat(4, 1fr) /repeat(4, 1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+    text-align: center;
+    overflow: auto;
+
+}
+
+
+.campoMaterial{
+    height: 100%;
+
+}
+
+.amareloMaterial{
+    height: 50%;
+    padding: 10px;
+    background-color: #FECE00;
+    font-weight: 900;
+    cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+.amareloMaterial:hover{
+    background-color: #494949;
+    color: #FECE00;
+}
+
+
+@media (max-width: 1077px) {
+    
+    #xNotasAd{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    
+    .modalMaterial{
+        width: 100vw;
+        height: 100vh ;
+    }
+
+    #xNotasAd{
+        width: 30px;
+        height: 30px;
+    }
+    
+    h1{
+        font-size:  1.5rem;
+    }
+
+    .modalMaterial{
+        width: 100vw;
+        height: 100vh;
+       
+    }
+    
+    #conteinerVerMaterial{
+        padding: 50px 10px 50px 10px;    
+    }
+
+    .campoMaterial{
+        font-size: 0.8rem;
+        margin-bottom: 30px;
+    }
+
+    #conteinerVerMaterial{
+
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .amareloMaterial{
+        height: 40%;
+        padding: 10px;
+    }
+}
