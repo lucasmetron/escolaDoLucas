@@ -211,11 +211,6 @@ select{
     color: gray;
 }
 
-select:focus{
-   color: #494949;
-   border: solid 1px gray;
-}
-
 
 .formTamanho > input, p{
     margin-top: 10px;
