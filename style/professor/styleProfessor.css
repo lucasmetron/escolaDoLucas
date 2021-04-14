@@ -112,6 +112,10 @@ body{
     margin-top: 50px;
 }
 
+.imgCadAluno{
+    width: 48px;
+}
+
 .funcoes{
     text-align: center;
     /* background-color: red; */
