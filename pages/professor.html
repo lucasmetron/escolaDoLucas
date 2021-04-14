@@ -21,15 +21,15 @@
 
 <body>
 
-    <div class="conteinerAluno">
+    <div class="conteinerProfessor">
         <p id="floatLeft"> Área do professor</p>
         <img id="floatRight" src="/assets/images/logo.png" alt="Escola do Lucas">
 
-        <div class="alunoSaudacao">
+        <div class="professorSaudacao">
 
-            <div id="bolaAluno" class="bolaAluno">
+            <div id="bolaProfessor" class="bolaProfessor">
 
-                <img id="fotoAlunoId" src="/assets/images/eLogo.png" alt="Foto do Aluno">
+                <img id="fotoProfessorId" src="/assets/images/eLogo.png" alt="Foto do Aluno">
 
                 <div id="engrenagemBola" class="engrenagemBola"
                     onmouseover="mudaImg('engrenagemBola','/assets/images/fotoEngrenagemYellow.png')"
@@ -48,6 +48,15 @@
         </div>
 
         <div class="todasFuncoes">
+
+            <div id="cadastrarAluno" class="cadastrarAluno funcoes"
+                onclick="mostraEsconde.mostra('.modalCadastrarAluno')">
+                <div id="cadastrarAlunoBola" class="bolaFuncoes" onmouseover="mudaImg('cadastrarAlunoBola','/assets/images/')"
+                    onmouseout="voltaImg('cadastrarAlunoBola','/assets/images/')"> >
+                    <img src="" alt="Cadastrar Aluno">
+                </div>
+                <p>Cadastrar <br> Aluno</p>
+            </div>
 
             <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra('.modalNotas')">
                 <div id="notasBola" class="bolaFuncoes"
@@ -322,8 +331,9 @@
 
         <!-- ----------------------------------- FIM TELAS OCULTAS ------------------------------------- -->
 
-        <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.modalBalao')" >
-            <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas" >RESPONDA AS DÚVIDAS</p>
+        <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.modalBalao')">
+            <p id="duvidas"> <img id="imgBalaoDuvidas" src="/assets/images/duvidas.png" alt="balão de duvidas">RESPONDA
+                AS DÚVIDAS</p>
         </div>
 
         <div class="modalBalao active">
@@ -331,7 +341,8 @@
             <div class="mostraBalao">
                 <div class="cabecalho">
                     <h1>Dúvidas:</h1>
-                    <img class="xBalao" src="/assets/images/xYellow.png" alt="x" onclick="mostraEsconde.esconde('.modalBalao')">
+                    <img class="xBalao" src="/assets/images/xYellow.png" alt="x"
+                        onclick="mostraEsconde.esconde('.modalBalao')">
                 </div>
 
                 <form method="GET" action="" class="formTamanho">
@@ -343,7 +354,7 @@
                         <option value="Ricardo">Ricardo</option>
                         <option value="Fabricio">Fabricio</option>
                         <option value="Matheus">Matheus</option>
-                   
+
                     </select>
 
                     <div class="ajustaForm">
@@ -355,7 +366,7 @@
                     <div class="centralizador">
                         <input type="submit" value="Enviar" id="bt">
                     </div>
-                    
+
                 </form>
             </div>
         </div>
