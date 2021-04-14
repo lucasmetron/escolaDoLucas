@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="/style/professor/styleProfessor.css">
     <link rel="stylesheet" href="/style/professor/notasProfessor.css">
     <link rel="stylesheet" href="/style/professor/faltasProfessor.css">
-    <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
     <link rel="stylesheet" href="/style/professor/advertenciasProfessor.css">
     <link rel="stylesheet" href="/style/professor/materialProfessor.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
@@ -48,12 +48,12 @@
         </div>
 
         <div class="todasFuncoes">
-
+            
             <div id="cadastrarAluno" class="cadastrarAluno funcoes"
                 onclick="mostraEsconde.mostra('.modalCadastrarAluno')">
-                <div id="cadastrarAlunoBola" class="bolaFuncoes" onmouseover="mudaImg('cadastrarAlunoBola','/assets/images/')"
-                    onmouseout="voltaImg('cadastrarAlunoBola','/assets/images/')"> >
-                    <img src="" alt="Cadastrar Aluno">
+                <div id="cadastrarAlunoBola" class="bolaFuncoes" onmouseover="mudaImg('cadastrarAlunoBola','/assets/images/cadAlunoYellow.png')"
+                    onmouseout="voltaImg('cadastrarAlunoBola','/assets/images/cadAlunoGray.png')">
+                    <img class="imgCadAluno" src="/assets/images/cadAlunoGray.png" alt="Cadastrar Aluno">
                 </div>
                 <p>Cadastrar <br> Aluno</p>
             </div>
@@ -106,62 +106,50 @@
 
         <div class="modalNotas active">
             <div id="conteinerVerNotas">
+
+                <img id="xNotas" src="/assets/images/xYellow.png" alt=""
+                onclick="mostraEsconde.esconde('.modalNotas')">
+                
                 <div class="cabecalho">
-                    <h1> ESSAS SÃO SUAS NOTAS:</h1>
-                    <img id="xNotas" src="/assets/images/xYellow.png" alt=""
-                        onclick="mostraEsconde.esconde('.modalNotas')">
+                    <h1> LANÇAMENTO DE NOTAS:</h1>
                 </div>
 
                 <div id="mostradorNotas" class="mostradorNotas">
 
-                    <h3 class="disciplina">Disciplina</h3>
-                    <h4 class="b1">1º Bimestre</h4>
-                    <h4 class="b2">2º Bimestre</h4>
-                    <h4 class="b3">3º Bimestre</h4>
-                    <h4 class="b4">4º Bimestre</h4>
-                    <h4 class="media">Média</h4>
+                    <form method="GET" action="">
 
-                    <div id="campoDisciplina" class="campo">Matemática</div>
-                    <div id="campo1Bi" class="campo">8</div>
-                    <div id="campo2Bi" class="campo">9</div>
-                    <div id="campo3Bi" class="campo">10</div>
-                    <div id="campo4Bi" class="campo">5</div>
-                    <div id="campoMedia" class="campo">8</div>
+                        <p>Nome do aluno(a):</p>
+                        <select name="nomeAlunoNota" id="nomeAlunoNota">
+                            <option value="joaoPedro">João Pedro</option>
+                            <option value="pedroHenrique">Pedro Henrique</option>
+                            <option value="lucianaOliveira">Luciana Oliveira</option>
+                            <option value="igorSilva">Igor Silva</option>
+                            <option value="marianaCosta">Mariana Costa</option>
+                        </select>
 
-                    <div id="campoDisciplina" class="campo">Português</div>
-                    <div id="campo1Bi" class="campo">8</div>
-                    <div id="campo2Bi" class="campo">4</div>
-                    <div id="campo3Bi" class="campo">5</div>
-                    <div id="campo4Bi" class="campo">3</div>
-                    <div id="campoMedia" class="campo">5</div>
+                        <p>Disciplina:</p>
+                        <select name="disciplinaAluno" id="disciplinaAluno">
+                            <option value="Matemática">Matemática</option>
+                            <option value="Português">Português</option>
+                            <option value="Geografia">Geografia</option>
+                            <option value="História">História</option>
+                            <option value="Ciências">Ciências</option>
+                        </select>
+                        
+                        <p>Bimestre:</p>
+                        <select name="bimestre" id="bimestre">
+                            <option value="1">1ºBimestre</option>
+                            <option value="1">2ºBimestre</option>
+                            <option value="1">3ºBimestre</option>
+                            <option value="1">4ºBimestre</option>
+                        </select>
 
-                    <div id="campoDisciplina" class="campo">Ciências</div>
-                    <div id="campo1Bi" class="campo">4</div>
-                    <div id="campo2Bi" class="campo">9</div>
-                    <div id="campo3Bi" class="campo">10</div>
-                    <div id="campo4Bi" class="campo">6</div>
-                    <div id="campoMedia" class="campo">7.25</div>
+                        <p>Nota:</p><br>
+                        <input type="number" name="notaLancada" max="10"><br>
 
-                    <div id="campoDisciplina" class="campo">Geografia</div>
-                    <div id="campo1Bi" class="campo">5</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">3</div>
-                    <div id="campo4Bi" class="campo">8</div>
-                    <div id="campoMedia" class="campo">5.5</div>
+                        <input type="submit" value="SALVAR">
+                    </form>
 
-                    <div id="campoDisciplina" class="campo">História</div>
-                    <div id="campo1Bi" class="campo">5</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">9</div>
-                    <div id="campo4Bi" class="campo">7</div>
-                    <div id="campoMedia" class="campo">6.75</div>
-
-                    <div id="campoDisciplina" class="campo">Redação</div>
-                    <div id="campo1Bi" class="campo">7</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">8</div>
-                    <div id="campo4Bi" class="campo">4</div>
-                    <div id="campoMedia" class="campo">6.25</div>
 
                 </div>
 
@@ -179,55 +167,6 @@
 
                 <div id="mostradorFaltas" class="mostradorFaltas">
 
-                    <h3 class="disciplina">Disciplina</h3>
-                    <h4 class="b1">1º Bimestre</h4>
-                    <h4 class="b2">2º Bimestre</h4>
-                    <h4 class="b3">3º Bimestre</h4>
-                    <h4 class="b4">4º Bimestre</h4>
-                    <h4 class="media">Total</h4>
-
-                    <div id="campoDisciplina" class="campo">Matemática</div>
-                    <div id="campo1Bi" class="campo">8</div>
-                    <div id="campo2Bi" class="campo">9</div>
-                    <div id="campo3Bi" class="campo">10</div>
-                    <div id="campo4Bi" class="campo">5</div>
-                    <div id="campoMedia" class="campo">8</div>
-
-                    <div id="campoDisciplina" class="campo">Português</div>
-                    <div id="campo1Bi" class="campo">8</div>
-                    <div id="campo2Bi" class="campo">4</div>
-                    <div id="campo3Bi" class="campo">5</div>
-                    <div id="campo4Bi" class="campo">3</div>
-                    <div id="campoMedia" class="campo">5</div>
-
-                    <div id="campoDisciplina" class="campo">Ciências</div>
-                    <div id="campo1Bi" class="campo">4</div>
-                    <div id="campo2Bi" class="campo">9</div>
-                    <div id="campo3Bi" class="campo">10</div>
-                    <div id="campo4Bi" class="campo">6</div>
-                    <div id="campoMedia" class="campo">7</div>
-
-                    <div id="campoDisciplina" class="campo">Geografia</div>
-                    <div id="campo1Bi" class="campo">5</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">3</div>
-                    <div id="campo4Bi" class="campo">8</div>
-                    <div id="campoMedia" class="campo">5</div>
-
-                    <div id="campoDisciplina" class="campo">História</div>
-                    <div id="campo1Bi" class="campo">5</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">9</div>
-                    <div id="campo4Bi" class="campo">7</div>
-                    <div id="campoMedia" class="campo">6</div>
-
-                    <div id="campoDisciplina" class="campo">Redação</div>
-                    <div id="campo1Bi" class="campo">7</div>
-                    <div id="campo2Bi" class="campo">6</div>
-                    <div id="campo3Bi" class="campo">8</div>
-                    <div id="campo4Bi" class="campo">4</div>
-                    <div id="campoMedia" class="campo">6</div>
-
 
                 </div>
 
@@ -244,50 +183,7 @@
 
                 <div id="mostradorAdvertencias" class="mostradorAdvertencias">
 
-                    <h4 class="motivo">Motivo</h4>
-                    <h4 class="data">Data</h4>
-                    <h4 class="b2">Consequência</h4>
-                    <h4 class="b3">Assinatura Responsável</h4>
-
-                    <div id="campoMotivo" class="campo">Não fez dever de casa</div>
-                    <div id="campoData" class="campo">05/03/2021</div>
-                    <div id="campoConsequencia" class="campo">Advertência</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Agrediu colega</div>
-                    <div id="campoData" class="campo">10/04/2021</div>
-                    <div id="campoConsequencia" class="campo">Suspenção 3 dias</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Não veio a aula</div>
-                    <div id="campoData" class="campo">05/02/2021</div>
-                    <div id="campoConsequencia" class="campo">Registro</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Não fez dever de casa</div>
-                    <div id="campoData" class="campo">06/03/2021</div>
-                    <div id="campoConsequencia" class="campo">Advertência</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Agrediu colega</div>
-                    <div id="campoData" class="campo">10/04/2021</div>
-                    <div id="campoConsequencia" class="campo">Suspenção</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Desrespeitou o professor</div>
-                    <div id="campoData" class="campo">07/02/2021</div>
-                    <div id="campoConsequencia" class="campo">Suspenção 1 dia</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Não fez dever de casa</div>
-                    <div id="campoData" class="campo">21/03/2021</div>
-                    <div id="campoConsequencia" class="campo">Advertência</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
-
-                    <div id="campoMotivo" class="campo">Faltou aula</div>
-                    <div id="campoData" class="campo">01/04/2021</div>
-                    <div id="campoConsequencia" class="campo">Registro</div>
-                    <div id="campoAssinatura" class="campo amarelo">Acesse aqui</div>
+                
 
                 </div>
             </div>
@@ -304,25 +200,6 @@
 
                 <div id="mostradorMaterial" class="mostradorMaterial">
 
-                    <div id="tituloMaterial" class="campoMaterial">Gabarito da prova 2</div>
-                    <div id="materiaMaterial" class="campoMaterial">Geografia</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Gilberto Santos</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Geurra Fria</div>
-                    <div id="materiaMaterial" class="campoMaterial">História</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Wanderson Abreu</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Material para revisão</div>
-                    <div id="materiaMaterial" class="campoMaterial">Matemática</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Professora Rosa Torres</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Elétrons e Nêutrons</div>
-                    <div id="materiaMaterial" class="campoMaterial">Química</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Alex Paxeco</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
 
                 </div>
             </div>
