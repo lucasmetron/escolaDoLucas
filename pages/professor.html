@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/style/professor/advertenciasProfessor.css">
     <link rel="stylesheet" href="/style/professor/materialProfessor.css">
     <link rel="stylesheet" href="https://use.typekit.net/xrz5qlt.css">
+    <link rel="stylesheet" href="/style/professor/cadastrarAluno.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
@@ -103,10 +104,72 @@
 
 
         <!-- ----------------------------------- INICIO TELAS OCULTAS ----------------------------------- -->
+        <div class="modalCadastrarAluno active">
+            <div id="conteinerVerCadastroAluno">
 
+                <img id="xNotas" src="/assets/images/xYellow.png" alt=""
+                    onclick="mostraEsconde.esconde('.modalCadastrarAluno')">
+
+                <div class="cabecalho">
+                    <h1> CADASTRAR ALUNO:</h1>
+                </div>
+
+                <div id="mostradorAlunoCadastro" class="mostradorAlunoCadastro">
+
+                    <form id="" method="GET" action="">
+                        <p id="pTurma">Ano/Turma</p>
+                        <input type="text" name="anoTurmaNovoAluno" id="anoTurmaNovoAluno">
+
+                        <p id="pMatricula">Matrícula</p>
+                        <input type="text" name="matriculaNovoAluno" id="matriculaNovoAluno">
+
+                        <p id="pNomeAluno">Nome</p>
+                        <input type="text" name="nomeNovoAluno" id="nomeNovoAluno">
+
+                        <p id="pIdade" >Idade</p>
+                        <input type="number" name="idadeNovoAluno" id="idadeNovoAluno" max="2">
+
+                        <p id="pCpf" >CPF</p>
+                        <input type="number" name="cpfNovoAluno" id="cpfNovoAluno" max="12">
+
+                        <p id="pCelular" >Celular</p>
+                        <input type="number" name="celularNovoAluno" id="celularNovoAluno">
+
+                        <p id="pEmailAluno">E-mail</p>
+                        <input type="email" name="emailNovoAluno" id="emailNovoAluno">
+
+                        <p id="pNomeResp">Nome responsável</p>
+                        <input type="text" name="nomeResponsavelNovoAluno" id="nomeResponsavelNovoAluno">
+
+                        <p id="pEmailResp">E-mail responsável</p>
+                        <input type="email" name="emailResponsavelNovoAluno" id="emailResponsavelNovoAluno">
+
+                        <p id="pCelResp">Celular responsável</p>
+                        <input type="number" name="celularResponsavelNovoAluno" id="celularResponsavelNovoAluno"
+                            max="10">
+
+                        <p id="pObs">Observações</p>
+                        <input type="text" name="obsNovoAluno" id="obsNovoAluno">
+
+                        <input type="submit" value="CADASTRAR" id="btCadastrar">
+                    </form>
+
+                    <!-- <h1 id="removerAluno">REMOVER ALUNO:</h1>
+                    <form method="GET" action="">
+                        <p>Nome:</p>
+                        <input type="text" name="excluirAlunoInput" id="excluirAlunoInput">
+                        <input type="submit" value="REMOVER" id="btRemover">
+                    </form> -->
+
+
+                </div>
+
+            </div>
+
+        </div>
 
         <div class="modalNotas active">
-            <div id="conteinerVerNotas">
+            <div id="conteinerVerCadastroAluno">
 
                 <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalNotas')">
 
@@ -116,7 +179,7 @@
 
                 <div id="mostradorNotas" class="mostradorNotas">
 
-                    <form method="GET" action="">
+                    <form id="formNotas" method="GET" action="">
 
                         <p>Ano/Turma:</p>
                         <select name="anoTurma" id="anoTurma" size="1" required>
@@ -161,12 +224,12 @@
                         </select>
 
                         <p>Nota:</p><br>
-                            <input type="number" name="notaLancada" max="10"><br>
-                        
+                        <input type="number" name="notaLancada" max="10"><br>
+
                         <div class="centralizador">
                             <input type="submit" value="SALVAR">
                         </div>
-                        
+
                     </form>
 
 
