@@ -89,6 +89,7 @@ form input[type="submit"]:hover{
     }
     
     #conteinerVerNotas{
+        width: 70%;
         padding: 50px 25px 25px;    
     }
 }
