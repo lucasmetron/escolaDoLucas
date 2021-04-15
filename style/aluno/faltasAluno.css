@@ -31,6 +31,10 @@
     margin-bottom: 50px;
 }
 
+.mostrarTrocaFoto > p{
+    margin-right: 10px;
+}
+
 #xNotas{
     cursor: pointer;
 }

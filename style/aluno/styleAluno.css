@@ -96,6 +96,63 @@ body{
     background-color: #494949;
 }
 
+.modalAlterarFotoAluno{
+    background-color: rgba(255, 255, 255, 0.699);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modalAlterarFotoAluno.active{
+    display: none;
+}
+
+.mostrarTrocaFoto{
+    background-color: #FFEEA9;
+    width: auto;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 30px 30px 40px 30px;
+}
+
+.xFoto{
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.mostrarTrocaFoto > p{
+    margin-right: 10px;
+    margin-top: 0p;
+    font-weight: 500;
+}
+
+
+.carregarFoto{
+    cursor: pointer;
+    width: auto;
+    background-color: #FECE00;
+    padding: 10px 20px;
+    font-weight: 900;
+    transition: all .5s ease;
+}
+
+.carregarFoto:hover{
+    color: #FECE00;
+    background-color: #5D5D3C;
+}
+
+.modalAlterarFotoAluno input[type="file"]{
+    display: none;
+}
+
+
 #ola{
     font-family: lemonLight;
 }
@@ -425,6 +482,16 @@ select{
     
     #engrenagemBola:hover{
         background-color: #494949;
+    }
+
+    .mostrarTrocaFoto{
+        flex-direction: column;
+    }
+
+    .xFoto{
+        width: 40px;
+        margin: auto;
+        margin-bottom:20px ;
     }
     
     #ola{

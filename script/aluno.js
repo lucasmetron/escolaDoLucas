@@ -28,5 +28,9 @@ let mostraEsconde = {
 
 }
 
+let mandarEmail = (teste)=>{
+    // alert("Prezado(a): " +nomeAluno +" sua duvida foi enviado para o email do seu professor "+ nomeProfessor+ ". Aguarde!")
+    console.log(nomeAluno)
+}
 
 
