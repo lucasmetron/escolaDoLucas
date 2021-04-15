@@ -23,7 +23,9 @@
     background-color: #FFEEA9;   
     position: absolute;
     width: 50%;
+    height: 70%;
     padding: 50px;
+    overflow: auto;
 }
 
 .cabecalho{
