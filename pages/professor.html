@@ -57,7 +57,7 @@
                     onmouseout="voltaImg('cadastrarAlunoBola','/assets/images/cadAlunoGray.png')">
                     <img class="imgCadAluno" src="/assets/images/cadAlunoGray.png" alt="Cadastrar Aluno">
                 </div>
-                <p>Cadastrar <br> Aluno</p>
+                <p>Cadastrar e <br> remover aluno</p>
             </div>
 
             <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra('.modalNotas')">
@@ -116,7 +116,7 @@
 
                 <div id="mostradorAlunoCadastro" class="mostradorAlunoCadastro">
 
-                    <form id="" method="GET" action="">
+                    <form id="formCadastrar" method="GET" action="">
                         <p id="pTurma">Ano/Turma</p>
                         <input type="text" name="anoTurmaNovoAluno" id="anoTurmaNovoAluno">
 
@@ -127,10 +127,10 @@
                         <input type="text" name="nomeNovoAluno" id="nomeNovoAluno">
 
                         <p id="pIdade">Idade</p>
-                        <input type="number" name="idadeNovoAluno" id="idadeNovoAluno" max="2">
+                        <input type="number" name="idadeNovoAluno" id="idadeNovoAluno" maxlength="2">
 
                         <p id="pCpf">CPF</p>
-                        <input type="number" name="cpfNovoAluno" id="cpfNovoAluno" max="12">
+                        <input type="number" name="cpfNovoAluno" id="cpfNovoAluno" maxlength="12">
 
                         <p id="pCelular">Celular</p>
                         <input type="number" name="celularNovoAluno" id="celularNovoAluno">
@@ -146,7 +146,7 @@
 
                         <p id="pCelResp">Celular responsável</p>
                         <input type="number" name="celularResponsavelNovoAluno" id="celularResponsavelNovoAluno"
-                            max="10">
+                        maxlength="10">
 
                         <p id="pObs">Observações</p>
                         <input type="text" name="obsNovoAluno" id="obsNovoAluno">
@@ -156,12 +156,12 @@
 
                     </form>
 
-                    <!-- <h1 id="removerAluno">REMOVER ALUNO:</h1>
-                    <form method="GET" action="">
-                        <p>Nome:</p>
+                    <form id="formExcluir" method="GET" action="">
+                        <h1 id="removerAluno">REMOVER ALUNO:</h1>
+                        <p id="pNomeRemoverAluno">Nome:</p>
                         <input type="text" name="excluirAlunoInput" id="excluirAlunoInput">
                         <input type="submit" value="REMOVER" id="btRemover">
-                    </form> -->
+                    </form>
 
 
                 </div>

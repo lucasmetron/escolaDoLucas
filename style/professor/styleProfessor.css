@@ -133,6 +133,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: auto;
 
    transition-property: background-color;
    transition-duration: 0.5s;

@@ -18,12 +18,12 @@
     background-color: #ffeea9;   
     position: absolute;
     width: 50%;
-
+    height: 70%;
     padding: 50px;
+    overflow: auto;
 }
 
 .cabecalho{
-    /* background-color: blue; */
     margin-top: 50px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 
-.mostradorAlunoCadastro  form{
+.mostradorAlunoCadastro  > #formCadastrar{
     /* background-color: tomato; */
     display: grid;
 
@@ -53,11 +53,7 @@
                         'emailResponsavelNovoAluno emailResponsavelNovoAluno'
                         'pCelResp pObs'
                         'celularResponsavelNovoAluno obsNovoAluno'
-                        'btCadastrar btCadastrar' ;
-                        /* 'removerAluno removerAluno'
-                        'excluirAlunoInput excluirAlunoInput'
-                        'btRemover btRemover'; */;
-    /* overflow: auto; */
+                        'btCadastrar btCadastrar';
     
     gap: 5px 8px;
     
@@ -157,14 +153,16 @@ form > p{
 
 #btCadastrar{   
     grid-area: btCadastrar;
-    width: 40%;
+    width: 50%;
     margin: auto;
     margin-top: 15px;
+    text-align: center;
     
 }
 
 #removerAluno{
     grid-area: removerAluno ;
+    margin-top: 15px;
 }
 
 #excluirAlunoInput{
@@ -173,8 +171,21 @@ form > p{
 
 #btRemover{
     grid-area: btRemover ;
+    margin: auto;
+    width: 50%;
 }
 
+.mostradorAlunoCadastro > #formExcluir{
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+                        'removerAluno removerAluno'
+                        'pNomeRemoverAluno pNomeRemoverAluno'
+                        'excluirAlunoInput excluirAlunoInput'
+                        'btRemover btRemover';
+    gap: 10px;
+}
 
 
 
@@ -211,6 +222,13 @@ form > select{
     /* background-color: tomato; */
     margin-top: 15px;
     text-align: center;
+}
+
+form > input{
+    border: none;
+    outline: none;
+    padding: 5px 0px 5px 0px;
+    width: 100%;
 }
 
 
