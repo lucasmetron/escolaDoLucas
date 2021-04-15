@@ -499,9 +499,14 @@ select{
     #engrenagemBola:hover{
         background-color: #494949;
     }
+
+    .carregarFoto{
+        margin-top: 20px;
+    }
     
     .mostrarTrocaFoto{
         flex-direction: column;
+        margin-right: 0px;
     }
 
     .xFoto{

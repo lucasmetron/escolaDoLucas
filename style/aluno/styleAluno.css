@@ -128,7 +128,8 @@ body{
 }
 
 .mostrarTrocaFoto > p{
-    margin-right: 10px;
+    margin-right: 0px;
+    text-align: center;
     margin-top: 0p;
     font-weight: 500;
 }
@@ -486,6 +487,7 @@ select{
 
     .mostrarTrocaFoto{
         flex-direction: column;
+        margin-right: 0px;
     }
 
     .xFoto{
