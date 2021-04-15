@@ -224,11 +224,13 @@ P{
     }
 
     input[type=text]{
+        padding-inline-start: 40px;
         background-position-x: 4%;
         background-size:15px;
     }
     
     input[type=password]{
+        padding-inline-start: 40px;
         background-position-x: 4%;
         background-size:10px;
     }
