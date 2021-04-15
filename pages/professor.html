@@ -60,7 +60,7 @@
                 <p>Cadastrar e <br> remover aluno</p>
             </div>
 
-            <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra('.modalNotas')">
+            <div id="notas" class="notas funcoes" onclick="mostraEsconde.mostra('.modalNotasProfesssor')">
                 <div id="notasBola" class="bolaFuncoes"
                     onmouseover="mudaImg('notasBola','/assets/images/notasYellow.png')"
                     onmouseout="voltaImg('notasBola','/assets/images/notas.png')">
@@ -69,7 +69,7 @@
                 <p>Notas</p>
             </div>
 
-            <div id="faltas" class="faltas funcoes" onclick="mostraEsconde.mostra('.modalFaltas')">
+            <div id="faltas" class="faltas funcoes" onclick="mostraEsconde.mostra('.modalFaltasProfessor')">
                 <div id="faltasBolas" class="bolaFuncoes"
                     onmouseover="mudaImg('faltasBolas','/assets/images/faltasYellow.png')"
                     onmouseout="voltaImg('faltasBolas','/assets/images/faltas.png')">
@@ -79,7 +79,7 @@
                 <p>Faltas</p>
             </div>
 
-            <div class="advertencias funcoes" onclick="mostraEsconde.mostra('.modalAdvertencias')">
+            <div class="advertencias funcoes" onclick="mostraEsconde.mostra('.modalAdvertenciasProfessor')">
                 <div id="advertenciasBolas" class="bolaFuncoes"
                     onmouseover="mudaImg('advertenciasBolas','/assets/images/advertenciaYellow.png')"
                     onmouseout="voltaImg('advertenciasBolas','/assets/images/advertencia.png')">
@@ -170,10 +170,10 @@
 
         </div>
 
-        <div class="modalNotas active">
-            <div id="conteinerVerCadastroAluno">
+        <div class="modalNotasProfesssor active">
+            <div id="conteinerVerNotasProfessor">
 
-                <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalNotas')">
+                <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalNotasProfesssor')">
 
                 <div class="cabecalho">
                     <h1> LANÇAMENTO DE NOTAS:</h1>
@@ -184,45 +184,45 @@
                     <form id="formNotas" method="GET" action="">
 
                         <p>Ano/Turma:</p>
-                        <select name="anoTurma" id="anoTurma" size="1" required>
+                        <select name="anoTurmaNotas" id="anoTurmaNotas" size="1" required>
                             <option value="">Selecione a Turma</option>
-                            <option value="1a">1º A</option>
-                            <option value="1b">1º B</option>
-                            <option value="2a">2º A</option>
-                            <option value="2b">2º B</option>
-                            <option value="3a">3º A</option>
-                            <option value="3b">3º B</option>
-                            <option value="4a">4º A</option>
-                            <option value="4b">4º B</option>
+                            <option value="1aNotas">1º A</option>
+                            <option value="1bNotas">1º B</option>
+                            <option value="2aNotas">2º A</option>
+                            <option value="2bNotas">2º B</option>
+                            <option value="3aNotas">3º A</option>
+                            <option value="3bNotas">3º B</option>
+                            <option value="4aNotas">4º A</option>
+                            <option value="4bNotas">4º B</option>
                         </select>
 
                         <p>Nome do aluno(a):</p>
                         <select name="nomeAlunoNota" id="nomeAlunoNota" required>
                             <option value="">Selecione o Aluno</option>
-                            <option value="joaoPedro">João Pedro</option>
-                            <option value="pedroHenrique">Pedro Henrique</option>
-                            <option value="lucianaOliveira">Luciana Oliveira</option>
-                            <option value="igorSilva">Igor Silva</option>
-                            <option value="marianaCosta">Mariana Costa</option>
+                            <option value="joaoPedroNotas">João Pedro</option>
+                            <option value="pedroHenriqueNotas">Pedro Henrique</option>
+                            <option value="lucianaOliveiraNotas">Luciana Oliveira</option>
+                            <option value="igorSilvaNotas">Igor Silva</option>
+                            <option value="marianaCostaNotas">Mariana Costa</option>
                         </select>
 
                         <p>Disciplina:</p>
                         <select name="disciplinaAluno" id="disciplinaAluno" required>
                             <option value="">Selecione a Disciplina</option>
-                            <option value="Matemática">Matemática</option>
-                            <option value="Português">Português</option>
-                            <option value="Geografia">Geografia</option>
-                            <option value="História">História</option>
-                            <option value="Ciências">Ciências</option>
+                            <option value="MatemáticaNotas">Matemática</option>
+                            <option value="PortuguêsNotas">Português</option>
+                            <option value="GeografiaNotas">Geografia</option>
+                            <option value="HistóriaNotas">História</option>
+                            <option value="CiênciasNotas">Ciências</option>
                         </select>
 
                         <p>Bimestre:</p>
                         <select name="bimestre" id="bimestre" required>
                             <option value="">Selecione o Bimestre</option>
-                            <option value="1">1ºBimestre</option>
-                            <option value="1">2ºBimestre</option>
-                            <option value="1">3ºBimestre</option>
-                            <option value="1">4ºBimestre</option>
+                            <option value="1bNotas">1ºBimestre</option>
+                            <option value="2bNotas">2ºBimestre</option>
+                            <option value="3bNotas">3ºBimestre</option>
+                            <option value="4bNotas">4ºBimestre</option>
                         </select>
 
                         <p>Nota:</p><br>
@@ -241,15 +241,56 @@
 
         </div>
 
-        <div class="modalFaltas active">
-            <div id="conteinerVerFaltas">
+        <div class="modalFaltasProfessor active">
+            <div id="conteinerVerFaltasProfessor">
+
+                <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalFaltasProfessor')">
+
                 <div class="cabecalho">
-                    <h1> ESSAS SÃO SUAS FALTAS:</h1>
-                    <img id="xNotas" src="/assets/images/xYellow.png" alt=""
-                        onclick="mostraEsconde.esconde('.modalFaltas')">
+                    <h1> LANÇAMENTO DE FALTAS:</h1>
                 </div>
 
-                <div id="mostradorFaltas" class="mostradorFaltas">
+                <div id="mostradorFaltasProfessor" class="mostradorFaltasProfessor">
+
+                    <form id="formFaltasProfessor" method="GET" action="">
+
+                        <p>Nome do aluno(a):</p>
+                        <select name="nomeAlunoFaltas" id="nomeAlunoFaltas" required>
+                            <option value="">Selecione o Aluno</option>
+                            <option value="joaoPedroFaltas">João Pedro</option>
+                            <option value="pedroHenriqueFaltas">Pedro Henrique</option>
+                            <option value="lucianaOliveiraFaltas">Luciana Oliveira</option>
+                            <option value="igorSilvaFaltas">Igor Silva</option>
+                            <option value="marianaCostaFaltas">Mariana Costa</option>
+                        </select>
+
+                        <p>Disciplina:</p>
+                        <select name="disciplinaAluno" id="disciplinaAluno" required>
+                            <option value="">Selecione a Disciplina</option>
+                            <option value="MatemáticaFaltas">Matemática</option>
+                            <option value="PortuguêsFaltas">Português</option>
+                            <option value="GeografiaFaltas">Geografia</option>
+                            <option value="HistóriaFaltas">História</option>
+                            <option value="CiênciasFaltas">Ciências</option>
+                        </select>
+
+                        <p>Bimestre:</p>
+                        <select name="bimestre" id="bimestre" required>
+                            <option value="">Selecione o Bimestre</option>
+                            <option value="1bFaltas">1ºBimestre</option>
+                            <option value="2bFaltas">2ºBimestre</option>
+                            <option value="3bFaltas">3ºBimestre</option>
+                            <option value="4bFaltas">4ºBimestre</option>
+                        </select>
+
+                        <p>Falta:</p><br>
+                        <input type="number" name="faltaLancada"><br>
+
+                        <div class="centralizador">
+                            <input type="submit" value="SALVAR">
+                        </div>
+
+                    </form>
 
 
                 </div>
@@ -257,16 +298,21 @@
             </div>
         </div>
 
-        <div class="modalAdvertencias active">
-            <div id="conteinerVerAdvertencias">
+        <div class="modalAdvertenciasProfessor active">
+            <div id="conteinerVerAdvertenciasProfessor">
                 <div class="cabecalho">
-                    <h1> ESSAS SÃO SUAS ADVERTÊNCIAS E SUSPENSÕES:</h1>
+                    <h1>ADVERTÊNCIAS E SUSPENSÕES:</h1>
                     <img id="xNotasAd" src="/assets/images/xYellow.png" alt=""
-                        onclick="mostraEsconde.esconde('.modalAdvertencias')">
+                        onclick="mostraEsconde.esconde('.modalAdvertenciasProfessor')">
                 </div>
 
-                <div id="mostradorAdvertencias" class="mostradorAdvertencias">
+                <div id="mostradorAdvertenciasProfessor" class="mostradorAdvertencias">
 
+                    <form method="GET" action="">
+
+
+
+                    </form>
 
 
                 </div>

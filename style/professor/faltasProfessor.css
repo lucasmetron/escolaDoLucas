@@ -1,4 +1,4 @@
-.modalFaltas{
+.modalFaltasProfessor{
     background-color: rgba(255, 255, 255, 0.699);
     width: 100%;
     height: 100%;
@@ -12,15 +12,14 @@
     transition-duration: 1s;
 }
 
-.modalFaltas.active{
+.modalFaltasProfessor.active{
     display: none;
 }
 
-#conteinerVerFaltas{
+#conteinerVerFaltasProfessor{
     background-color: #E2E2E2;   
     position: absolute;
-    width: 70%;
-    height: 70%;
+    width: 50%;
     padding: 50px;
 }
 
@@ -36,22 +35,52 @@
 }
 
 
-.mostradorFaltas{
-    height: 70%;
-    /* background-color: hotpink; */
-    display: grid;
-    grid-template: 2fr repeat(5, 1fr)/ 2fr repeat(5, 1fr);
-    column-gap: 5px;
-    row-gap: 5px;
-    text-align: center;
-    overflow: auto;
-
+.mostradorFaltasProfessor{
+    /* background-color: yellow; */
 }
 
 .campo{
     background-color: white;
     padding: 8px;
     
+}
+
+
+#formFaltasProfessor > input[type='number']{
+
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#formFaltasProfessor input[type="submit"]{
+    background-color:#FECE00;
+    text-align: center;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+    /* transition-property: background-color color; */
+    transition: ease 0.5s;
+}
+
+#formFaltasProfessor input[type="submit"]:hover{
+    background-color: #494949;
+    color:#FECE00;
+}
+
+.centralizador{
+    margin-top: 15px;
+    text-align: center;
+}
+
+form > select{
+    background-color: white;
 }
 
 
@@ -67,7 +96,7 @@
         font-size:  1.5rem;
     }
 
-    .modalFaltas{
+    .modalFaltasProfessor{
         width: 100vw;
         height: 100vh;
        
