@@ -114,6 +114,8 @@
 
 form > input, textarea{
     border: none;
+    outline: none;
+    color: gray;
 }
 
 .amarelo{
