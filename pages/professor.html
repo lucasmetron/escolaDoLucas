@@ -306,11 +306,36 @@
                         onclick="mostraEsconde.esconde('.modalAdvertenciasProfessor')">
                 </div>
 
-                <div id="mostradorAdvertenciasProfessor" class="mostradorAdvertencias">
+                <div id="mostradorAdvertenciasProfessor" class="mostradorAdvertenciasProfessor">
 
                     <form method="GET" action="">
+                        <p id="pNomeAlunoAdv">Nome do aluno(a)</p>
+                        <select name="nomeAlunoNotaAdv" id="nomeAlunoNotaAdv" required>
+                            <option value="">Selecione o Aluno</option>
+                            <option value="joaoPedroNotas">João Pedro</option>
+                            <option value="pedroHenriqueNotas">Pedro Henrique</option>
+                            <option value="lucianaOliveiraNotas">Luciana Oliveira</option>
+                            <option value="igorSilvaNotas">Igor Silva</option>
+                            <option value="marianaCostaNotas">Mariana Costa</option>
+                        </select>
 
+                        <p id="pTipoAdv">Tipo</p>
+                        <select name="tipoAdvOuSuspe" id="tipoAdvOuSuspe" required>
+                            <option value="">Escolha uma opcao</option>
+                            <option value="suspencao">Suspenção</option>
+                            <option value="advertencia">Advertência</option>
+                        </select>
 
+                        <p id="pMotivoAdv">Movito</p>
+                        <textarea name="motivo" id="motivo" cols="30" rows="10"></textarea>
+
+                        <p id="pDataAdv">Data</p>
+                        <input type="date" name="dataAdv" id="dataAdv">
+
+                        <p id="pConseAdv">Consequência</p>
+                        <input type="text" name="consequencia" id="consequencia">
+
+                        <input type="submit" value="SALVAR" id="btSubmit">
 
                     </form>
 

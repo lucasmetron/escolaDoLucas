@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .modalAdvertenciasProfessor{
     background-color: rgba(255, 255, 255, 0.699);
     width: 100%;
@@ -7,6 +12,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: content-box;
+    overflow: auto;
 }
 
 .modalAdvertenciasProfessor.active{
@@ -32,21 +38,82 @@
 }
 
 
-.mostradorAdvertenciasProfessor{
-    height: 70%;
-    /* background-color: hotpink; */
+.mostradorAdvertenciasProfessor > form{
+
     display: grid;
-    grid-template: 2fr 1fr 1.5fr 1.5fr/ 2fr 1fr 1.5fr 1.5fr;
-    column-gap: 5px;
-    row-gap: 5px;
-    text-align: center;
-    overflow: auto;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+                        'pNomeAlunoAdv'
+                        'nomeAlunoNotaAdv'
+                        'pTipoAdv'
+                        'tipoAdvOuSuspe'
+                        'pMotivoAdv'
+                        'motivo'
+                        'pDataAdv'
+                        'dataAdv'
+                        'pConseAdv'
+                        'consequencia'
+                        'btSubmit';
+
+    gap: 8px;
 
 }
+
+#pNomeAlunoAdv{
+    grid-area: pNomeAlunoAdv;
+}
+
+#nomeAlunoNotaAdv{
+    grid-area: nomeAlunoNotaAdv;
+}
+
+#pTipoAdv{
+    grid-area:pTipoAdv;
+}
+
+#tipoAdvOuSuspe{
+    grid-area: tipoAdvOuSuspe;
+}
+
+#pMotivoAdv{
+    grid-area: pMotivoAdv;
+}
+
+#motivo{
+    grid-area: motivo;
+}
+
+#pDataAdv{
+    grid-area: pDataAdv;
+}
+
+#dataAdv{
+    grid-area: dataAdv;
+}
+
+#pConseAdv{
+    grid-area: pConseAdv;
+}
+
+#consequencia{
+    grid-area: consequencia;
+}
+
+#btSubmit{
+    grid-area: btSubmit;
+    margin-top: 10px;
+    width: auto;
+    margin: auto;
+}
+
 
 .campo{
     background-color: white;
     padding: 8px;
+}
+
+form > input, textarea{
+    border: none;
 }
 
 .amarelo{
