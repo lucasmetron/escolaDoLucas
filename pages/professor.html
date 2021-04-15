@@ -89,7 +89,7 @@
                 <p>Advertencias <br> e suspensões</p>
             </div>
 
-            <div class="material funcoes" onclick="mostraEsconde.mostra('.modalMaterial')">
+            <div class="material funcoes" onclick="mostraEsconde.mostra('.modalMaterialProfessor')">
                 <div id="materialBolas" class="bolaFuncoes"
                     onmouseover="mudaImg('materialBolas','/assets/images/materialAtividadeYellow.png')"
                     onmouseout="voltaImg('materialBolas','/assets/images/materialAtividade.png')">
@@ -107,7 +107,7 @@
         <div class="modalCadastrarAluno active">
             <div id="conteinerVerCadastroAluno">
 
-                <img id="xNotas" src="/assets/images/xYellow.png" alt=""
+                <img id="xNotas" src="/assets/images/xYellow.png" alt="fechar tela"
                     onclick="mostraEsconde.esconde('.modalCadastrarAluno')">
 
                 <div class="cabecalho">
@@ -146,7 +146,7 @@
 
                         <p id="pCelResp">Celular responsável</p>
                         <input type="number" name="celularResponsavelNovoAluno" id="celularResponsavelNovoAluno"
-                        maxlength="10">
+                            maxlength="10">
 
                         <p id="pObs">Observações</p>
                         <input type="text" name="obsNovoAluno" id="obsNovoAluno">
@@ -173,7 +173,8 @@
         <div class="modalNotasProfesssor active">
             <div id="conteinerVerNotasProfessor">
 
-                <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalNotasProfesssor')">
+                <img id="xNotas" src="/assets/images/xYellow.png" alt="fechar tela"
+                    onclick="mostraEsconde.esconde('.modalNotasProfesssor')">
 
                 <div class="cabecalho">
                     <h1> LANÇAMENTO DE NOTAS:</h1>
@@ -199,30 +200,30 @@
                         <p>Nome do aluno(a):</p>
                         <select name="nomeAlunoNota" id="nomeAlunoNota" required>
                             <option value="">Selecione o Aluno</option>
-                            <option value="joaoPedroNotas">João Pedro</option>
-                            <option value="pedroHenriqueNotas">Pedro Henrique</option>
-                            <option value="lucianaOliveiraNotas">Luciana Oliveira</option>
-                            <option value="igorSilvaNotas">Igor Silva</option>
-                            <option value="marianaCostaNotas">Mariana Costa</option>
+                            <option value="joaoPedro">João Pedro</option>
+                            <option value="pedroHenrique">Pedro Henrique</option>
+                            <option value="lucianaOliveira">Luciana Oliveira</option>
+                            <option value="igorSilva">Igor Silva</option>
+                            <option value="marianaCosta">Mariana Costa</option>
                         </select>
 
                         <p>Disciplina:</p>
                         <select name="disciplinaAluno" id="disciplinaAluno" required>
                             <option value="">Selecione a Disciplina</option>
-                            <option value="MatemáticaNotas">Matemática</option>
-                            <option value="PortuguêsNotas">Português</option>
-                            <option value="GeografiaNotas">Geografia</option>
-                            <option value="HistóriaNotas">História</option>
-                            <option value="CiênciasNotas">Ciências</option>
+                            <option value="Matemática">Matemática</option>
+                            <option value="Português">Português</option>
+                            <option value="Geografia">Geografia</option>
+                            <option value="História">História</option>
+                            <option value="Ciências">Ciências</option>
                         </select>
 
                         <p>Bimestre:</p>
                         <select name="bimestre" id="bimestre" required>
                             <option value="">Selecione o Bimestre</option>
-                            <option value="1bNotas">1ºBimestre</option>
-                            <option value="2bNotas">2ºBimestre</option>
-                            <option value="3bNotas">3ºBimestre</option>
-                            <option value="4bNotas">4ºBimestre</option>
+                            <option value="1b">1ºBimestre</option>
+                            <option value="2b">2ºBimestre</option>
+                            <option value="3b">3ºBimestre</option>
+                            <option value="4b">4ºBimestre</option>
                         </select>
 
                         <p>Nota:</p><br>
@@ -244,7 +245,8 @@
         <div class="modalFaltasProfessor active">
             <div id="conteinerVerFaltasProfessor">
 
-                <img id="xNotas" src="/assets/images/xYellow.png" alt="" onclick="mostraEsconde.esconde('.modalFaltasProfessor')">
+                <img id="xNotas" src="/assets/images/xYellow.png" alt="fechar tela"
+                    onclick="mostraEsconde.esconde('.modalFaltasProfessor')">
 
                 <div class="cabecalho">
                     <h1> LANÇAMENTO DE FALTAS:</h1>
@@ -302,7 +304,7 @@
             <div id="conteinerVerAdvertenciasProfessor">
                 <div class="cabecalho">
                     <h1>ADVERTÊNCIAS E SUSPENSÕES:</h1>
-                    <img id="xNotasAd" src="/assets/images/xYellow.png" alt=""
+                    <img id="xNotasAd" src="/assets/images/xYellow.png" alt="fechar tela"
                         onclick="mostraEsconde.esconde('.modalAdvertenciasProfessor')">
                 </div>
 
@@ -344,17 +346,35 @@
             </div>
         </div>
 
-        <div class="modalMaterial active">
+        <div class="modalMaterialProfessor active">
 
             <div id="conteinerVerMaterial">
                 <div class="cabecalho">
                     <h1> MATERIAIS E ATIVIDADES:</h1>
-                    <img id="xNotas" src="/assets/images/xYellow.png" alt="X"
-                        onclick="mostraEsconde.esconde('.modalMaterial')">
+                    <img id="xNotas" src="/assets/images/xYellow.png" alt="fechar tela"
+                        onclick="mostraEsconde.esconde('.modalMaterialProfessor')">
                 </div>
 
-                <div id="mostradorMaterial" class="mostradorMaterial">
+                <div id="mostradorMaterialProfessor" class="mostradorMaterialProfessor">
 
+                    <form id="matEAtiviProfessor" method="GET" action="">
+
+                        <p id="pNomeAtiv"> Nome da atividade</p>
+                        <input type="text" name="nomeAtiviProfessor" id="nomeAtiviProfessor">
+
+                        <p id="disciplinaMaterialProfessor">Disciplina</p>
+                        <select name="disciplinaMAterialProfessor" id="disciplinaMAterialProfessor" required>
+                            <option value="">Selecione a Disciplina</option>
+                            <option value="Matemática">Matemática</option>
+                            <option value="Português">Português</option>
+                            <option value="Geografia">Geografia</option>
+                            <option value="História">História</option>
+                            <option value="Ciências">Ciências</option>
+                        </select>
+
+                        <p><input type="file" id="materialProfessor" value="Upload do arquivo (PDF ou DOC)"> </p>
+
+                    </form>
 
                 </div>
             </div>
