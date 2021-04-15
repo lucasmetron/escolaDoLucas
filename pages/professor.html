@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/eLogo.png">
 
-    <title>Aluno</title>
+    <title>Professor</title>
 
     <link rel="stylesheet" href="/style/professor/styleProfessor.css">
     <link rel="stylesheet" href="/style/professor/notasProfessor.css">
@@ -34,7 +34,8 @@
 
                 <div id="engrenagemBola" class="engrenagemBola"
                     onmouseover="mudaImg('engrenagemBola','/assets/images/fotoEngrenagemYellow.png')"
-                    onmouseout="voltaImg('engrenagemBola','/assets/images/fotoEngrenagem.png')">
+                    onmouseout="voltaImg('engrenagemBola','/assets/images/fotoEngrenagem.png') "
+                    onclick="mostraEsconde.mostra('.modalAlterarFotoProfessor')">
 
                     <img id="engrenagem" class="engrenagem" src="/assets/images/fotoEngrenagem.png" alt="alterar foto">
 
@@ -104,6 +105,21 @@
 
 
         <!-- ----------------------------------- INICIO TELAS OCULTAS ----------------------------------- -->
+        <div class="modalAlterarFotoProfessor active">
+
+            <div class="mostrarTrocaFoto">
+                
+                <img class="xFoto" src="/assets/images/xYellow.png" alt="fechar janela" onclick="mostraEsconde.esconde('.modalAlterarFotoProfessor')" >
+                <p>Selecione a nova foto</p>
+                <label class="carregarFoto" >
+                    Carregar foto
+                    <input type="file">
+                </label>
+
+            </div>
+
+        </div>
+     
         <div class="modalCadastrarAluno active">
             <div id="conteinerVerCadastroAluno">
 
@@ -389,7 +405,7 @@
 
         <!-- ----------------------------------- FIM TELAS OCULTAS ------------------------------------- -->
 
-        <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.modalBalao')">
+        <!-- <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.modalBalao')">
             <p id="duvidas"> <img id="imgBalaoDuvidas" src="/assets/images/duvidas.png" alt="balão de duvidas">RESPONDA
                 AS DÚVIDAS</p>
         </div>
@@ -427,7 +443,7 @@
 
                 </form>
             </div>
-        </div>
+        </div> -->
 
         <script src="/script/aluno.js"></script>
 </body>
