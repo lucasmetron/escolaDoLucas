@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .modalMaterialProfessor{
     background-color: rgba(255, 255, 255, 0.699);
     width: 100%;
@@ -36,12 +40,7 @@
 .mostradorMaterialProfessor{
 
     /* background-color: hotpink; */
-    display: grid;
-    grid-template: repeat(4, 1fr) /repeat(4, 1fr);
-    row-gap: 5px;
-    column-gap: 5px;
-    text-align: center;
-    overflow: auto;
+
 
 }
 
@@ -67,6 +66,70 @@
     color: #FECE00;
 }
 
+form > input{
+    margin-top: ;
+}
+
+input[type="file"]{
+    display: none;
+    cursor: pointer;    
+}
+
+form > label{
+    cursor: pointer;
+    background-color: #FECE00;
+    width: auto;
+    padding: 10px;
+}
+
+form > input[type="submit"]{
+    background-color: #FECE00;
+    width: auto;
+    margin: auto;
+}
+
+.mostradorMaterialProfessor > form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                        'pNomeAtiv'
+                        'nomeAtiviProfessor'
+                        'pDisciplinaMaterialProfessor'
+                        'disciplinaMAterialProfessor'
+                        'pArquivoUpload'
+                        'arquivoUpload'
+                        'btEnviarMaterial';
+    gap: 10px;
+}
+
+#pNomeAtiv{
+    grid-area:pNomeAtiv ;
+}
+
+#nomeAtiviProfessor{
+    grid-area:nomeAtiviProfessor ;
+}
+
+#pDisciplinaMaterialProfessor{
+    grid-area:pDisciplinaMaterialProfessor ;
+}
+
+#disciplinaMAterialProfessor{
+    grid-area:disciplinaMAterialProfessor ;
+}
+
+#pArquivoUpload{
+    grid-area: pArquivoUpload;
+}
+
+#arquivoUpload{
+    grid-area: arquivoUpload;
+}
+
+#btEnviarMaterial{
+    grid-area:btEnviarMaterial ;
+    margin-top: 20px;
+}
 
 @media (max-width: 1077px) {
     

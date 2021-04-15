@@ -362,7 +362,7 @@
                         <p id="pNomeAtiv"> Nome da atividade</p>
                         <input type="text" name="nomeAtiviProfessor" id="nomeAtiviProfessor">
 
-                        <p id="disciplinaMaterialProfessor">Disciplina</p>
+                        <p id="pDisciplinaMaterialProfessor">Disciplina</p>
                         <select name="disciplinaMAterialProfessor" id="disciplinaMAterialProfessor" required>
                             <option value="">Selecione a Disciplina</option>
                             <option value="Matemática">Matemática</option>
@@ -372,7 +372,13 @@
                             <option value="Ciências">Ciências</option>
                         </select>
 
-                        <p><input type="file" id="materialProfessor" value="Upload do arquivo (PDF ou DOC)"> </p>
+                        <p id="pArquivoUpload">Selecionar arquivo</p>
+                        <label id="arquivoUpload"> 
+                            Upload do arquivo (.pdf, .doc)
+                            <input class="arquivo" type="file" id="materialProfessor" name="teste"> 
+                        </label>
+                        
+                        <input type="submit" value="ENVIAR" id="btEnviarMaterial">
 
                     </form>
 
