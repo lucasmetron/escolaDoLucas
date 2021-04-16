@@ -10,6 +10,10 @@
 
     transition-property: display;
     transition-duration: 1s;
+
+    animation-name: aparece;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
 
 .modalFaltas.active{

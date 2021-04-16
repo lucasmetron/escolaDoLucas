@@ -19,6 +19,11 @@
     src: url(/assets/fonts/LEMONMILK-Bold.otf);
 }
 
+@keyframes aparece {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -106,6 +111,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation-name: aparece;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
     
 }
 
@@ -238,6 +247,10 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    animation-name: aparece;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
 
 .modalBalao.active{

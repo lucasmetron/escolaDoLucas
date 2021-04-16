@@ -12,6 +12,10 @@
     justify-content: center;
     box-sizing: content-box;
     overflow:auto;
+
+    animation-name: aparece;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
 
 .modalMaterialProfessor.active{
@@ -80,6 +84,14 @@ form > label{
     background-color: #FECE00;
     width: auto;
     padding: 10px;
+    text-align: center;
+
+    transition: all 0.5s ease;
+}
+
+form > label:hover{
+    background-color:#494949;
+    color: #FECE00;
 }
 
 form > input[type="submit"]{

@@ -1,3 +1,8 @@
+@keyframes aparece {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
 .modalNotasProfesssor{
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
@@ -7,6 +12,10 @@
     align-items: center;
     justify-content: center;
     box-sizing: content-box;
+
+    animation-name: aparece;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
    
 }
 
