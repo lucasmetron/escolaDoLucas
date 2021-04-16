@@ -47,13 +47,17 @@
     column-gap: 5px;
     text-align: center;
     overflow: auto;
+    height: 70%;
 
 }
 
 
 .campoMaterial{
     height: 100%;
-
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .amareloMaterial{
