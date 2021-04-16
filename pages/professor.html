@@ -108,10 +108,11 @@
         <div class="modalAlterarFotoProfessor active">
 
             <div class="mostrarTrocaFoto">
-                
-                <img class="xFoto" src="/assets/images/xYellow.png" alt="fechar janela" onclick="mostraEsconde.esconde('.modalAlterarFotoProfessor')" >
+
+                <img class="xFoto" src="/assets/images/xYellow.png" alt="fechar janela"
+                    onclick="mostraEsconde.esconde('.modalAlterarFotoProfessor')">
                 <p>Selecione a nova foto</p>
-                <label class="carregarFoto" >
+                <label class="carregarFoto">
                     Carregar foto
                     <input type="file">
                 </label>
@@ -119,7 +120,7 @@
             </div>
 
         </div>
-     
+
         <div class="modalCadastrarAluno active">
             <div id="conteinerVerCadastroAluno">
 
@@ -167,7 +168,8 @@
                         <p id="pObs">Observações</p>
                         <input type="text" name="obsNovoAluno" id="obsNovoAluno">
 
-                        <input type="submit" value="CADASTRAR" id="btCadastrar">
+                        <p onclick="cadastrarUsuario()"> Cadastrar</p> 
+                        <input type="submit" value="CADASTRAR" id="btCadastrar" onclick="cadastrarUsuario()">
 
 
                     </form>
@@ -183,6 +185,7 @@
                             <option value="igorSilva">Igor Silva</option>
                             <option value="marianaCosta">Mariana Costa</option>
                         </select>
+                        <p onclick="removerAluno()">remover</p>
                         <input type="submit" value="REMOVER" id="btRemover">
                     </form>
 
@@ -396,11 +399,11 @@
                         </select>
 
                         <p id="pArquivoUpload">Selecionar arquivo</p>
-                        <label id="arquivoUpload"> 
+                        <label id="arquivoUpload">
                             Upload do arquivo (.pdf, .doc)
-                            <input class="arquivo" type="file" id="materialProfessor" name="teste"> 
+                            <input class="arquivo" type="file" id="materialProfessor" name="teste">
                         </label>
-                        
+
                         <input type="submit" value="ENVIAR" id="btEnviarMaterial">
 
                     </form>
@@ -452,7 +455,18 @@
             </div>
         </div> -->
 
-        <script src="/script/aluno.js"></script>
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+        <script src="/script/animacoes.js"></script>
+        <script src="/script/professor/cadastrarRemover.js"></script>
 </body>
 
 
