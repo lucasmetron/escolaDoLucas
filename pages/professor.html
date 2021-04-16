@@ -87,7 +87,7 @@
                     <img src="/assets/images/advertencia.png" alt="advertencias">
                 </div>
 
-                <p>Advertencias <br> e suspensões</p>
+                <p>Advertências <br> e suspensões</p>
             </div>
 
             <div class="material funcoes" onclick="mostraEsconde.mostra('.modalMaterialProfessor')">
@@ -175,7 +175,14 @@
                     <form id="formExcluir" method="GET" action="">
                         <h1 id="removerAluno">REMOVER ALUNO:</h1>
                         <p id="pNomeRemoverAluno">Nome:</p>
-                        <input type="text" name="excluirAlunoInput" id="excluirAlunoInput">
+                        <select name="excluirAlunoInput" id="excluirAlunoInput" required>
+                            <option value="">Selecione o Aluno</option>
+                            <option value="joaoPedro">João Pedro</option>
+                            <option value="pedroHenrique">Pedro Henrique</option>
+                            <option value="lucianaOliveira">Luciana Oliveira</option>
+                            <option value="igorSilva">Igor Silva</option>
+                            <option value="marianaCosta">Mariana Costa</option>
+                        </select>
                         <input type="submit" value="REMOVER" id="btRemover">
                     </form>
 
@@ -339,8 +346,8 @@
 
                         <p id="pTipoAdv">Tipo</p>
                         <select name="tipoAdvOuSuspe" id="tipoAdvOuSuspe" required>
-                            <option value="">Escolha uma opcao</option>
-                            <option value="suspencao">Suspenção</option>
+                            <option value="">Escolha uma opção</option>
+                            <option value="suspencao">Suspensão</option>
                             <option value="advertencia">Advertência</option>
                         </select>
 
