@@ -50,6 +50,21 @@ body{
     width: 150px;
 }
 
+.btCadastrar{
+    background-color: #FECE00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: all .5s ease;
+}
+
+.btCadastrar:hover{
+    background-color: #494949;
+    color:#FECE00 ;
+}
+
 .conteinerProfessor{
     width: 100%;
     height: 100vh;

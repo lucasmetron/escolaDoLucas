@@ -134,7 +134,7 @@
                 <div id="mostradorAlunoCadastro" class="mostradorAlunoCadastro">
 
                     <form id="formCadastrar" method="GET" action="">
-                        <p id="pTurma">Ano/Turma</p>
+                        <p id="pTurma">Ano/Turma</p> 
                         <input type="text" name="anoTurmaNovoAluno" id="anoTurmaNovoAluno">
 
                         <p id="pMatricula">Matrícula</p>
@@ -168,8 +168,8 @@
                         <p id="pObs">Observações</p>
                         <input type="text" name="obsNovoAluno" id="obsNovoAluno">
 
-                        <p onclick="cadastrarUsuario()"> Cadastrar</p> 
-                        <input type="submit" value="CADASTRAR" id="btCadastrar" onclick="cadastrarUsuario()">
+                        <p class="btCadastrar" id="btCadastrar" onclick="verificaCampos()"> Cadastrar</p> 
+                        <!-- <input type="submit" value="CADASTRAR" id="btCadastrar" onclick="cadastrarUsuario()"> -->
 
 
                     </form>

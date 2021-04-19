@@ -15,6 +15,83 @@ firebase.analytics();
 
 let db = firebase.firestore();
 
+function verificaCampos(){
+
+    if(document.querySelector("#anoTurmaNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Ano/Turma' vazio.")
+        document.querySelector("#anoTurmaNovoAluno").focus()
+    } 
+    
+    else if(document.querySelector("#matriculaNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Matrícula' vazio.")
+        document.querySelector("#matriculaNovoAluno").focus()
+        // let matricula = document.querySelector("#matriculaNovoAluno").value
+        // let anoTurma = document.querySelector("#anoTurmaNovoAluno").value
+        // console.log(matricula, anoTurma)
+
+        // db.collection(anoTurma).get().then((snapshot)=>{
+        //     snapshot.forEach(doc => {
+
+        //     })
+        // })
+        
+    } 
+    
+    else if(document.querySelector("#nomeNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Nome aluno' vazio.")
+        document.querySelector("#nomeNovoAluno").focus()
+
+        // função verificar se há outro valor igual
+    }
+    
+    else if(document.querySelector("#idadeNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Idade'vazio.")
+        document.querySelector("#idadeNovoAluno").focus()
+    }
+    
+    else if(document.querySelector("#cpfNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'CPF' vazio.")
+        document.querySelector("#cpfNovoAluno").focus()
+
+        // função verificar se há outro valor igual
+    }
+    
+    else if(document.querySelector("#celularNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Celular do aluno' vazio.")
+        document.querySelector("#celularNovoAluno").focus()
+
+        // função verificar se há outro valor igual
+    }
+    
+    else if(document.querySelector("#emailNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'E-mail do aluno' vazio.")
+        document.querySelector("#emailNovoAluno").focus()
+        // função verificar se há outro valor igual
+    }
+    
+    else if(document.querySelector("#nomeResponsavelNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Nome responsável' vazio.")
+        document.querySelector("#nomeResponsavelNovoAluno").focus()
+    }
+    
+    else if(document.querySelector("#emailResponsavelNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'E-mail responsável' vazio.")
+        document.querySelector("#emailResponsavelNovoAluno").focus()
+    }
+    
+    else if(document.querySelector("#celularResponsavelNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Celular responsável' vazio.")
+        document.querySelector("#celularResponsavelNovoAluno").focus()
+    }
+    
+    else if(document.querySelector("#obsNovoAluno").value == ''){
+        alert("Preencha todos os campos! Campo 'Obeservação' vazio.")
+        document.querySelector("#obsNovoAluno").focus()
+
+    } else {
+        cadastrarUsuario()
+    }
+}
 
 function cadastrarUsuario(){
     let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
@@ -28,6 +105,8 @@ function cadastrarUsuario(){
     let emailResp = document.querySelector("#emailResponsavelNovoAluno").value;
     let celularResp = document.querySelector("#celularResponsavelNovoAluno").value;
     let obs = document.querySelector("#obsNovoAluno").value;
+
+    
 
     db.collection(anoTurma).doc(matricula).set({
         nomeAluno: nomeAluno,
@@ -46,10 +125,30 @@ function cadastrarUsuario(){
     })
 
     console.log(anoTurma, matricula, nomeAluno, idade, cpf, celularAluno, emailAluno, nomeResp, emailResp, celularResp,)
+
+    setTimeout(()=>{
+        window.location.reload();
+    },2000)    
+    
 }
 
 function removerAluno(){
     let aluno = document.querySelector("#excluirAlunoInput").value
-
     console.log(aluno)
 }
+
+function teste () {
+    let turma = '3b'
+    let matricula = '12121212' 
+    
+    db.collection(turma).get().then((snapshot)=>{
+        snapshot.forEach(doc => {
+            let aluno = doc._delegate._key.path.segments[6]
+
+
+            console.log(aluno)
+        })
+    })
+}
+
+teste();
