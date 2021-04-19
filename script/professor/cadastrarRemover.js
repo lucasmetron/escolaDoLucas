@@ -15,28 +15,52 @@ firebase.analytics();
 
 let db = firebase.firestore();
 
-var igualdadeMatricula = false
+let igualdadeMatricula = false
 
-function verificaCampos() {
 
-    
+
+function verificarIgualdade() {
+
+    console.log(igualdadeMatricula)
+
     let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
+    let matricula = document.querySelector("#matriculaNovoAluno").value;
 
     db.collection(anoTurma).get().then((snapshot) => {
         snapshot.forEach(doc => {
             let alunoMatricula = doc._delegate._key.path.segments[6]
-            let matricula = document.querySelector("#matriculaNovoAluno").value;
-            if (alunoMatricula == matricula) {
-                igualdadeMatricula = true
+
+            if (matricula === alunoMatricula) {
+                igualdadeMatricula = true;
             }
-            console.log(igualdadeMatricula)
-            console.log(matricula)
-            console.log(alunoMatricula)
+
         })
     })
 
+    setTimeout(() => {
+        console.log(igualdadeMatricula)
 
-     if (document.querySelector("#anoTurmaNovoAluno").value == '') {
+        if (igualdadeMatricula === true) {
+            alert("Matricula já cadastrada")
+            igualdadeMatricula = false;
+
+        } else {
+            verificaCampos();
+            console.log('cheguei no else')
+        }
+    }, 500)
+
+
+}
+
+
+
+
+function verificaCampos() {
+
+
+
+    if (document.querySelector("#anoTurmaNovoAluno").value == '') {
         alert("Preencha todos os campos! Campo 'Ano/Turma' vazio.")
         document.querySelector("#anoTurmaNovoAluno").focus()
     }
@@ -48,7 +72,7 @@ function verificaCampos() {
 
     }
 
-    else if (igualdadeMatricula != false){
+    else if (igualdadeMatricula != false) {
         alert("Matricula já existente! Cadastre outro número de matrícula")
         igualdadeMatricula = false;
     }
@@ -109,28 +133,6 @@ function verificaCampos() {
     }
 }
 
-// function verificaCamposRepetidos() {
-
-//     let matriculas = [];
-//     let anoTurma = '3b'
-//     let matricula = '12121212'
-
-//     db.collection(anoTurma).get().then((snapshot) => {
-//         snapshot.forEach(doc => {
-//             let alunoMatricula = doc._delegate._key.path.segments[6]
-//             matriculas.push(alunoMatricula)
-//             if (alunoMatricula === matricula) {
-//                 alert("Matricula já existente")
-//             }
-
-//         })
-//     })
-
-//     console.log(matriculas)
-
-
-// }
-
 
 function cadastrarUsuario() {
     let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
@@ -184,10 +186,10 @@ function removerAluno() {
 //         snapshot.forEach(doc => {
 //             let alunoMatricula = doc._delegate._key.path.segments[6]
 
-//             if (alunoMatricula === matricula) {
-//                 alert("Matricula já existente")
-//             }
+//             console.log(alunoMatricula)
 
 //         })
 //     })
-// }}
+// }
+
+// teste();
