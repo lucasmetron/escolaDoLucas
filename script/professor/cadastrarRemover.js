@@ -15,7 +15,7 @@ firebase.analytics();
 
 let db = firebase.firestore();
 
-var igualdadeMatricula = false;
+let igualdadeMatricula = false;
 let igualdadeNomeNovoAluno = false;
 let igualdadeCpfNovoAluno = false;
 let igualdadeCelularNovoAluno = false;
@@ -36,11 +36,6 @@ function verificaCampos() {
         alert("Preencha todos os campos! Campo 'Matrícula' vazio.");
         document.querySelector("#matriculaNovoAluno").focus();
 
-    }
-
-    else if (igualdadeMatricula != false) {
-        alert("Matricula já existente! Cadastre outro número de matrícula")
-        igualdadeMatricula = false;
     }
 
     else if (document.querySelector("#nomeNovoAluno").value == '') {
@@ -101,6 +96,8 @@ function verificaCampos() {
 
 function verificarIgualdade() {
 
+    // console.log("igualdade matricula quando entra na função" + igualdadeMatricula)
+
     let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
 
     let matricula = document.querySelector("#matriculaNovoAluno").value;
@@ -111,31 +108,75 @@ function verificarIgualdade() {
 
     db.collection(anoTurma).get().then((snapshot) => {
         snapshot.forEach(doc => {
-            console.log(igualdadeMatricula)
-            console.log(matricula)
-            let alunoMatricula = doc._delegate._key.path.segments[6]
+            let dbAlunoMatricula = doc._delegate._key.path.segments[6]
+            let dbNomeAluno = doc.data().nomeAluno;
+            let dbCPF = doc.data().cpf;
+            let dbCelularAluno = doc.data().celularAluno;
+            let dbEmailAluno = doc.data().emailAluno;
 
-            if (matricula === alunoMatricula) {
+            console.log(dbAlunoMatricula, dbNomeAluno, dbCPF, dbCelularAluno, dbEmailAluno)
+
+            // console.log("igualdade matricula dentro do foreach " + igualdadeMatricula);
+            // console.log("matricula salva no banco " + alunoMatricula);
+            // console.log("matricula digitada pelo usuário " + matricula);
+
+            if (dbAlunoMatricula === matricula) {
                 igualdadeMatricula = true;
+
+            } else if (dbNomeAluno === nomeAluno) {
+                igualdadeNomeNovoAluno = true;
+
+            } else if (dbCPF === cpfAluno) {
+                igualdadeCpfNovoAluno = true;
+
+            } else if (dbCelularAluno === celularAluno) {
+                igualdadeCelularNovoAluno = true;
+
+            } else if (dbEmailAluno === emailAluno) {
+                igualdadeEmailNovoAluno = true;
+
+            }
+        })
+
+
+
+        setTimeout(() => {
+
+            // console.log("igualdade que saiu do foreach " + igualdadeMatricula)
+
+            if (igualdadeMatricula === true) {
+                alert("Matricula já cadastrada")
+                igualdadeMatricula = false;
+
+            } else if (igualdadeNomeNovoAluno === true) {
+                alert("Nome de aluno já cadastrado")
+                igualdadeNomeNovoAluno = false;
             }
 
-        })
+            else if (igualdadeCpfNovoAluno === true) {
+                alert("CPF já cadastrado")
+                igualdadeCpfNovoAluno = false;
+            }
+
+            else if (igualdadeCelularNovoAluno === true) {
+                alert("Celular deste aluno já está cadastrado")
+                igualdadeCelularNovoAluno = false;
+            }
+
+            else if (igualdadeEmailNovoAluno === true) {
+                alert("E-mail deste aluno já foi cadastrado")
+                igualdadeEmailNovoAluno = false;
+            }
+
+            else {
+                cadastrarUsuario();
+                console.log('cheguei no else')
+            }
+
+        }, 1000)
+
+
     })
-
-    setTimeout(() => {
-        console.log(igualdadeMatricula)
-
-        if (igualdadeMatricula === true) {
-            alert("Matricula já cadastrada")
-            igualdadeMatricula = false;
-
-        } else {
-            cadastrarUsuario();
-            console.log('cheguei no else')
-        }
-    }, 500)
-
-
 }
 
 
@@ -189,9 +230,13 @@ function removerAluno() {
 
 //     db.collection(turma).get().then((snapshot) => {
 //         snapshot.forEach(doc => {
-//             let alunoMatricula = doc._delegate._key.path.segments[6]
+//             let dbAlunoMatricula = doc._delegate._key.path.segments[6]
+//             let dbNomeAluno = doc.data().nomeAluno;
+//             let dbCPF = doc.data().cpf;
+//             let dbCelularAluno = doc.data().celularAluno;
+//             let dbEmailAluno = doc.data().emailAluno;
+//             console.log(dbAlunoMatricula, dbNomeAluno, dbCPF, dbCelularAluno, dbEmailAluno)
 
-//             console.log(alunoMatricula)
 
 //         })
 //     })
