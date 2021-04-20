@@ -15,7 +15,7 @@ firebase.analytics();
 
 let db = firebase.firestore();
 
-let igualdadeMatricula = false;
+var igualdadeMatricula = false;
 let igualdadeNomeNovoAluno = false;
 let igualdadeCpfNovoAluno = false;
 let igualdadeCelularNovoAluno = false;
@@ -112,6 +112,7 @@ function verificarIgualdade() {
     db.collection(anoTurma).get().then((snapshot) => {
         snapshot.forEach(doc => {
             console.log(igualdadeMatricula)
+            console.log(matricula)
             let alunoMatricula = doc._delegate._key.path.segments[6]
 
             if (matricula === alunoMatricula) {
