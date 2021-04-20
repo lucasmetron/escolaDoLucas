@@ -15,49 +15,15 @@ firebase.analytics();
 
 let db = firebase.firestore();
 
-let igualdadeMatricula = false
-
-
-
-function verificarIgualdade() {
-
-    console.log(igualdadeMatricula)
-
-    let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
-    let matricula = document.querySelector("#matriculaNovoAluno").value;
-
-    db.collection(anoTurma).get().then((snapshot) => {
-        snapshot.forEach(doc => {
-            let alunoMatricula = doc._delegate._key.path.segments[6]
-
-            if (matricula === alunoMatricula) {
-                igualdadeMatricula = true;
-            }
-
-        })
-    })
-
-    setTimeout(() => {
-        console.log(igualdadeMatricula)
-
-        if (igualdadeMatricula === true) {
-            alert("Matricula já cadastrada")
-            igualdadeMatricula = false;
-
-        } else {
-            verificaCampos();
-            console.log('cheguei no else')
-        }
-    }, 500)
-
-
-}
-
+let igualdadeMatricula = false;
+let igualdadeNomeNovoAluno = false;
+let igualdadeCpfNovoAluno = false;
+let igualdadeCelularNovoAluno = false;
+let igualdadeEmailNovoAluno = false;
 
 
 
 function verificaCampos() {
-
 
 
     if (document.querySelector("#anoTurmaNovoAluno").value == '') {
@@ -129,8 +95,46 @@ function verificaCampos() {
         document.querySelector("#obsNovoAluno").focus()
 
     } else {
-        cadastrarUsuario()
+        verificarIgualdade()
     }
+}
+
+function verificarIgualdade() {
+
+    let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
+
+    let matricula = document.querySelector("#matriculaNovoAluno").value;
+    let nomeAluno = document.querySelector("#nomeNovoAluno").value;
+    let cpfAluno = document.querySelector("#cpfNovoAluno").value;
+    let celularAluno = document.querySelector("#celularNovoAluno").value;
+    let emailAluno = document.querySelector("#emailNovoAluno").value;
+
+    db.collection(anoTurma).get().then((snapshot) => {
+        snapshot.forEach(doc => {
+            console.log(igualdadeMatricula)
+            let alunoMatricula = doc._delegate._key.path.segments[6]
+
+            if (matricula === alunoMatricula) {
+                igualdadeMatricula = true;
+            }
+
+        })
+    })
+
+    setTimeout(() => {
+        console.log(igualdadeMatricula)
+
+        if (igualdadeMatricula === true) {
+            alert("Matricula já cadastrada")
+            igualdadeMatricula = false;
+
+        } else {
+            cadastrarUsuario();
+            console.log('cheguei no else')
+        }
+    }, 500)
+
+
 }
 
 
