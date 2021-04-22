@@ -147,10 +147,10 @@
                         <input type="number" name="idadeNovoAluno" id="idadeNovoAluno" maxlength="2">
 
                         <p id="pCpf">CPF</p>
-                        <input type="number" name="cpfNovoAluno" id="cpfNovoAluno" maxlength="12">
+                        <input type="number" name="cpfNovoAluno" id="cpfNovoAluno" minLength="11" maxlength="11">
 
                         <p id="pCelular">Celular</p>
-                        <input type="number" name="celularNovoAluno" id="celularNovoAluno">
+                        <input type="number" name="celularNovoAluno" id="celularNovoAluno" maxlength="10">
 
                         <p id="pEmailAluno">E-mail</p>
                         <input type="email" name="emailNovoAluno" id="emailNovoAluno">
@@ -185,8 +185,8 @@
                             <option value="igorSilva">Igor Silva</option>
                             <option value="marianaCosta">Mariana Costa</option>
                         </select>
-                        <p onclick="removerAluno()">remover</p>
-                        <input type="submit" value="REMOVER" id="btRemover">
+                        <p class="btCadastrar" id="btRemover" onclick="removerAluno()">remover</p>
+                        <!-- <input type="submit" value="REMOVER" id="btRemover"> -->
                     </form>
 
 
