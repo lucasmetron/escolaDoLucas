@@ -23,8 +23,6 @@ let igualdadeEmailNovoAluno = false;
 
 
 
-
-
 function verificaCampos() {
 
 
@@ -225,23 +223,52 @@ function removerAluno() {
     console.log(aluno)
 }
 
+db.collection('3b').onSnapshot(snapshot => {
+    snapshot.forEach((doc) => {
+        let tagSelect = document.querySelector("#excluirAlunoInput")
+        let nomeAluno = doc.data().nomeAluno;
+        let aluno = document.createTextNode(nomeAluno);
+
+        let novaTagOption = document.createElement("option");
+        let conteudoOption = aluno;
+
+
+        novaTagOption.appendChild(aluno);
+        novaTagOption.setAttribute('value', nomeAluno);
+        tagSelect.appendChild(novaTagOption);
+
+
+
+    })
+})
+
 
 // function teste() {
-//     let turma = '3b'
-//     let matricula = '651324'
 
-//     db.collection(turma).get().then((snapshot) => {
-//         snapshot.forEach(doc => {
-//             let dbAlunoMatricula = doc._delegate._key.path.segments[6]
-//             let dbNomeAluno = doc.data().nomeAluno;
-//             let dbCPF = doc.data().cpf;
-//             let dbCelularAluno = doc.data().celularAluno;
-//             let dbEmailAluno = doc.data().emailAluno;
-//             console.log(dbAlunoMatricula, dbNomeAluno, dbCPF, dbCelularAluno, dbEmailAluno)
+//     let tagSelect = document.querySelector("#excluirAlunoInput")
+//     let aluno = document.createTextNode("Lucas")
+//     let elemento_pai = document.body;
+//     let nome = "lucas"
+
+//     // let novaTagOption = document.createElement("option");
+//     // let conteudoOption = aluno;
+
+//     // novaTagOption.append(conteudoOption);
+
+//     // document.body.insertBefore(tagSelect, novaTagOption);
 
 
-//         })
-//     })
+//     // console.log(novaTag, novaTagOption);
+
+//     let titulo = document.createElement('option')
+
+//     titulo.appendChild(aluno);
+//     tagSelect.appendChild(titulo)
+
+//     titulo.setAttribute('value', nome)
+
+
+
 // }
 
 // teste();
