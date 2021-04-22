@@ -176,12 +176,19 @@
 
                     <form id="formExcluir" method="GET" action="">
                         <h1 id="removerAluno">REMOVER ALUNO:</h1>
+
+                        <p id="pTurmaRemoverAluno">Turma</p>
+                        <select name="excluirAlunoInput" id="turmaExcluirAlunoInput" required>
+                            <option value="">Selecione a turma</option>
+                            <!-- <option value="joaoPedro">João Pedro</option> -->
+                        </select>
+
                         <p id="pNomeRemoverAluno">Nome:</p>
-                        <select name="excluirAlunoInput" id="excluirAlunoInput" required>
+                        <select name="excluirAlunoInput" id="NomeExcluirAlunoInput" required>
                             <option value="">Selecione o Aluno</option>
                             <!-- <option value="joaoPedro">João Pedro</option> -->
                         </select>
-                        <p class="btCadastrar" id="btRemover" onclick="removerAluno()">REMOVER</p>
+                        <p class="btCadastrar marginBt" id="btRemover" onclick="removerAluno()">REMOVER</p>
 
                         <!-- <input type="submit" value="REMOVER" id="btRemover"> -->
                     </form>

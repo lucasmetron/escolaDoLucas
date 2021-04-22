@@ -225,7 +225,7 @@ function removerAluno() {
 
 db.collection('3b').onSnapshot(snapshot => {
     snapshot.forEach((doc) => {
-        let tagSelect = document.querySelector("#excluirAlunoInput")
+        let tagSelect = document.querySelector("#NomeExcluirAlunoInput")
         let nomeAluno = doc.data().nomeAluno;
         let aluno = document.createTextNode(nomeAluno);
 

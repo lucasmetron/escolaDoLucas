@@ -159,14 +159,39 @@ form > p{
     grid-area: btCadastrar;
     width: auto;
     margin: auto;
-    margin-top: 15px;
     text-align: center;
-    
+    margin-top:10px
 }
+
+
+.mostradorAlunoCadastro > #formExcluir{
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+                        'removerAluno removerAluno'
+                        'pTurmaRemoverAluno pNomeRemoverAluno'
+                        'turmaExcluirAlunoInput excluirAlunoInput'
+                        'btRemover btRemover';
+    gap: 10px;
+}
+
 
 #removerAluno{
     grid-area: removerAluno ;
     margin-top: 15px;
+}
+
+#pTurmaRemoverAluno{
+    grid-area: pTurmaRemoverAluno;
+}
+
+#turmaExcluirAlunoInput{
+    grid-area: turmaExcluirAlunoInput ;
+}
+
+#pNomeRemoverAluno{
+    grid-area: pNomeRemoverAluno;
 }
 
 #excluirAlunoInput{
@@ -177,21 +202,8 @@ form > p{
     grid-area: btRemover ;
     margin: auto;
     width: auto;
+    margin-top:10px;
 }
-
-.mostradorAlunoCadastro > #formExcluir{
-
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-                        'removerAluno removerAluno'
-                        'pNomeRemoverAluno pNomeRemoverAluno'
-                        'excluirAlunoInput excluirAlunoInput'
-                        'btRemover btRemover';
-    gap: 10px;
-}
-
-
 
 
 form input[type='number']{
