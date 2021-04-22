@@ -23,6 +23,8 @@ let igualdadeEmailNovoAluno = false;
 
 
 
+
+
 function verificaCampos() {
 
 
@@ -114,7 +116,7 @@ function verificarIgualdade() {
             let dbCelularAluno = doc.data().celularAluno;
             let dbEmailAluno = doc.data().emailAluno;
 
-            console.log(dbAlunoMatricula, dbNomeAluno, dbCPF, dbCelularAluno, dbEmailAluno)
+            // console.log(dbAlunoMatricula, dbNomeAluno, dbCPF, dbCelularAluno, dbEmailAluno)
 
             // console.log("igualdade matricula dentro do foreach " + igualdadeMatricula);
             // console.log("matricula salva no banco " + alunoMatricula);
@@ -138,7 +140,7 @@ function verificarIgualdade() {
             }
         })
 
-
+        alert("Verificando dados do aluno cadastrado, por favor aguarde :D")
 
         setTimeout(() => {
 
@@ -178,7 +180,6 @@ function verificarIgualdade() {
 
     })
 }
-
 
 function cadastrarUsuario() {
     let anoTurma = document.querySelector("#anoTurmaNovoAluno").value;
@@ -223,6 +224,7 @@ function removerAluno() {
     let aluno = document.querySelector("#excluirAlunoInput").value
     console.log(aluno)
 }
+
 
 // function teste() {
 //     let turma = '3b'
