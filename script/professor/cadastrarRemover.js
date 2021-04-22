@@ -223,24 +223,34 @@ function removerAluno() {
     console.log(aluno)
 }
 
-db.collection('3b').onSnapshot(snapshot => {
-    snapshot.forEach((doc) => {
-        let tagSelect = document.querySelector("#NomeExcluirAlunoInput")
-        let nomeAluno = doc.data().nomeAluno;
-        let aluno = document.createTextNode(nomeAluno);
-
-        let novaTagOption = document.createElement("option");
-        let conteudoOption = aluno;
-
-
-        novaTagOption.appendChild(aluno);
-        novaTagOption.setAttribute('value', nomeAluno);
-        tagSelect.appendChild(novaTagOption);
+function buscaDados() {
 
 
 
+
+    db.collection('3b').onSnapshot(snapshot => {
+        snapshot.forEach((doc) => {
+            let nomeAluno = doc.data().nomeAluno;
+
+            let aluno = document.createTextNode(nomeAluno);
+
+            let novaTagOption = document.createElement("option");
+            let conteudoOption = aluno;
+
+            let tagSelect = document.querySelector("#NomeExcluirAlunoInput")
+            novaTagOption.appendChild(aluno);
+            novaTagOption.setAttribute('value', nomeAluno);
+            tagSelect.appendChild(novaTagOption);
+
+
+
+        })
     })
-})
+}
+
+buscaDados();
+
+
 
 
 // function teste() {
