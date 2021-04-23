@@ -220,34 +220,50 @@ function cadastrarUsuario() {
 }
 
 function removerAluno() {
-    let aluno = document.querySelector("#excluirAlunoInput").value
-    console.log(aluno)
+    let turma = document.querySelector("#turmaExcluirAlunoInput").value
+    let matricula = document.querySelector("#NomeExcluirAlunoInput").value
+
+    db.collection(turma).doc(matricula).delete().then(
+        alert("Aluno deletado")
+    ).catch(error => {
+        alert("Sitema fora do ar, tente novamente mais tarde :(")
+        console.log(error)
+    })
+
+    setTimeout(() => {
+        window.location.reload();
+    }, 1000)
+
+    console.log(turma, aluno)
 }
 
 
-function listaAluno() {
+async function listaAluno() {
     let turmaSelecionada = document.querySelector("#turmaExcluirAlunoInput").value
-    console.log(turmaSelecionada);
 
     let tagSelect = document.querySelector("#NomeExcluirAlunoInput");
     tagSelect.innerHTML = '<option value="">Selecione o Aluno</option>';
 
-    db.collection(turmaSelecionada).get().then((snapshot) => {
+    alert(`Atenção! Caso o campo nome não apresente listagem, a turma ${turmaSelecionada} não existe.`)
+
+    await db.collection(turmaSelecionada).get().then((snapshot) => {
         snapshot.forEach((doc) => {
-            let nomeAluno = doc.data().nomeAluno
-            let aluno = document.createTextNode(nomeAluno);
+            let nomeAluno = doc.data().nomeAluno;
+            let matriculaAluno = doc._delegate._key.path.segments[6];
+            // let aluno = document.createTextNode(nomeAluno);
+            // let matricula = document.createTextNode(matriculaAluno);
 
             let novaTagOption = document.createElement('option');
+            let infoAluno = nomeAluno + "/ Matricula:" + matriculaAluno;
+            let info = document.createTextNode(infoAluno)
 
             let tagSelect = document.querySelector('#NomeExcluirAlunoInput')
-            novaTagOption.appendChild(aluno);
-            novaTagOption.setAttribute('value', nomeAluno)
+            novaTagOption.append(info);
+            novaTagOption.setAttribute('value', matriculaAluno)
             tagSelect.appendChild(novaTagOption);
 
-            console.log(tagSelect)
+            console.log(info)
         })
-    }).catch((error) => {
-        console.log(error)
     })
 
 }
@@ -279,6 +295,27 @@ async function onSnapshotListaAlunos() {
 
 
 }
+
+// function teste() {
+
+//     db.collection('3b').get().then((snapshot) => {
+//         snapshot.forEach((doc) => {
+//             let nomeAluno = doc.data().nomeAluno;
+//             let matriculaAluno = doc._delegate._key.path.segments[6];
+//             // let aluno = document.createTextNode(nomeAluno);
+//             // let matricula = document.createTextNode(matriculaAluno);
+
+//             // let novaTagOption = document.createElement('option');
+
+//             // let tagSelect = document.querySelector('#NomeExcluirAlunoInput')
+//             // novaTagOption.appendChild(aluno + " Matricula: " + matricula);
+//             // novaTagOption.setAttribute('value', nomeAluno)
+//             // tagSelect.appendChild(novaTagOption);
+//             console.log(matriculaAluno)
+
+//         })
+//     })
+// }
 
 
 // function teste() {
