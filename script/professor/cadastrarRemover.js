@@ -23,6 +23,7 @@ let igualdadeEmailNovoAluno = false;
 
 
 
+
 function verificaCampos() {
 
 
@@ -141,7 +142,6 @@ function verificarIgualdade() {
         alert("Verificando dados do aluno cadastrado, por favor aguarde :D")
 
         setTimeout(() => {
-
             // console.log("igualdade que saiu do foreach " + igualdadeMatricula)
 
             if (igualdadeMatricula === true) {
@@ -172,6 +172,7 @@ function verificarIgualdade() {
                 cadastrarUsuario();
                 console.log('cheguei no else')
             }
+
 
         }, 1000)
 
@@ -223,12 +224,41 @@ function removerAluno() {
     console.log(aluno)
 }
 
-function buscaDados() {
+
+function listaAluno() {
+    let turmaSelecionada = document.querySelector("#turmaExcluirAlunoInput").value
+    console.log(turmaSelecionada);
+
+    let tagSelect = document.querySelector("#NomeExcluirAlunoInput");
+    tagSelect.innerHTML = '<option value="">Selecione o Aluno</option>';
+
+    db.collection(turmaSelecionada).get().then((snapshot) => {
+        snapshot.forEach((doc) => {
+            let nomeAluno = doc.data().nomeAluno
+            let aluno = document.createTextNode(nomeAluno);
+
+            let novaTagOption = document.createElement('option');
+
+            let tagSelect = document.querySelector('#NomeExcluirAlunoInput')
+            novaTagOption.appendChild(aluno);
+            novaTagOption.setAttribute('value', nomeAluno)
+            tagSelect.appendChild(novaTagOption);
+
+            console.log(tagSelect)
+        })
+    }).catch((error) => {
+        console.log(error)
+    })
+
+}
 
 
+async function onSnapshotListaAlunos() {
+    let turmaSelecionada = document.querySelector("#turmaExcluirAlunoInput").value
+    console.log(turmaSelecionada);
 
 
-    db.collection('3b').onSnapshot(snapshot => {
+    await db.collection(turmaSelecionada).onSnapshot(snapshot => {
         snapshot.forEach((doc) => {
             let nomeAluno = doc.data().nomeAluno;
 
@@ -246,11 +276,52 @@ function buscaDados() {
 
         })
     })
+
+
 }
 
-buscaDados();
+
+// function teste() {
 
 
+//     db.collection('3b').get().then((snapshot) => {
+//         snapshot.forEach((doc) => {
+//             let nomeAluno = doc.data().nomeAluno
+//             let aluno = document.createTextNode(nomeAluno);
+
+//             let novaTagOption = document.createElement('option');
+
+//             let tagSelect = document.querySelector('#NomeExcluirAlunoInput')
+//             novaTagOption.appendChild(aluno);
+//             novaTagOption.setAttribute('value', nomeAluno)
+//             tagSelect.appendChild(novaTagOption);
+
+//             console.log(tagSelect)
+//         })
+//     })
+// }
+
+
+
+
+// db.collection('3b').onSnapshot(snapshot => {
+//     snapshot.forEach((doc) => {
+//         let nomeAluno = doc.data().nomeAluno;
+
+//         let aluno = document.createTextNode(nomeAluno);
+
+//         let novaTagOption = document.createElement("option");
+//         let conteudoOption = aluno;
+
+//         let tagSelect = document.querySelector("#NomeExcluirAlunoInput")
+//         novaTagOption.appendChild(aluno);
+//         novaTagOption.setAttribute('value', nomeAluno);
+//         tagSelect.appendChild(novaTagOption);
+
+
+
+//     })
+// })
 
 
 // function teste() {
