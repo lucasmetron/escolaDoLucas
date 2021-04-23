@@ -244,7 +244,7 @@ async function listaAluno() {
     let tagSelect = document.querySelector("#NomeExcluirAlunoInput");
     tagSelect.innerHTML = '<option value="">Selecione o Aluno</option>';
 
-    alert(`Atenção! Caso o campo nome não apresente listagem, a turma ${turmaSelecionada} não existe.`)
+    await alert(`Atenção! Caso o campo nome não apresente listagem, a turma ${turmaSelecionada} não existe.`)
 
     await db.collection(turmaSelecionada).get().then((snapshot) => {
         snapshot.forEach((doc) => {
