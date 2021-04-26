@@ -174,3 +174,14 @@ input[type=text]{
         padding: 50px 25px 25px;    
     }
 }
+
+@media (max-width: 500px) {
+    h1{
+        font-size: 0.9rem;
+
+    }
+
+    p{
+    font-size:0.830rem;
+    }
+}
