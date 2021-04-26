@@ -331,12 +331,11 @@
 
                         <p id="pAnoTurmaAdv">Ano/Turma:</p>
                         <input type="text" id="anoTurmaAdv" placeholder="Digite a turma exata"
-                            onchange="listaAlunoFaltas()">
+                            onchange="listaAlunoAdv()">
 
                         <p id="pNomeAlunoAdv">Nome do aluno(a)</p>
-                        <select name="nomeAlunoNotaAdv" id="nomeAlunoNotaAdv" required>
+                        <select name="nomeAlunoNotaAdv" id="nomeAlunoAdv" required>
                             <option value="">Selecione o Aluno</option>
-                            <option value="joaoPedro">João Pedro</option>
                         </select>
 
                         <p id="pTipoAdv">Tipo</p>
@@ -355,7 +354,8 @@
                         <p id="pConseAdv">Consequência</p>
                         <input type="text" name="consequencia" id="consequencia">
 
-                        <input type="submit" value="SALVAR" id="btSubmit">
+                        <!-- <input type="submit" value="SALVAR" id="btSubmit"> -->
+                        <p class="btCadastrar" id="btSubmit" onclick="verificaCamposAdv()"> CADASTRAR</p>
 
                     </form>
 
@@ -461,6 +461,7 @@
         <script src="/script/professor/cadastrarRemover.js"></script>
         <script src="/script/professor/lancarNotas.js"></script>
         <script src="/script/professor/lancarFaltas.js"></script>
+        <script src="/script/professor/advertencias.js"></script>
 </body>
 
 

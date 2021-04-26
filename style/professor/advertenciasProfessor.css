@@ -112,9 +112,10 @@
 
 #btSubmit{
     grid-area: btSubmit;
-    margin-top: 10px;
-    width: auto;
     margin: auto;
+    margin-top: 20px;
+    width: auto;
+    
 }
 
 
