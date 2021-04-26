@@ -217,26 +217,12 @@
                     <form id="formNotas" method="GET" action="">
 
                         <p>Ano/Turma:</p>
-                        <select name="anoTurmaNotas" id="anoTurmaNotas" size="1" required>
-                            <option value="">Selecione a Turma</option>
-                            <option value="1aNotas">1º A</option>
-                            <option value="1bNotas">1º B</option>
-                            <option value="2aNotas">2º A</option>
-                            <option value="2bNotas">2º B</option>
-                            <option value="3aNotas">3º A</option>
-                            <option value="3bNotas">3º B</option>
-                            <option value="4aNotas">4º A</option>
-                            <option value="4bNotas">4º B</option>
-                        </select>
+                        <input type="text" id="anoTurmaNotas" placeholder="Digite a turma exata neste campo"
+                            onchange="listaAlunoNotas()">
 
                         <p>Nome do aluno(a):</p>
                         <select name="nomeAlunoNota" id="nomeAlunoNota" required>
                             <option value="">Selecione o Aluno</option>
-                            <option value="joaoPedro">João Pedro</option>
-                            <option value="pedroHenrique">Pedro Henrique</option>
-                            <option value="lucianaOliveira">Luciana Oliveira</option>
-                            <option value="igorSilva">Igor Silva</option>
-                            <option value="marianaCosta">Mariana Costa</option>
                         </select>
 
                         <p>Disciplina:</p>
@@ -252,17 +238,17 @@
                         <p>Bimestre:</p>
                         <select name="bimestre" id="bimestre" required>
                             <option value="">Selecione o Bimestre</option>
-                            <option value="1b">1ºBimestre</option>
-                            <option value="2b">2ºBimestre</option>
-                            <option value="3b">3ºBimestre</option>
-                            <option value="4b">4ºBimestre</option>
+                            <option value="1bimestre">1ºBimestre</option>
+                            <option value="2bimestre">2ºBimestre</option>
+                            <option value="3bimestre">3ºBimestre</option>
+                            <option value="4bimestre">4ºBimestre</option>
                         </select>
 
-                        <p>Nota:</p><br>
-                        <input type="number" name="notaLancada" max="10"><br>
+                        <p id="teste">Nota:</p><br>
+                        <input type="number" name="notaLancada" id="notaLancada" max="10"><br>
 
                         <div class="centralizador">
-                            <input type="submit" value="SALVAR">
+                            <p class="btCadastrar" id="btCadastrar" onclick="lancaNota()"> CADASTRAR</p>
                         </div>
 
                     </form>
@@ -473,6 +459,7 @@
 
         <script src="/script/animacoes.js"></script>
         <script src="/script/professor/cadastrarRemover.js"></script>
+        <script src="/script/professor/lancarNotas.js"></script>
 </body>
 
 

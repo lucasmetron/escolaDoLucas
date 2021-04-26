@@ -14,14 +14,12 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 let db = firebase.firestore();
-let escola = "escolaDoLucas";
 
-let igualdadeMatricula = false;
+let igualdadeMatricula = false;   //TODAS ESSAS VARIAVEIS SÃO PARA VERIFICAR SE HÁ DADOS SENSÍVEIS REPETIDOS NO DB
 let igualdadeNomeNovoAluno = false;
 let igualdadeCpfNovoAluno = false;
 let igualdadeCelularNovoAluno = false;
 let igualdadeEmailNovoAluno = false;
-
 
 
 
@@ -197,7 +195,7 @@ function cadastrarUsuario() {
 
 
 
-    db.collection(escola).doc(matricula).set({
+    db.collection(anoTurma).doc(matricula).set({
         nomeAluno: nomeAluno,
         idade: idade,
         cpf: cpf,
@@ -271,7 +269,7 @@ async function listaAluno() {
 }
 
 
-async function onSnapshotListaAlunos() {
+async function onSnapshotListaAlunos() {  //ESTA FUNÇÃO NAO ESTA EM USO
     let turmaSelecionada = document.querySelector("#turmaExcluirAlunoInput").value
     console.log(turmaSelecionada);
 
@@ -300,97 +298,3 @@ async function onSnapshotListaAlunos() {
 
 
 
-// function teste() {
-
-//     db.collection('3b').get().then((snapshot) => {
-//         snapshot.forEach((doc) => {
-//             let nomeAluno = doc.data().nomeAluno;
-//             let matriculaAluno = doc._delegate._key.path.segments[6];
-//             // let aluno = document.createTextNode(nomeAluno);
-//             // let matricula = document.createTextNode(matriculaAluno);
-
-//             // let novaTagOption = document.createElement('option');
-
-//             // let tagSelect = document.querySelector('#NomeExcluirAlunoInput')
-//             // novaTagOption.appendChild(aluno + " Matricula: " + matricula);
-//             // novaTagOption.setAttribute('value', nomeAluno)
-//             // tagSelect.appendChild(novaTagOption);
-//             console.log(matriculaAluno)
-
-//         })
-//     })
-// }
-
-
-// function teste() {
-
-
-//     db.collection('3b').get().then((snapshot) => {
-//         snapshot.forEach((doc) => {
-//             let nomeAluno = doc.data().nomeAluno
-//             let aluno = document.createTextNode(nomeAluno);
-
-//             let novaTagOption = document.createElement('option');
-
-//             let tagSelect = document.querySelector('#NomeExcluirAlunoInput')
-//             novaTagOption.appendChild(aluno);
-//             novaTagOption.setAttribute('value', nomeAluno)
-//             tagSelect.appendChild(novaTagOption);
-
-//             console.log(tagSelect)
-//         })
-//     })
-// }
-
-
-
-
-// db.collection('3b').onSnapshot(snapshot => {
-//     snapshot.forEach((doc) => {
-//         let nomeAluno = doc.data().nomeAluno;
-
-//         let aluno = document.createTextNode(nomeAluno);
-
-//         let novaTagOption = document.createElement("option");
-//         let conteudoOption = aluno;
-
-//         let tagSelect = document.querySelector("#NomeExcluirAlunoInput")
-//         novaTagOption.appendChild(aluno);
-//         novaTagOption.setAttribute('value', nomeAluno);
-//         tagSelect.appendChild(novaTagOption);
-
-
-
-//     })
-// })
-
-
-// function teste() {
-
-//     let tagSelect = document.querySelector("#excluirAlunoInput")
-//     let aluno = document.createTextNode("Lucas")
-//     let elemento_pai = document.body;
-//     let nome = "lucas"
-
-//     // let novaTagOption = document.createElement("option");
-//     // let conteudoOption = aluno;
-
-//     // novaTagOption.append(conteudoOption);
-
-//     // document.body.insertBefore(tagSelect, novaTagOption);
-
-
-//     // console.log(novaTag, novaTagOption);
-
-//     let titulo = document.createElement('option')
-
-//     titulo.appendChild(aluno);
-//     tagSelect.appendChild(titulo)
-
-//     titulo.setAttribute('value', nome)
-
-
-
-// }
-
-// teste();
