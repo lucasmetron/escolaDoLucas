@@ -144,7 +144,7 @@ form > input, textarea{
     color: #FECE00;
 }
 
-input[type=text]{
+.mostradorAdvertenciasProfessor input[type=text]{
     padding-inline-start: 5%;
 }
 
@@ -194,5 +194,9 @@ input[type=text]{
 
     p{
     font-size:0.830rem;
+    }
+
+    .mostradorAdvertenciasProfessor input[type=text]{
+        padding-inline-start: 10%;
     }
 }

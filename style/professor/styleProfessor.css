@@ -90,8 +90,6 @@ body{
     display: inline-block;
 }
 
-
-
 #fotoProfessorId{
     border-radius: 100px;
     width: 200px;
@@ -331,7 +329,7 @@ select{
 
 input[type=text], input[type=number], textarea{
     box-sizing: border-box;
-    padding-inline-start: 1%;
+    padding-inline-start: 1.5%;
 }
 
 /* ----------------- GRID AREA DO FORMULARIO DÚVIDAS ----------------- */
@@ -493,7 +491,6 @@ input[type=text], input[type=number], textarea{
        
     }
 
-
     .professorSaudacao{
         display: flex;
         flex-direction: column;
@@ -646,5 +643,12 @@ input[type=text], input[type=number], textarea{
         height:auto;
    
     }
+
+    input[type=text], input[type=number], textarea{
+        box-sizing: border-box;
+        padding-inline-start: 4.2%;
+    }
+
+
 }
 
