@@ -14,12 +14,14 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 let db = firebase.firestore();
+let escola = "escolaDoLucas";
 
 let igualdadeMatricula = false;
 let igualdadeNomeNovoAluno = false;
 let igualdadeCpfNovoAluno = false;
 let igualdadeCelularNovoAluno = false;
 let igualdadeEmailNovoAluno = false;
+
 
 
 
@@ -195,7 +197,7 @@ function cadastrarUsuario() {
 
 
 
-    db.collection(anoTurma).doc(matricula).set({
+    db.collection(escola).doc(matricula).set({
         nomeAluno: nomeAluno,
         idade: idade,
         cpf: cpf,
@@ -295,6 +297,8 @@ async function onSnapshotListaAlunos() {
 
 
 }
+
+
 
 // function teste() {
 
