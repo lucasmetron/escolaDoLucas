@@ -28,7 +28,7 @@
     position: absolute;
     width: 50%;
     height: 70%;
-    padding: 0px 50px 50px 50px;
+    padding: 30px 60px 60px 60px;
     overflow: auto;
 }
 
@@ -41,6 +41,11 @@
 
 #xNotasAd{
     cursor: pointer;
+}
+
+.xAdv{
+    transform: translate(50%, -90%)
+   
 }
 
 
@@ -176,6 +181,12 @@ input[type=text]{
 }
 
 @media (max-width: 500px) {
+
+    #conteinerVerAdvertenciasProfessor{
+        padding: 0px 50px 50px 50px;
+
+    }
+
     h1{
         font-size: 0.9rem;
 

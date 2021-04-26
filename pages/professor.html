@@ -321,7 +321,7 @@
             <div id="conteinerVerAdvertenciasProfessor">
                 <div class="cabecalho">
                     <h1>ADVERTÊNCIAS E SUSPENSÕES:</h1>
-                    <img id="xNotasAd" src="/assets/images/xYellow.png" alt="fechar tela"
+                    <img class="xAdv" id="xNotasAd" src="/assets/images/xYellow.png" alt="fechar tela"
                         onclick="mostraEsconde.esconde('.modalAdvertenciasProfessor')">
                 </div>
 
@@ -331,7 +331,7 @@
 
                         <p id="pAnoTurmaAdv">Ano/Turma:</p>
                         <input type="text" id="anoTurmaAdv" placeholder="Digite a turma exata"
-                            onchange="listaAlunoAdv()">
+                            onchange="listaAlunoFaltas()">
 
                         <p id="pNomeAlunoAdv">Nome do aluno(a)</p>
                         <select name="nomeAlunoNotaAdv" id="nomeAlunoNotaAdv" required>
