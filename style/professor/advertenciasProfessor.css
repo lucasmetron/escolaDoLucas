@@ -28,7 +28,7 @@
     position: absolute;
     width: 50%;
     height: 70%;
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
     overflow: auto;
 }
 
@@ -47,19 +47,19 @@
 .mostradorAdvertenciasProfessor > form{
 
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr 2fr ;
     grid-template-areas: 
-                        'pNomeAlunoAdv'
-                        'nomeAlunoNotaAdv'
-                        'pTipoAdv'
-                        'tipoAdvOuSuspe'
-                        'pMotivoAdv'
-                        'motivo'
-                        'pDataAdv'
-                        'dataAdv'
-                        'pConseAdv'
-                        'consequencia'
-                        'btSubmit';
+                        'pAnoTurmaAdv pNomeAlunoAdv'
+                        'anoTurmaAdv nomeAlunoNotaAdv'
+                        'pTipoAdv pTipoAdv'
+                        'tipoAdvOuSuspe tipoAdvOuSuspe'
+                        'pMotivoAdv pMotivoAdv'
+                        'motivo motivo'
+                        'pDataAdv pDataAdv'
+                        'dataAdv dataAdv'
+                        'pConseAdv pConseAdv'
+                        'consequencia consequencia'
+                        'btSubmit btSubmit';
 
     gap: 8px;
 
@@ -137,6 +137,10 @@ form > input, textarea{
 .amarelo:hover{
     background-color: #494949;
     color: #FECE00;
+}
+
+input[type=text]{
+    padding-inline-start: 5%;
 }
 
 
