@@ -274,14 +274,14 @@
 
                     <form id="formFaltasProfessor" method="GET" action="">
 
+                        <p>Ano/Turma:</p>
+                        <input type="text" id="anoTurmaNotas" placeholder="Digite a turma exata neste campo"
+                            onchange="listaAlunoNotas()">
+
                         <p>Nome do aluno(a):</p>
                         <select name="nomeAlunoFaltas" id="nomeAlunoFaltas" required>
                             <option value="">Selecione o Aluno</option>
                             <option value="joaoPedro">João Pedro</option>
-                            <option value="pedroHenrique">Pedro Henrique</option>
-                            <option value="lucianaOliveira">Luciana Oliveira</option>
-                            <option value="igorSilva">Igor Silva</option>
-                            <option value="marianaCosta">Mariana Costa</option>
                         </select>
 
                         <p>Disciplina:</p>
@@ -460,6 +460,7 @@
         <script src="/script/animacoes.js"></script>
         <script src="/script/professor/cadastrarRemover.js"></script>
         <script src="/script/professor/lancarNotas.js"></script>
+        <script src="/script/professor/lancarFaltas.js"></script>
 </body>
 
 
