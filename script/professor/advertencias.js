@@ -104,6 +104,7 @@ async function lancaAdv() {
 }
 
 function geraID() {
-    let id = parseInt(Math.random() * 10000);
+    let id = parseInt(Math.random() * 100000);
     return id;
 }
+
