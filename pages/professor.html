@@ -226,7 +226,7 @@
                         </select>
 
                         <p>Disciplina:</p>
-                        <select name="disciplinaAluno" id="disciplinaAluno" required>
+                        <select name="disciplinaAluno" id="disciplinaNota" required>
                             <option value="">Selecione a Disciplina</option>
                             <option value="Matemática">Matemática</option>
                             <option value="Português">Português</option>
@@ -236,7 +236,7 @@
                         </select>
 
                         <p>Bimestre:</p>
-                        <select name="bimestre" id="bimestre" required>
+                        <select name="bimestre" id="bimestreNota" required>
                             <option value="">Selecione o Bimestre</option>
                             <option value="1bimestre">1ºBimestre</option>
                             <option value="2bimestre">2ºBimestre</option>
@@ -248,7 +248,7 @@
                         <input type="number" name="notaLancada" id="notaLancada" max="10"><br>
 
                         <div class="centralizador">
-                            <p class="btCadastrar" id="btCadastrar" onclick="lancaNota()"> CADASTRAR</p>
+                            <p class="btCadastrar" id="btCadastrar" onclick="verificaCamposNotas()"> CADASTRAR</p>
                         </div>
 
                     </form>
@@ -275,17 +275,16 @@
                     <form id="formFaltasProfessor" method="GET" action="">
 
                         <p>Ano/Turma:</p>
-                        <input type="text" id="anoTurmaNotas" placeholder="Digite a turma exata neste campo"
-                            onchange="listaAlunoNotas()">
+                        <input type="text" id="anoTurmaFaltas" placeholder="Digite a turma exata neste campo"
+                            onchange="listaAlunoFaltas()">
 
                         <p>Nome do aluno(a):</p>
                         <select name="nomeAlunoFaltas" id="nomeAlunoFaltas" required>
                             <option value="">Selecione o Aluno</option>
-                            <option value="joaoPedro">João Pedro</option>
                         </select>
 
                         <p>Disciplina:</p>
-                        <select name="disciplinaAluno" id="disciplinaAluno" required>
+                        <select name="disciplinaAluno" id="disciplinaFaltas" required>
                             <option value="">Selecione a Disciplina</option>
                             <option value="Matemática">Matemática</option>
                             <option value="Português">Português</option>
@@ -295,19 +294,19 @@
                         </select>
 
                         <p>Bimestre:</p>
-                        <select name="bimestre" id="bimestre" required>
+                        <select name="bimestre" id="bimestreFaltas" required>
                             <option value="">Selecione o Bimestre</option>
-                            <option value="1b">1ºBimestre</option>
-                            <option value="2b">2ºBimestre</option>
-                            <option value="3b">3ºBimestre</option>
-                            <option value="4b">4ºBimestre</option>
+                            <option value="1bimestre">1ºBimestre</option>
+                            <option value="2bimestre">2ºBimestre</option>
+                            <option value="3bimestre">3ºBimestre</option>
+                            <option value="4bimestre">4ºBimestre</option>
                         </select>
 
                         <p>Falta:</p><br>
-                        <input type="number" name="faltaLancada"><br>
+                        <input type="number" name="faltaLancada" id="faltaLancada"><br>
 
                         <div class="centralizador">
-                            <input type="submit" value="SALVAR">
+                            <p class="btCadastrar" id="btCadastrar" onclick="verificaCamposFaltas()"> CADASTRAR</p>
                         </div>
 
                     </form>
