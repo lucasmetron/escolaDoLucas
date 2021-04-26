@@ -328,14 +328,15 @@
                 <div id="mostradorAdvertenciasProfessor" class="mostradorAdvertenciasProfessor">
 
                     <form method="GET" action="">
+
+                        <p id="pAnoTurmaAdv">Ano/Turma:</p>
+                        <input type="text" id="anoTurmaAdv" placeholder="Digite a turma exata"
+                            onchange="listaAlunoAdv()">
+
                         <p id="pNomeAlunoAdv">Nome do aluno(a)</p>
                         <select name="nomeAlunoNotaAdv" id="nomeAlunoNotaAdv" required>
                             <option value="">Selecione o Aluno</option>
                             <option value="joaoPedro">João Pedro</option>
-                            <option value="pedroHenrique">Pedro Henrique</option>
-                            <option value="lucianaOliveira">Luciana Oliveira</option>
-                            <option value="igorSilvaNotas">Igor Silva</option>
-                            <option value="marianaCosta">Mariana Costa</option>
                         </select>
 
                         <p id="pTipoAdv">Tipo</p>
