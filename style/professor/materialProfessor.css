@@ -27,7 +27,7 @@
     position: absolute;
     width: 40%;
     height: auto;
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
     overflow: auto;
     overflow:auto;
 }
@@ -75,7 +75,7 @@
 }
 
 input[type="file"]{
-    display: none;
+    /* display: none; */
     cursor: pointer;    
 }
 
@@ -140,7 +140,10 @@ form > input[type="submit"]{
 
 #btEnviarMaterial{
     grid-area:btEnviarMaterial ;
+    margin: auto;
     margin-top: 20px;
+    text-align: center;
+    width: auto;
 }
 
 @media (max-width: 1077px) {

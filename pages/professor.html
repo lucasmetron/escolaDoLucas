@@ -393,10 +393,11 @@
                         <p id="pArquivoUpload">Selecionar arquivo</p>
                         <label id="arquivoUpload">
                             Upload do arquivo (.pdf, .doc)
-                            <input class="arquivo" type="file" id="materialProfessor" name="teste">
+                            <input class="arquivo" type="file" id="materialProfessor" name="materialProfessor">
                         </label>
 
-                        <input type="submit" value="ENVIAR" id="btEnviarMaterial">
+                        <!-- <input type="submit" value="ENVIAR" id="btEnviarMaterial"> -->
+                        <p class="btCadastrar" id="btEnviarMaterial" onclick="subirMaterial()"> CADASTRAR</p>
 
                     </form>
 
@@ -456,12 +457,15 @@
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
 
         <script src="/script/animacoes.js"></script>
         <script src="/script/professor/cadastrarRemover.js"></script>
         <script src="/script/professor/lancarNotas.js"></script>
         <script src="/script/professor/lancarFaltas.js"></script>
         <script src="/script/professor/advertencias.js"></script>
+        <script src="/script/professor/uploadMaterial.js"></script>
 </body>
 
 
