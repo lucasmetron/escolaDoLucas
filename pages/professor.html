@@ -32,14 +32,14 @@
 
                 <img id="fotoProfessorId" src="/assets/images/eLogo.png" alt="Foto do Aluno">
 
-                <div id="engrenagemBola" class="engrenagemBola"
+                <!-- <div id="engrenagemBola" class="engrenagemBola"
                     onmouseover="mudaImg('engrenagemBola','/assets/images/fotoEngrenagemYellow.png')"
                     onmouseout="voltaImg('engrenagemBola','/assets/images/fotoEngrenagem.png') "
                     onclick="mostraEsconde.mostra('.modalAlterarFotoProfessor')">
 
                     <img id="engrenagem" class="engrenagem" src="/assets/images/fotoEngrenagem.png" alt="alterar foto">
 
-                </div>
+                </div> -->
 
             </div>
 
@@ -171,6 +171,22 @@
                         <p class="btCadastrar" id="btCadastrar" onclick="verificaCampos()"> CADASTRAR</p>
                         <!-- <input type="submit" value="CADASTRAR" id="btCadastrar" onclick="cadastrarUsuario()"> -->
 
+
+                    </form>
+
+                    <form id="FormListarAluno" action="" method="GET">
+                        <h1>LISTAR ALUNO:</h1>
+
+                        <p id="pTurmaListarAluno">Turma:</p>
+                        <input type="text" id="turmaListarAluno" onchange="listaAluno()">
+
+
+                        <p id="pNomeListarAluno">Nome:</p>
+                        <select name="nomeListarAluno" id="nomeListarAluno" required>
+                            <option value="">Selecione o Aluno</option>
+                            <!-- <option value="joaoPedro">João Pedro</option> -->
+                        </select>
+                        <p class="btCadastrar marginBt" id="btRemover" onclick="verificaCamposRemover()">CONFIRMAR</p>
 
                     </form>
 
@@ -397,7 +413,7 @@
                         </label>
 
                         <!-- <input type="submit" value="ENVIAR" id="btEnviarMaterial"> -->
-                        <p class="btCadastrar" id="btEnviarMaterial" onclick="subirMaterial()"> CADASTRAR</p>
+                        <p class="btCadastrar" id="btEnviarMaterial" onclick="verificaCamposMaterial()"> CADASTRAR</p>
 
                     </form>
 
