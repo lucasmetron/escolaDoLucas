@@ -219,25 +219,6 @@ function cadastrarUsuario() {
 
 }
 
-function removerAluno() {
-    let turma = document.querySelector("#turmaExcluirAlunoInput").value
-    let matricula = document.querySelector("#NomeExcluirAlunoInput").value
-
-    db.collection(turma).doc(matricula).delete().then(
-        alert("Aluno deletado")
-    ).catch(error => {
-        alert("Sitema fora do ar, tente novamente mais tarde :(")
-        console.log(error)
-    })
-
-    setTimeout(() => {
-        window.location.reload();
-    }, 1000)
-
-    console.log(turma, aluno)
-}
-
-
 async function listaAluno() {
     let turmaSelecionada = document.querySelector("#turmaExcluirAlunoInput").value
 
@@ -268,7 +249,6 @@ async function listaAluno() {
 
 }
 
-
 async function onSnapshotListaAlunos() {  //ESTA FUNÇÃO NAO ESTA EM USO
     let turmaSelecionada = document.querySelector("#turmaExcluirAlunoInput").value
     console.log(turmaSelecionada);
@@ -296,5 +276,43 @@ async function onSnapshotListaAlunos() {  //ESTA FUNÇÃO NAO ESTA EM USO
 
 }
 
+function verificaCamposRemover() {
 
 
+    if (document.querySelector("#turmaExcluirAlunoInput").value == '') {
+        alert("Preencha todos os campos! Campo 'Turma' vazio.")
+        document.querySelector("#turmaExcluirAlunoInput").focus()
+    }
+
+    else if (document.querySelector("#NomeExcluirAlunoInput").value == '') {
+        alert("Preencha todos os campos! Campo 'Aluno' vazio.");
+        document.querySelector("#NomeExcluirAlunoInput").focus();
+
+    }
+
+
+    else {
+        removerAluno();
+    }
+
+
+
+}
+
+function removerAluno() {
+    let turma = document.querySelector("#turmaExcluirAlunoInput").value
+    let matricula = document.querySelector("#NomeExcluirAlunoInput").value
+
+    db.collection(turma).doc(matricula).delete().then(
+        alert("Aluno excluido com sucesso!")
+    ).catch(error => {
+        alert("Sitema fora do ar, tente novamente mais tarde :(")
+        console.log(error)
+    })
+
+    setTimeout(() => {
+        window.location.reload();
+    }, 1000)
+
+    console.log(turma, aluno)
+}
