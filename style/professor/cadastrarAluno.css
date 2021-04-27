@@ -160,8 +160,185 @@ form > p{
     width: auto;
     margin: auto;
     text-align: center;
-    margin-top:10px
+    margin-top:20px
 }
+
+.mostradorAlunoCadastro > #formListar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                        'h1ListarAluno h1ListarAluno'
+                        'pTurmaListarAluno pNomeListarAluno'
+                        'turmaListarAluno nomeListarAluno'
+                        'btListarAluno btListarAluno' ;
+
+    gap: 8px;
+}
+
+#h1ListarAluno{
+    margin-top:20px;
+    grid-area:h1ListarAluno;
+}
+
+#pTurmaListarAluno{
+    grid-area:pTurmaListarAluno;
+}
+
+#turmaListarAluno{
+    grid-area:turmaListarAluno;
+}
+
+#pNomeListarAluno{
+    grid-area:pNomeListarAluno;
+}
+
+#nomeListarAluno{
+    grid-area:nomeListarAluno;
+}
+
+#btListarAluno{
+    grid-area:btListarAluno;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.linhaDivisoria{
+    background-color:white;
+    width: 100%;
+    height:2px;
+    margin-top:20px
+}
+
+
+.mostradorAlunoCadastro > #alunoBD{
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+                        'linhaDivisoria linhaDivisoria'
+                        'pTurmaBD pMatriculaBD'
+                        'turmaBD matriculaBD'
+                        'pNomeBD pNomeBD'
+                        'nomeBD nomeBD'
+                        'pIdadeBD pCpfBD'
+                        'idadeBD cpfBD'
+                        'pAlunoCelularBD pEmailBD'
+                        'alunoCelularBD emailBD'
+                        'pNoRespBD pNoRespBD'
+                        'noRespBD noRespBD'
+                        'pEmailRespDB pEmailRespDB'
+                        'emailRespDB emailRespDB'
+                        'pCelRespDB pObsDB'
+                        'celRespDB obsDB'
+                        'btFecharList btFecharList';
+    gap: 8px;
+}
+
+#linhaDivisoria{
+    grid-area: linhaDivisoria;
+}
+
+#pTurmaBD{
+    grid-area:pTurmaBD;
+}
+
+#turmaBD{
+    grid-area:turmaBD;
+}
+
+#pMatriculaBD{
+    grid-area:pMatriculaBD;
+}
+
+#matriculaBD{
+    grid-area:matriculaBD;
+}
+
+#pNomeBD{
+    grid-area:pNomeBD;
+}
+
+#nomeBD{
+    grid-area:nomeBD;
+}
+
+#pIdadeBD{
+    grid-area:pIdadeBD;
+}
+
+#idadeBD{
+    grid-area:idadeBD;
+}
+
+#pCpfBD{
+    grid-area:pCpfBD;
+}
+
+#cpfBD{
+    grid-area:cpfBD;
+}
+
+#pAlunoCelularBD{
+    grid-area:pAlunoCelularBD;
+}
+
+#alunoCelularBD{
+    grid-area:alunoCelularBD;
+}
+
+#pEmailBD{
+    grid-area:pEmailBD;
+}
+
+#emailBD{
+    grid-area:emailBD;
+}
+
+#pNoRespBD{
+    grid-area:pNoRespBD;
+}
+
+#noRespBD{
+    grid-area:noRespBD;
+}
+
+#pEmailRespDB{
+    grid-area:pEmailRespDB;
+}
+
+#emailRespDB{
+    grid-area:emailRespDB;
+}
+
+#pCelRespDB{
+    grid-area:pCelRespDB;
+}
+
+#celRespDB{
+    grid-area:celRespDB;
+}
+
+#pObsDB{
+    grid-area:pObsDB;
+}
+
+#obsDB{
+    grid-area:obsDB;
+}
+
+#btFecharList{
+    grid-area:btFecharList;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.fundoBranco{
+    background-color:white;
+    width:100%;
+    line-height: auto;
+
+}
+
+
 
 
 .mostradorAlunoCadastro > #formExcluir{
@@ -202,13 +379,10 @@ form > p{
     grid-area: btRemover ;
     margin: auto;
     width: auto;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 
-form input[type='number']{
-
-}
 
 form input[type="submit"]{
     background-color:#FECE00;
