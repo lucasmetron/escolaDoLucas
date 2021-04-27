@@ -299,7 +299,7 @@ function verificaCamposRemover() {
 
 }
 
-function listarAluno() {
+function listaAlunoDB() {
     let divOculta = document.querySelector("#alunoBD")
     divOculta.style.display = "grid"
 }
