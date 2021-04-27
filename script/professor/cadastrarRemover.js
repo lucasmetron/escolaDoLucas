@@ -299,6 +299,18 @@ function verificaCamposRemover() {
 
 }
 
+function listarAluno() {
+    let divOculta = document.querySelector("#alunoBD")
+    divOculta.style.display = "grid"
+}
+
+
+function fecharListaAluno() {
+    let divOculta = document.querySelector("#alunoBD")
+    divOculta.style.display = "none"
+}
+
+
 function removerAluno() {
     let turma = document.querySelector("#turmaExcluirAlunoInput").value
     let matricula = document.querySelector("#NomeExcluirAlunoInput").value
