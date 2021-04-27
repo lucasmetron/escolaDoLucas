@@ -34,7 +34,8 @@
                 <div id="engrenagemBola" class="engrenagemBola"
                     onmouseover="mudaImg('engrenagemBola','/assets/images/fotoEngrenagemYellow.png')"
                     onmouseout="voltaImg('engrenagemBola','/assets/images/fotoEngrenagem.png')"
-                    onclick="mostraEsconde.mostra('.modalAlterarFotoAluno')">
+                    onclick="emDesenvolvimento()">
+                    <!-- mostraEsconde.mostra('.modalAlterarFotoAluno') -->
 
                     <img id="engrenagem" class="engrenagem" src="/assets/images/fotoEngrenagem.png" alt="alterar foto">
 
@@ -99,9 +100,10 @@
 
             <div class="mostrarTrocaFoto">
 
-                <img class="xFoto" src="/assets/images/xYellow.png" alt="fechar janela" onclick="mostraEsconde.esconde('.modalAlterarFotoAluno')" >
+                <img class="xFoto" src="/assets/images/xYellow.png" alt="fechar janela"
+                    onclick="mostraEsconde.esconde('.modalAlterarFotoAluno')">
                 <p class=selectEspacamento>Selecione a nova foto</p>
-                <br><label class="carregarFoto" >
+                <br><label class="carregarFoto">
                     Carregar foto
                     <input type="file">
                 </label>
@@ -330,7 +332,7 @@
                     <div id="professorMaterial" class="campoMaterial">Professor Alex Paxeco</div>
                     <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
 
-                    
+
                     <div id="tituloMaterial" class="campoMaterial">Gabarito da prova 2</div>
                     <div id="materiaMaterial" class="campoMaterial">Geografia</div>
                     <div id="professorMaterial" class="campoMaterial">Professor Gilberto Santos</div>
@@ -358,8 +360,8 @@
 
         <!-- ----------------------------------- FIM TELAS OCULTAS ------------------------------------- -->
 
-        <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.modalBalao')" >
-            <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas" >Dúvidas</p>
+        <div id="balaoDuvida" class="balaoDuvida" onclick="mostraEsconde.mostra('.modalBalao')">
+            <p id="duvidas"> <img src="/assets/images/duvidas.png" alt="balão de duvidas">Dúvidas</p>
         </div>
 
         <div class="modalBalao active">
@@ -367,7 +369,8 @@
             <div class="mostraBalao">
                 <div class="cabecalho">
                     <h1>Dúvidas:</h1>
-                    <img class="xBalao" src="/assets/images/xYellow.png" alt="x" onclick="mostraEsconde.esconde('.modalBalao')">
+                    <img class="xBalao" src="/assets/images/xYellow.png" alt="x"
+                        onclick="mostraEsconde.esconde('.modalBalao')">
                 </div>
 
                 <form method="GET" action="" class="formTamanho">
@@ -379,7 +382,7 @@
                         <option value="Ricardo">Ricardo</option>
                         <option value="Fabricio">Fabricio</option>
                         <option value="Matheus">Matheus</option>
-                   
+
                     </select>
 
                     <div class="ajustaForm">
@@ -391,7 +394,7 @@
                     <div class="centralizador">
                         <input type="submit" value="Enviar" id="bt" onclick="mandarEmail(nome ,professor)">
                     </div>
-                    
+
                 </form>
             </div>
         </div>

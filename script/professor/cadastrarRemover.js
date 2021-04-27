@@ -304,12 +304,10 @@ function listaAlunoDB() {
     divOculta.style.display = "grid"
 }
 
-
 function fecharListaAluno() {
     let divOculta = document.querySelector("#alunoBD")
     divOculta.style.display = "none"
 }
-
 
 function removerAluno() {
     let turma = document.querySelector("#turmaExcluirAlunoInput").value
@@ -328,3 +326,4 @@ function removerAluno() {
 
     console.log(turma, aluno)
 }
+
