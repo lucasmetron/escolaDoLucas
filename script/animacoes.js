@@ -16,7 +16,6 @@ let mostraEsconde = {
     mostra: (modal) => {
         let tela = document.querySelector(modal)
         tela.classList.toggle('active')
-        console.log(tela)
     },
 
     esconde: (modal) => {
@@ -28,7 +27,6 @@ let mostraEsconde = {
             tela.setAttribute('style', 'display:')
         }, 500)
 
-        console.log(tela)
     },
 
 
