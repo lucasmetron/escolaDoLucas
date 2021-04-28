@@ -45,7 +45,6 @@ let esconde = () => {
     console.log(tela)
 }
 
-
 let emDesenvolvimento = () => {
     alert("Em desenvolvimento.")
 }

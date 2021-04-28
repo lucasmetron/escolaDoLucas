@@ -299,9 +299,81 @@ function verificaCamposRemover() {
 
 }
 
-function listaAlunoDB() {
+async function busrcarAlunoDB() {
+
+    let turmaSelecionada = document.querySelector("#turmaListarAluno").value
+
+    let tagSelect = document.querySelector("#nomeListarAluno");
+    tagSelect.innerHTML = '<option value="">Selecione o Aluno</option>';
+
+    await alert(`Atenção! Caso o campo nome não apresente listagem, a turma ${turmaSelecionada} não existe.`)
+
+    await db.collection(turmaSelecionada).get().then((snapshot) => {
+        snapshot.forEach((doc) => {
+            let nomeAluno = doc.data().nomeAluno;
+            let matriculaAluno = doc._delegate._key.path.segments[6];
+            // let aluno = document.createTextNode(nomeAluno);
+            // let matricula = document.createTextNode(matriculaAluno);
+
+            let novaTagOption = document.createElement('option');
+            let infoAluno = nomeAluno + "/ Matricula:" + matriculaAluno;
+            let info = document.createTextNode(infoAluno)
+
+
+            novaTagOption.append(info);
+            novaTagOption.setAttribute('value', matriculaAluno)
+            tagSelect.appendChild(novaTagOption);
+
+        })
+    })
+}
+
+async function mostrarAlunoDB() {
+    let aluno = document.querySelector("#nomeListarAluno").value;
+
+    let turma = document.querySelector("#turmaListarAluno").value;
+    let matricula;
+    let nomeAluno;
+    let idade;
+    let cpf;
+    let celularAluno;
+    let emailAluno;
+    let nomeResp;
+    let emailResp;
+    let celularResp;
+    let obs;
+
+    await db.collection(turma).doc(aluno).get().then(doc => {
+        nomeAluno = doc.data().nomeAluno;
+        matricula = doc._delegate._key.path.segments[1];
+        idade = doc.data().idade;
+        cpf = doc.data().cpf;
+        celularAluno = doc.data().celularAluno;
+        emailAluno = doc.data().emailAluno;
+        nomeResp = doc.data().nomeResp;
+        emailResp = doc.data().emailResp;
+        celularResp = doc.data().celularResp;
+        obs = doc.data().obs;
+
+    })
+
+    console.log(nomeAluno, matricula, idade, cpf, celularAluno, emailAluno, nomeResp, emailResp, celularResp, obs)
+    document.querySelector("#turmaBD").innerHTML = turma;
+    document.querySelector("#matriculaBD").innerHTML = matricula;
+    document.querySelector("#nomeBD").innerHTML = nomeAluno;
+    document.querySelector("#idadeBD").innerHTML = idade;
+    document.querySelector("#cpfBD").innerHTML = cpf;
+    document.querySelector("#alunoCelularBD").innerHTML = celularAluno;
+    document.querySelector("#emailBD").innerHTML = emailAluno;
+    document.querySelector("#noRespBD").innerHTML = nomeResp;
+    document.querySelector("#emailRespDB").innerHTML = emailResp;
+    document.querySelector("#celRespDB").innerHTML = celularResp;
+    document.querySelector("#obsDB").innerHTML = obs;
+
     let divOculta = document.querySelector("#alunoBD")
     divOculta.style.display = "grid"
+
+
 }
 
 function fecharListaAluno() {
