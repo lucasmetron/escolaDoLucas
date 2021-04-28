@@ -145,9 +145,6 @@ form > input, textarea{
     color: #FECE00;
 }
 
-.mostradorAdvertenciasProfessor input[type=text]{
-    padding-inline-start: 5%;
-}
 
 
 @media (max-width: 1077px) {
