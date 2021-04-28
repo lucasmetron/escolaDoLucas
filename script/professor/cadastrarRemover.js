@@ -409,21 +409,29 @@ function verificaCamposRemover() {
 
 }
 
-function removerAluno() {
+async function removerAluno() {
     let turma = document.querySelector("#turmaExcluirAlunoInput").value
     let matricula = document.querySelector("#NomeExcluirAlunoInput").value
 
-    db.collection(turma).doc(matricula).delete().then(
-        alert("Aluno excluido com sucesso!")
-    ).catch(error => {
-        alert("Sitema fora do ar, tente novamente mais tarde :(")
-        console.log(error)
-    })
+    if (turma == "3a" && matricula == 17007739) {
+        alert("Este aluno não pode ser deletado pois ele faz parte da demonstração do projeto! Escolha outro.")
+    }
 
-    setTimeout(() => {
-        window.location.reload();
-    }, 1000)
+    else {
 
-    console.log(turma, aluno)
+        await db.collection(turma).doc(matricula).delete().then(
+            alert("Aluno excluido com sucesso!")
+        ).catch(error => {
+            alert("Sitema fora do ar, tente novamente mais tarde :(")
+            console.log(error)
+        })
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000)
+    }
+
+
+
 }
 

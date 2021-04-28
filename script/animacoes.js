@@ -46,5 +46,5 @@ let esconde = () => {
 }
 
 let emDesenvolvimento = () => {
-    alert("Em desenvolvimento.")
+    alert("Este botão é apenas demostrativo, não implementei o mesmo para manter o layout demonstrativo da página");
 }
