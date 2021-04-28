@@ -14,3 +14,8 @@ firebase.analytics();
 let db = firebase.firestore();
 
 console.log(db)
+
+function listaNotas() {
+
+
+}
