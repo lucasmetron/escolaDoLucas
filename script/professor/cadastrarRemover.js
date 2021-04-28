@@ -22,7 +22,7 @@ let igualdadeCelularNovoAluno = false;
 let igualdadeEmailNovoAluno = false;
 
 
-
+// CADASTRA ALUNO 
 
 function verificaCampos() {
 
@@ -276,28 +276,8 @@ async function onSnapshotListaAlunos() {  //ESTA FUNÇÃO NAO ESTA EM USO
 
 }
 
-function verificaCamposRemover() {
+// MOSTRA ALUNO 
 
-
-    if (document.querySelector("#turmaExcluirAlunoInput").value == '') {
-        alert("Preencha todos os campos! Campo 'Turma' vazio.")
-        document.querySelector("#turmaExcluirAlunoInput").focus()
-    }
-
-    else if (document.querySelector("#NomeExcluirAlunoInput").value == '') {
-        alert("Preencha todos os campos! Campo 'Aluno' vazio.");
-        document.querySelector("#NomeExcluirAlunoInput").focus();
-
-    }
-
-
-    else {
-        removerAluno();
-    }
-
-
-
-}
 
 async function busrcarAlunoDB() {
 
@@ -326,6 +306,29 @@ async function busrcarAlunoDB() {
 
         })
     })
+}
+
+function verificaCamposMostrar() {
+
+
+    if (document.querySelector("#turmaListarAluno").value == '') {
+        alert("Preencha todos os campos! Campo 'Turma' vazio.")
+        document.querySelector("#turmaListarAluno").focus()
+    }
+
+    else if (document.querySelector("#nomeListarAluno").value == '') {
+        alert("Preencha todos os campos! Campo 'Aluno' vazio.");
+        document.querySelector("#nomeListarAluno").focus();
+
+    }
+
+
+    else {
+        mostrarAlunoDB();
+    }
+
+
+
 }
 
 async function mostrarAlunoDB() {
@@ -379,6 +382,31 @@ async function mostrarAlunoDB() {
 function fecharListaAluno() {
     let divOculta = document.querySelector("#alunoBD")
     divOculta.style.display = "none"
+}
+
+// REMOVER ALUNO 
+
+function verificaCamposRemover() {
+
+
+    if (document.querySelector("#turmaExcluirAlunoInput").value == '') {
+        alert("Preencha todos os campos! Campo 'Turma' vazio.")
+        document.querySelector("#turmaExcluirAlunoInput").focus()
+    }
+
+    else if (document.querySelector("#NomeExcluirAlunoInput").value == '') {
+        alert("Preencha todos os campos! Campo 'Aluno' vazio.");
+        document.querySelector("#NomeExcluirAlunoInput").focus();
+
+    }
+
+
+    else {
+        removerAluno();
+    }
+
+
+
 }
 
 function removerAluno() {
