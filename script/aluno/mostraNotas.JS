@@ -17,11 +17,11 @@ let matricula = '17007739'
 
 
 async function listaNotas() {
-    let inforMat = [];
-    let inforPort;
-    let inforCien;
-    let inforGeo;
-    let inforHist;
+    let infoMat;
+    let infoPort;
+    let infoCien;
+    let infoGeo;
+    let infoHist;
 
     await db.collection(turma).doc(matricula).get().then(doc => {
 
