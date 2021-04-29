@@ -49,9 +49,13 @@
 
 }
 
+
 .campo{
     background-color: white;
     padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .amarelo{
@@ -60,6 +64,11 @@
     cursor: pointer;
     transition-property: background-color;
     transition-duration: 500ms;
+}
+
+.link{
+    text-decoration: none;
+    color: #5D5D5D;
 }
 
 .amarelo:hover{

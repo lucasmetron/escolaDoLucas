@@ -204,7 +204,8 @@ function cadastrarUsuario() {
         nomeResp: nomeResp,
         emailResp: emailResp,
         celularResp: celularResp,
-        obs: obs
+        obs: obs,
+        matricula: matricula
     }).then(doc => {
         alert("Aluno cadastrado com sucesso")
     }).catch(erro => {

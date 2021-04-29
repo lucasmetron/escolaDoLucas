@@ -69,6 +69,18 @@ function verificaCamposAdv() {
 
 }
 
+let ocorrencia = (conse, data, motivo, tipo) => {
+    return {
+
+        tipo: tipo,
+        motivo: motivo,
+        data: data,
+        consequencia: conse
+
+    }
+
+}
+
 async function lancaAdv() {
 
     let anoTurma = document.querySelector("#anoTurmaAdv").value;
@@ -77,18 +89,14 @@ async function lancaAdv() {
     let motivo = document.querySelector("#motivo").value;
     let data = document.querySelector("#dataAdv").value;
     let consequencia = document.querySelector("#consequencia").value;
-    let id = geraID();
+
 
     await db.collection(anoTurma).doc(matricula).set(
         {
-            ocorrencias: {
-                [id]: {
-                    tipo: tipo,
-                    motivo: motivo,
-                    data: data,
-                    consequencia: consequencia
-                }
-            }
+
+            ocorrencias: firebase.firestore.FieldValue.arrayUnion(
+                ocorrencia(tipo, data, motivo, consequencia)
+            )
 
         }, { merge: true }
 
@@ -103,9 +111,6 @@ async function lancaAdv() {
     }, 1000)
 }
 
-function geraID() {
-    let id = "id" + parseInt(Math.random() * 100000);
-    return id;
-}
 
-console.log(geraID())
+
+

@@ -16,6 +16,7 @@ let turma = '3a'
 let matricula = '17007739'
 
 
+
 db.collection(turma).onSnapshot( //essa função observa o banco e se algo mudar ela executa automaticamente
 
     async function listaNotas() {
@@ -75,7 +76,3 @@ function media(n1, n2, n3, n4) {
     let resultado = (n1 + n2 + n3 + n4) / 4;
     return resultado.toFixed(2)
 }
-
-// console.log(media(6, 7.75, 8.5, 5.1))
-
-listaNotas();
