@@ -1,5 +1,9 @@
 let listaOcorrencias;
 
+let formatDate = (date) => {
+    const splitDate = date.split("-")
+    return `${splitDate[2]}/${splitDate[1]}/${splitDate[0]}`
+}
 
 db.collection(turma).onSnapshot(snapshot => {
     let tela = document.querySelector("#mostradorAdvertencias");
@@ -16,6 +20,9 @@ db.collection(turma).onSnapshot(snapshot => {
 
 
         listaOcorrencias.forEach(item => {
+            let data = item.data;
+
+
 
             console.log()
             let advArea = document.querySelector("#mostradorAdvertencias")
@@ -27,7 +34,7 @@ db.collection(turma).onSnapshot(snapshot => {
             let tagLink = document.createElement("a");
 
             let infoMot = document.createTextNode(item.motivo)
-            let infoData = document.createTextNode(item.data)
+            let infoData = document.createTextNode(formatDate(data))
             let infoConse = document.createTextNode(item.consequencia)
             let infoLink = document.createTextNode("Acesse aqui")
 
@@ -61,7 +68,14 @@ db.collection(turma).onSnapshot(snapshot => {
     }
 
     listaAdvs()
+
 })
+
+
+
+
+
+
 
 
 
