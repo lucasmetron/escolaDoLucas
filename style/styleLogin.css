@@ -50,7 +50,7 @@ input[type=text],[type=password] {
     border-radius: 25px;
     border: none;
     font-size: 1.2rem;
-    padding-inline-start: 20%;
+    padding-inline-start: 9%;
     outline: 0;
     box-sizing: border-box;
     /* transform: translateX(-5%); */
@@ -121,6 +121,22 @@ input[type=submit]:hover{
 P{
     color: #51504E;
     cursor: pointer;
+}
+
+.demo1{
+    position: fixed;
+    left: 50%;
+    top: 0px;
+    font-size: 15px;
+    transform: translateX(-50%);
+}
+
+.demo2{
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    font-size: 15px;
+    transform: translateX(-50%);
 }
 
 .ilustracao{
@@ -365,13 +381,13 @@ P{
     input[type=text]{
         background-position-x: 7%;
         background-size:12px;
-        padding-inline-start: 12%;
+        padding-inline-start: 9%;
     }
     
     input[type=password]{
         background-position-x: 7%;
         background-size: 8px;
-        padding-inline-start: 12%;
+        padding-inline-start: 10%;
     }
 
     input[type=submit]{

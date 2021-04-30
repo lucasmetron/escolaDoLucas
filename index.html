@@ -16,12 +16,13 @@
     <div class="conteinerLogin">
 
         <div class="login">
+
             <img id="logoLucas" src="./assets/images/logo.png" alt="Escola do Lucas">
 
             <form method="GET" action="">
                 <!-- colocar a action aqui e metodo GET esta somente para teste -->
-                <input type="text" name="usuario" id="usuario"><br>
-                <input type="password" name="senha" id="senha"><br>
+                <input type="text" name="usuario" id="usuario" onclick="use()"><br>
+                <input type="password" name="senha" id="senha" onclick="pass()"><br>
 
                 <!-- <input type="submit" id="acessar" value="ACESSAR"><br> -->
             </form>
@@ -29,7 +30,6 @@
             <p id="btAcessarLogin" class="btAcessarLogin" onclick="verificaCamposLogin()">ACESSAR</p>
             <P onclick="aviso()">Esqueci minha senha</P><br>
 
-            <!-- <a href="/pages/aluno.html">Aluno</a> <a href="/pages/professor.html">Professor</a> -->
         </div>
 
         <div class="ilustracao">
@@ -37,9 +37,27 @@
 
         </div>
 
+        <a href="./pages/professor.html">
+            <p class="demo1">Usuario Professor</p>
+        </a>
+        <a href="./pages/aluno.html">
+            <p class="demo2">Usuario Aluno</p>
+        </a>
+
+
     </div>
 
-    <script src="./script/login.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+                  https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <script src="/script/login.js"></script>
 </body>
 
 </html>
