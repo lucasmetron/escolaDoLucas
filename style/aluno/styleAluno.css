@@ -640,4 +640,9 @@ select{
         height:auto;
    
     }
+
+    .xBalao {
+        width: 30px;
+        height: 30px;
+    }
 }
