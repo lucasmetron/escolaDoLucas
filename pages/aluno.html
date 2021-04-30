@@ -243,7 +243,8 @@
                     <h4 class="b2">Consequência</h4>
                     <h4 class="b3">Assinatura Responsável</h4>
 
-                    <!-- 
+                    <!-- Modelo 
+
                     <div id="campoMotivo" class="campo">Não fez dever de casa</div>
                     <div id="campoData" class="campo">05/03/2021</div>
                     <div id="campoConsequencia" class="campo">Advertência</div>
@@ -264,46 +265,15 @@
 
                 <div id="mostradorMaterial" class="mostradorMaterial">
 
-                    <div id="tituloMaterial" class="campoMaterial">Gabarito da prova 2</div>
-                    <div id="materiaMaterial" class="campoMaterial">Geografia</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Gilberto Santos</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
+                    <h4 class="titulos">Atividade</h3>
+                        <h4 class="titulos">Matéria</h4>
+                        <h4 class="titulos">Professor</h4>
+                        <h4 class="titulos">Link</h4>
 
-                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Guerra Fria</div>
-                    <div id="materiaMaterial" class="campoMaterial">História</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Wanderson Abreu</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Material para revisão</div>
-                    <div id="materiaMaterial" class="campoMaterial">Matemática</div>
-                    <div id="professorMaterial" class="campoMaterial">Professora Rosa Torres</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Elétrons e Nêutrons</div>
-                    <div id="materiaMaterial" class="campoMaterial">Química</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Alex Paxeco</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-
-                    <div id="tituloMaterial" class="campoMaterial">Gabarito da prova 2</div>
-                    <div id="materiaMaterial" class="campoMaterial">Geografia</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Gilberto Santos</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Guerra Fria</div>
-                    <div id="materiaMaterial" class="campoMaterial">História</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Wanderson Abreu</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Material para revisão</div>
-                    <div id="materiaMaterial" class="campoMaterial">Matemática</div>
-                    <div id="professorMaterial" class="campoMaterial">Professora Rosa Torres</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
-
-                    <div id="tituloMaterial" class="campoMaterial">Tarefa - Elétrons e Nêutrons</div>
-                    <div id="materiaMaterial" class="campoMaterial">Química</div>
-                    <div id="professorMaterial" class="campoMaterial">Professor Alex Paxeco</div>
-                    <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
+                        <div id="tituloMaterial" class="campoMaterial">Gabarito da prova 2</div>
+                        <div id="materiaMaterial" class="campoMaterial">Geografia</div>
+                        <div id="professorMaterial" class="campoMaterial">Professor Gilberto Santos</div>
+                        <div id="campoAcessar" class="campoMaterial amareloMaterial">Clique aqui</div>
 
                 </div>
             </div>
@@ -329,7 +299,8 @@
                     <p>Dúvida:</p>
                     <textarea name="mensagem" id="mensagem" cols="50" rows="10"></textarea>
                     <p>Professor:</p>
-                    <select name="professor" id="professor">
+                    <select name="professorDuvidas" id="professorDuvidas" required>
+                        <option value="">Selecione o professor</option>
                         <option value="Carlos"> Carlos</option>
                         <option value="Ricardo">Ricardo</option>
                         <option value="Fabricio">Fabricio</option>
@@ -339,12 +310,14 @@
 
                     <div class="ajustaForm">
                         <p id="nomeTexto">Nome:</p>
-                        <input type="text" name="nome" id="nomeInput">
+                        <input type="text" name="nome" id="nomeInput" value="Lucas Marcelino Rosa" disabled>
                         <p id="turmaTexto">Turma:</p>
-                        <input type="text" name="turma" id="turmaInput"><br>
+                        <input type="text" name="turma" id="turmaInput" value="3b" disabled><br>
                     </div>
                     <div class="centralizador">
-                        <input type="submit" value="Enviar" id="bt" onclick="mandarEmail(nome ,professor)">
+
+                        <p class="btCadastrar" id="btSubmit" onclick="verificaCamposDuvidas()"> Enviar</p>
+                        <!-- <input type="submit" value="Enviar" id="bt" onclick="mandarEmail(nome ,professor)"> -->
                     </div>
 
                 </form>
@@ -365,6 +338,7 @@
         <script src="/script/aluno/mostraNotas.js"></script>
         <script src="/script/aluno/mostraFaltas.js"></script>
         <script src="/script/aluno/mostraAdv.js"></script>
+        <script src="/script/aluno/mostrarMateriais.js"></script>
 </body>
 
 </html>

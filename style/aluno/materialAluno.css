@@ -22,7 +22,7 @@
     position: absolute;
     width: 70%;
     height: 70%;
-    padding: 50px;
+    padding: 50px 50px 50px 50px;
     overflow: auto;
 }
 
@@ -43,8 +43,7 @@
     /* background-color: hotpink; */
     display: grid;
     grid-template: repeat(4, 1fr) /repeat(4, 1fr);
-    row-gap: 5px;
-    column-gap: 5px;
+    gap: 5px;
     text-align: center;
     overflow: auto;
     height: 70%;

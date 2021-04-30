@@ -32,15 +32,16 @@ async function subirMaterial() {
     let nomeAtividade = document.querySelector("#nomeAtiviProfessor").value;
     let disciplina = document.querySelector("#disciplinaMAterialProfessor").value;
     let arquivo = document.querySelector("#materialProfessor").files[0]
-    let storageRef = firebase.storage().ref();
-    let documentoRef = storageRef.child("material/" + arquivo.name)
+    var storageRef = firebase.storage().ref();
+    var documentoRef = storageRef.child("material/" + arquivo.name)
 
     alert("Seu material será salvo!");
 
     await db.collection(arq).doc(nomeAtividade).set({
         nomeAtividade: nomeAtividade,
         disciplina: disciplina,
-        nomeArquivo: arquivo.name
+        nomeArquivo: arquivo.name,
+        nomeProfessor: "Ricardo Oliveira"
     }).then(doc => {
         console.log("Atividade salva na nuvem.")
     }).catch(erro => {
@@ -59,5 +60,6 @@ async function subirMaterial() {
         window.location.reload();
     }, 500)
 }
+
 
 

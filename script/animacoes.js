@@ -46,3 +46,44 @@ let esconde = () => {
 let emDesenvolvimento = () => {
     alert("Este botão é apenas demostrativo, não implementei o mesmo para manter o layout demonstrativo da página");
 }
+
+function verificaCamposDuvidas() {
+
+
+    if (document.querySelector("#mensagem").value == '') {
+        alert("Preencha todos os campos! Campo 'Dúvida' vazio.")
+        document.querySelector("#mensagem").focus()
+    }
+
+    else if (document.querySelector("#professorDuvidas").value == '') {
+        alert("Preencha todos os campos! Campo 'Professor' vazio.");
+        document.querySelector("#professorDuvidas").focus();
+
+    }
+
+    else if (document.querySelector("#nomeInput").value == '') {
+        alert("Preencha todos os campos! Campo 'Nome' vazio.")
+        document.querySelector("#nomeInput").focus()
+    }
+
+    else if (document.querySelector("#turmaInput").value == '') {
+        alert("Preencha todos os campos! Campo 'turma'vazio.")
+        document.querySelector("#turmaInput").focus()
+    }
+
+    else {
+        enviaEmail();
+    }
+
+
+
+}
+
+let enviaEmail = () => {
+    let professor = document.querySelector("#professorDuvidas").value;
+    let email = professor.toLowerCase() + "@gmail.com";
+
+    alert(`E-mail enviado para ${email}. Assim que possível seu professor ${professor} entrará em contanto `)
+
+    window.location.reload();
+}
