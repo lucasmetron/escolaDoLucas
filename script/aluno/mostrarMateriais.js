@@ -39,19 +39,19 @@ db.collection(materialLocal).onSnapshot(snapshot => {
 
             tagAtividade.append(infoAtividade)
             tagAtividade.setAttribute("id", "tituloMaterial")
-            tagAtividade.setAttribute("class", "campoMaterial")
+            tagAtividade.setAttribute("class", "campo")
 
             tagMateria.append(infoMateria)
             tagMateria.setAttribute("id", "materiaMaterial")
-            tagMateria.setAttribute("class", "campoMaterial")
+            tagMateria.setAttribute("class", "campo")
 
             tagProfe.append(infoProfe)
             tagProfe.setAttribute("id", "professorMaterial")
-            tagProfe.setAttribute("class", "campoMaterial")
+            tagProfe.setAttribute("class", "campo")
 
             tagLink.append(infoLink)
             tagLink.href = "https://firebasestorage.googleapis.com/v0/b/escoladolucas-81f7c.appspot.com/o/adv%2Ftermo.docx?alt=media&token=b8ad323e-a58b-40ab-a67c-17f00778166d"
-            tagLink.setAttribute("class", "campoMaterial amareloMaterial link")
+            tagLink.setAttribute("class", "amareloMaterial link")
             tagLink.target = "_blanck"
 
 

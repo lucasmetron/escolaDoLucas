@@ -43,11 +43,10 @@
     /* background-color: hotpink; */
     display: grid;
     grid-template: repeat(4, 1fr) /repeat(4, 1fr);
-    gap: 5px;
     text-align: center;
     overflow: auto;
     height: 70%;
-
+  gap: 5px;
 }
 
 
@@ -60,11 +59,13 @@
 }
 
 .amareloMaterial{
-    height: 50%;
-    padding: 10px;
+    height: 100%;
     background-color: #FECE00;
     font-weight: 900;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     transition-property: background-color;
     transition-duration: 500ms;

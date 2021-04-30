@@ -10,7 +10,6 @@ let voltaImg = (id, img) => {
     // console.log(image)
 }
 
-
 let mostraEsconde = {
 
     mostra: (modal) => {
