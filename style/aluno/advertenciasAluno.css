@@ -105,4 +105,8 @@
     #conteinerVerAdvertencias{
         padding: 50px 25px 25px;    
     }
+
+    #mostradorAdvertencias{
+        max-height: 80% ;
+    }
 }

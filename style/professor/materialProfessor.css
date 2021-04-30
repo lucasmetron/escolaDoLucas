@@ -32,7 +32,7 @@
     overflow:auto;
 }
 
-.cabecalho{
+.cabecalhoMaterial{
     /* background-color: blue; */
     display: flex;
     justify-content: space-between;
@@ -172,13 +172,15 @@ form > input[type="submit"]{
     #conteinerVerMaterial{
 
         width: 80%;
-        height: auto;
-        padding: 50px 10px 50px 10px;    
+        max-height: 70%;
+        padding: 0px 10px 50px 10px;  
+        margin-bottom: 20px;  
     }
 
-    #xNotas{
-        width: 10px;
-        height: 10px;
+
+    #xMaterial{
+        width: 30px;
+        height: 30px;
     }
     
     h1{

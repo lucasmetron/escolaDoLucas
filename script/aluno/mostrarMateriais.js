@@ -51,7 +51,7 @@ db.collection(materialLocal).onSnapshot(snapshot => {
 
             tagLink.append(infoLink)
             tagLink.href = "https://firebasestorage.googleapis.com/v0/b/escoladolucas-81f7c.appspot.com/o/adv%2Ftermo.docx?alt=media&token=b8ad323e-a58b-40ab-a67c-17f00778166d"
-            tagLink.setAttribute("class", "amareloMaterial link")
+            tagLink.setAttribute("class", "campo amarelo link ")
             tagLink.target = "_blanck"
 
 

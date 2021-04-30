@@ -379,9 +379,15 @@ select{
 }
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
-@media screen and (min-width: 1800px) and (max-width: 1990px) {
+@media screen and (min-width: 1800px) and (max-width: 3000px) {
 
     .xTamanho {
+        width: 60px;
+        height: 60px;
+    }
+
+    
+    .xBalao{
         width: 60px;
         height: 60px;
     }
