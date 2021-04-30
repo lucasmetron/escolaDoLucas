@@ -3,11 +3,8 @@
     padding: 0;
     font-family: bilo, sans-serif; 
     color: #51504E;
-}
 
-/* body,html{
-    height: 100%;
-} */
+}
 
 
 .conteinerLogin{
@@ -26,6 +23,10 @@
     height: 100vh;
     width: 45%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #logoLucas{
@@ -34,15 +35,25 @@
     margin-bottom: 80px;
 }
 
+form{
+    /* background-color: pink; */
+    margin-bottom: 1rem;;
+    width: 80%;
+    box-sizing: border-box;
+    
+}
+
 input[type=text],[type=password] {
-    margin-bottom: 45px;
-    width: 65%;
-    padding: 10px;
+    margin-bottom: 2rem;
+    width: 80%;
+    padding: 10px 0px 10px 0px ;
     border-radius: 25px;
     border: none;
     font-size: 1.2rem;
-    padding-inline-start: 8%;
+    padding-inline-start: 20%;
     outline: 0;
+    box-sizing: border-box;
+    /* transform: translateX(-5%); */
 }
 
 
@@ -87,10 +98,25 @@ input[type=submit]:hover{
 
 }
 
-form{
-    align-items: center;
-    margin: auto;
+.btAcessarLogin{
+    background-color: #FECE00;
+    display: inline;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 50px;
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 1rem;
+
+    transition: all ease 0.5s;
+
 }
+
+.btAcessarLogin:hover{
+    color: #FECE00;
+    background-color: #51504E;
+}
+
 
 P{
     color: #51504E;
@@ -106,7 +132,7 @@ P{
     width: 450px;
 }
 
-@media screen and (min-width: 1631px ) and (max-width: 1930px) {
+ @media screen and (min-width: 1631px ) and (max-width: 1930px) {
 
     #logoLucas{
         width: 600px;
@@ -201,13 +227,6 @@ P{
 
 }
 
-
-
-/* @media screen and (max-width: 1166px)  {
-    #ilustracaoImg{
-        width: 450px;
-    }
-} */
 
 @media screen and (min-width: 890px) and (max-width: 1300px)  {
     #logoLucas{
@@ -307,11 +326,7 @@ P{
 }
 
 @media screen and (max-width:679px) {
-    /* body,html{
-        height: none;
-    } */
     .conteinerLogin{
-        /* background-color: aqua; */
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
@@ -379,46 +394,3 @@ P{
 
 
 }
-
-
-
-
-
-
-
-
-
-/* Bilo Light
-
-font-family: bilo, sans-serif;
-
-font-weight: 400;
-
-font-style: normal;
-
-
-Bilo Light Italic
-
-font-family: bilo, sans-serif;
-
-font-weight: 400;
-
-font-style: italic;
-
-
-Bilo Bold
-
-font-family: bilo, sans-serif;
-
-font-weight: 700;
-
-font-style: normal;
-
-
-Bilo Bold Italic
-
-font-family: bilo, sans-serif;
-
-font-weight: 700;
-
-font-style: italic; */
