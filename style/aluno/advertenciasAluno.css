@@ -29,7 +29,6 @@
     /* background-color: blue; */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
 }
 
 #xNotasAd{
@@ -38,7 +37,7 @@
 
 
 .mostradorAdvertencias{
-    height: 70%;
+    max-height: 70%;
     /* background-color: hotpink; */
     display: grid;
     grid-template: 2fr 1fr 1.5fr 1.5fr/ 2fr 1fr 1.5fr 1.5fr;

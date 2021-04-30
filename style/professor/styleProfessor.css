@@ -398,6 +398,7 @@ input[type=text], input[type=number], textarea{
 
 @media screen and (min-width: 1800px) and (max-width: 1990px) {
     
+
     #floatLeft{
         
         top:60px;
@@ -417,7 +418,15 @@ input[type=text], input[type=number], textarea{
         border-radius: 200px;
         width: 300px;
         height: 300px;
+        display: none;
     }
+
+    .fotoProfe{
+        border-radius: 200px;
+        width: 300px;
+        height: 300px;
+
+    }   
     
     #engrenagemBola{
         width: 60px;
@@ -449,6 +458,11 @@ input[type=text], input[type=number], textarea{
         margin-bottom: 30px;
     }
 
+    #fotoProfessorId{
+        border-radius: 150px;
+        width: 300px;
+        height: 300px;
+    }
     
     p{
         font-size: 1.8rem;;

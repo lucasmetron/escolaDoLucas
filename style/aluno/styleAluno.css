@@ -265,7 +265,7 @@ p{
     background-color: #FFEEA9;  
     position: absolute;
     width: 70%;
-    height: 70%;
+    max-height: 70%;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -380,6 +380,11 @@ select{
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
 @media screen and (min-width: 1800px) and (max-width: 1990px) {
+
+    .xTamanho {
+        width: 60px;
+        height: 60px;
+    }
     
     #floatLeft{
         
@@ -400,6 +405,7 @@ select{
         border-radius: 200px;
         width: 300px;
         height: 300px;
+
     }
     
     #engrenagemBola{

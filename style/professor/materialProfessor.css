@@ -39,10 +39,6 @@
     margin-bottom: 50px;
 }
 
-#xNotasAd{
-    cursor: pointer;
-}
-
 
 .mostradorMaterialProfessor{
 
@@ -144,6 +140,17 @@ form > input[type="submit"]{
     margin-top: 20px;
     text-align: center;
     width: auto;
+}
+
+
+@media (min-width: 1800px){
+
+    #xMaterial{
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+    }
+
 }
 
 @media (max-width: 1077px) {
