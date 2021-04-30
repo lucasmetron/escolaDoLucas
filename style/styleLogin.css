@@ -336,7 +336,7 @@ P{
     
     .login{
         background-color:#FFEEA9 ;
-        width: 100%;
+        width: 150%;
         text-align: center;
     }
 
@@ -385,6 +385,14 @@ P{
     input[type=submit]:hover{
         padding-left: 0px;
         padding-right: 0px;
+    
+    }
+
+    .btAcessarLogin{
+     
+        padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+        font-size: 1.2rem;
+ 
     
     }
 
