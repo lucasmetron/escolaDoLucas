@@ -1,7 +1,5 @@
 let logado = false
 let user;
-let lucas = 'lucas.rosa'
-let ricardo = 'ricardo.oliveira'
 
 if (localStorage.getItem("acesso") == "true") {
     logado = true;
@@ -12,8 +10,7 @@ else if (logado != true) {
 }
 
 function deslogar() {
-    localStorage.setItem(lucas, false)
-    localStorage.setItem(ricardo, false)
+    localStorage.setItem("acesso", false)
 }
 
 function infoCap() {
