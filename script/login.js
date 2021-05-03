@@ -71,9 +71,6 @@ capturaUserAndPasswordDB();
 function validaEntrada(usuario, senha) {
     let autorizado = false;
     let tipo;
-    console.log("função valida " + usuario + senha)
-    console.log(usuarios.length);
-    console.log(usuarios[0].user);
 
     for (i = 0; i < usuarios.length; i++) {
         if (usuarios[i].user == usuario && usuarios[i].password == senha) {
@@ -84,7 +81,7 @@ function validaEntrada(usuario, senha) {
 
     if (autorizado === true) {
         localStorage.setItem("acesso", true); //esse dado salvo no localStorage será o que iremos verificar para liberar o acesso
-        alert("Usuário autenticado");
+        alert("Usuário autenticado.");
         window.location.href = tipo;
     } else {
         alert("Usuário ou senha inválido!")
