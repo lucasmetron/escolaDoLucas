@@ -68,22 +68,35 @@ input[type=text],[type=password] {
 }
 
 
-input[type=text]{
+/* input[type=text]{
     background-image:url(/assets/images/usuario.png);
     background-size: 15px;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 4%;
     background-color: white;
-}
+} */
 
-input[type=password]{
+.usuarioTranform{
+    transform:translate(200%, 10%);
+    width: 15px;
+    display: inline;
+} 
+
+.usuarioTranform1{
+    transform:translate(260%, 10%);
+    width: 10px;
+    display: inline;
+} 
+
+
+/* input[type=password]{
     background-image: url(/assets/images/senha.png);
     background-size: 10px;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 4%;
-}
+} */
 
 
 input[type=submit]{
