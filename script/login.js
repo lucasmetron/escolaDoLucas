@@ -20,15 +20,6 @@ function aviso() {
     alert('Mande email para: lucasmetron@gmail.com com suas credênciais.\nO acesso será liberado assim que possível')
 };
 
-function use() {
-    alert(`Usuario Professor: ricardo.oliveira 
-Usuario Aluno: lucas.rosa`)
-};
-
-function pass() {
-    alert(`Senha: 12121212 para ambos usuários`)
-};
-
 function telaCarregamento() {
     let tela = document.querySelector(".carregamento");
     tela.style.display = "flex";
@@ -71,6 +62,7 @@ capturaUserAndPasswordDB();
 function validaEntrada(usuario, senha) {
     let autorizado = false;
     let tipo;
+    let use = usuario;
 
     for (i = 0; i < usuarios.length; i++) {
         if (usuarios[i].user == usuario && usuarios[i].password == senha) {

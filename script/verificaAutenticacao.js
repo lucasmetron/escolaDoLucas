@@ -1,4 +1,6 @@
 let logado = false
+let user;
+
 
 if (localStorage.getItem("acesso") == "true") {
     logado = true;
@@ -9,4 +11,9 @@ if (localStorage.getItem("acesso") == "true") {
 
 function deslogar() {
     localStorage.setItem("acesso", false)
+}
+
+function infoCap() {
+    user = document.querySelector("#usuario").value
+    console.log(user)
 }
