@@ -6,6 +6,17 @@
 
 }
 
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-color: none;
+    background-image: url(/assets/images/usuario.png);
+    color: -internal-light-dark(black, white) !important;
+}
+
+/* input[type=text]::marker{
+background-color: transparent;
+} */
+
 
 .conteinerLogin{
     /* background-color: aqua; */
@@ -59,13 +70,16 @@ input[type=text],[type=password] {
 
 input[type=text]{
     background-image:url(/assets/images/usuario.png);
+    background-size: 15px;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 4%;
+    background-color: white;
 }
 
 input[type=password]{
     background-image: url(/assets/images/senha.png);
+    background-size: 10px;
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 4%;

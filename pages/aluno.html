@@ -23,7 +23,7 @@
 
     <div class="conteinerAluno">
         <a href="../index.html">
-            <p id="floatLeft"> Área do estudante | <span class="sair">Sair</span> </p>
+            <p id="floatLeft" onclick="deslogar()"> Área do estudante | <span class="sair">Sair</span> </p>
         </a>
         <img id="floatRight" src="/assets/images/logo.png" alt="Escola do Lucas">
 
@@ -336,6 +336,8 @@
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
+        <script src="/script/verificaAutenticacao.js"></script>
+        <script src="/script/aluno/deslogaAutoAluno.js"></script>
         <script src="/script/animacoes.js"></script>
         <script src="/script/aluno/mostraNotas.js"></script>
         <script src="/script/aluno/mostraFaltas.js"></script>

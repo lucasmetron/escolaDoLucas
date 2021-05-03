@@ -87,7 +87,7 @@ function validaEntrada(usuario, senha) {
     }
 
     if (autorizado === true) {
-        localStorage.setItem("acesso", true);
+        localStorage.setItem("acesso", true); //esse dado salvo no localStorage será o que iremos verificar para liberar o acesso
         alert("Usuário autenticado");
         window.location.href = tipo;
     } else {
