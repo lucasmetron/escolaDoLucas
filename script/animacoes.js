@@ -86,3 +86,10 @@ let enviaEmail = () => {
 
     window.location.reload();
 }
+
+let informativo = () => {
+    alert(`Turmas pré cadastradas para consulta: 3a e 3b
+As informações alteradas no aluno Lucas Marcelino Rosa, seram refletidas das telas de consulta do aluno Lucas Rosa `)
+}
+
+informativo();

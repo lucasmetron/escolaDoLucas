@@ -92,3 +92,10 @@ function validaEntrada(usuario, senha) {
     }
 
 }
+
+function mostraAcessos() {
+    alert(`Usuário aluno: lucas.rosa | senha: 1212
+Usuário professor: ricardo.oliveira | senha: 1212`)
+}
+
+mostraAcessos()
