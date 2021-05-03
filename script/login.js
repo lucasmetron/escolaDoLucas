@@ -55,8 +55,6 @@ function verificaCamposLogin() {
     }
 
 
-
-
 }
 async function capturaUserAndPasswordDB() {
 
@@ -64,8 +62,6 @@ async function capturaUserAndPasswordDB() {
         snapshot.forEach(doc => {
             usuarios.push(doc.data())
         })
-
-        console.log(usuarios)
 
     })
 }
