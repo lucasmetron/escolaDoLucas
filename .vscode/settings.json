@@ -20,5 +20,6 @@
         "turma",
         "verifica",
         "vfdpd"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
