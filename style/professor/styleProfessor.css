@@ -334,6 +334,19 @@ input[type=text], input[type=number], textarea{
     padding-inline-start: 1.5%;
 }
 
+.sair{
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.sair:hover{
+    color: #FECE00;
+}
+
+a:visited{
+    color: #494949;
+}
+
 /* ----------------- GRID AREA DO FORMULARIO DÚVIDAS ----------------- */
 /* .ajustaForm{
     display: grid;

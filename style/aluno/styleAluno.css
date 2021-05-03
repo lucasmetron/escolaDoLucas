@@ -377,6 +377,19 @@ select{
 .centralizador{
     text-align: center;
 }
+
+.sair{
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.sair:hover{
+    color: #FECE00;
+}
+
+a:visited{
+    color: #494949;
+}
 /* --------------------------------RESPOSIVIDADE-------------------------------- */
 
 @media screen and (min-width: 1800px) and (max-width: 3000px) {

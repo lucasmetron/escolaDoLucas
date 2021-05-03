@@ -29,13 +29,40 @@ function pass() {
     alert(`Senha: 12121212 para ambos usuários`)
 };
 
+function telaCarregamento() {
+    let tela = document.querySelector(".carregamento");
+    tela.style.display = "flex";
+}
 
+function verificaCamposLogin() {
+    let login = document.querySelector("#usuario").value;
+    let senha = document.querySelector("#senha").value;
+
+    if (login === "" || login === undefined || login === null) {
+        alert("Preencha todos os campos! Campo 'usuário' vazio")
+    }
+    else if (senha === "" || senha === undefined || senha === null) {
+        alert("Preencha todos os campos! Campo 'senha' vazio")
+    } else {
+
+        telaCarregamento();
+
+        setTimeout(() => {
+
+            validaEntrada(login, senha)
+
+        }, 2000)
+    }
+
+
+
+
+}
 async function capturaUserAndPasswordDB() {
 
     await db.collection(aut).get().then(snapshot => {
         snapshot.forEach(doc => {
-            usuarios.push(doc.data().user)
-            usuarios.push(doc.data().password)
+            usuarios.push(doc.data())
         })
 
         console.log(usuarios)
@@ -44,3 +71,28 @@ async function capturaUserAndPasswordDB() {
 }
 
 capturaUserAndPasswordDB();
+
+function validaEntrada(usuario, senha) {
+    let autorizado = false;
+    let tipo;
+    console.log("função valida " + usuario + senha)
+    console.log(usuarios.length);
+    console.log(usuarios[0].user);
+
+    for (i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].user == usuario && usuarios[i].password == senha) {
+            autorizado = true;
+            tipo = usuarios[i].tipo
+        }
+    }
+
+    if (autorizado === true) {
+        localStorage.setItem("acesso", true);
+        alert("Usuário autenticado");
+        window.location.href = tipo;
+    } else {
+        alert("Usuário ou senha inválido!")
+        window.location.reload();
+    }
+
+}
