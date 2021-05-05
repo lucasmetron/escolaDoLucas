@@ -50,7 +50,7 @@ db.collection(materialLocal).onSnapshot(snapshot => {
             tagProfe.setAttribute("class", "campo")
 
             tagLink.append(infoLink)
-            tagLink.href = "https://firebasestorage.googleapis.com/v0/b/escoladolucas-81f7c.appspot.com/o/adv%2Ftermo.docx?alt=media&token=b8ad323e-a58b-40ab-a67c-17f00778166d"
+            tagLink.href = "https://docs.google.com/uc?export=download&id=1zw2gHRk6MnQz3d-n194eqGKmTb1w-Q5J"
             tagLink.setAttribute("class", "campo amarelo link ")
             tagLink.target = "_blanck"
 
@@ -68,4 +68,39 @@ db.collection(materialLocal).onSnapshot(snapshot => {
     listaMaterial()
 
 })
+
+
+function baixaArquivo() {
+    // Create a reference with an initial file path and name
+    var storage = firebase.storage();
+    var pathReference = storage.ref('arquivo.pdf');
+
+    // Create a reference from a Google Cloud Storage URI
+    var gsReference = storage.refFromURL('gs://escoladolucas-81f7c.appspot.com/material/19-GUERRA-FRIA-2019-LISTA.pdf.googleapis.com/b/bucket/o/images%20stars.jpg')
+
+    // Create a reference from an HTTPS URL
+    // Note that in the URL, characters are URL escaped!
+    var httpsReference = storage.refFromURL('https://gs://escoladolucas-81f7c.appspot.com/material/19-GUERRA-FRIA-2019-LISTA.pdf.googleapis.com/b/bucket/o/images%20stars.jpg');
+
+    storageRef.child('gs://escoladolucas-81f7c.appspot.com/').getDownloadURL().then(function (url) {
+        // `url` is the download URL for 'images/stars.jpg'
+
+        // This can be downloaded directly:
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'blob';
+        xhr.onload = function (event) {
+            var blob = xhr.response;
+        };
+        xhr.open('GET', url);
+        xhr.send();
+
+        // // Or inserted into an <img> element:
+        // var img = document.getElementById('myimg');
+        // img.src = url;
+    }).catch(function (error) {
+        // Handle any errors
+    });
+
+
+}
 
