@@ -17,7 +17,7 @@
 #### *Firebase (Firestore Database e Storage)
 
 
-### Usuário aluno
+### Demostração usuário aluno
 ![Tela inicial](./assets/gifs/show2.gif)
 
 ### Veja o projeto você mesmo! Acesse: https://escoladolucas.netlify.app/
