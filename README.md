@@ -18,6 +18,10 @@
 ### Demostração da aplicação
 ![Tela inicial](./assets/gifs/show2.gif)
 
+### Turmas pré cadastradas para visualização de alunos: 3a e 3b
+### Usuário e senha professor: ricardo.oliveira | 1212
+### Usuário e senha aluno: ricardo.oliveira | 1212
+
 ### Para acessar meu projeto e testar você mesmo, não é necessário subir serviços ou realizar build, pois o mesmo está hospedado no seguinte link: https://escoladolucas.netlify.app/
 ### Repositório: https://github.com/lucasmetron/escolaDoLucas
 
