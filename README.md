@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./assets/logoMenor.png" alt="Podcastr logo">
+</div>
+
 # Escola do Lucas
 
 ### - Para testar minhas skills que eu venho adquirindo ao longo do curso do ProgramadorBr, tive a ideia de fazer um sistema de intereção entre aluno e professor. Onde no usuário professor, é possível postar notas, faltas, advertências e materiais de estudo referente aos alunos e no usuário aluno é possível visualizar todas informações relacionadas a ele mesmo postadas pelo professor. 
