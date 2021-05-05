@@ -20,7 +20,7 @@
 ### Demostração da aplicação
 ![Tela inicial](./assets/gifs/show2.gif)
 
-### Veja o projeto você mesmo! Acesse: https://escoladolucas.netlify.app/
+### Para acessar meu projeto e testar você mesmo, não é necessário subir serviços ou realizar build, pois o mesmo está hospedado no seguinte link: https://escoladolucas.netlify.app/
 ### Repositório: https://github.com/lucasmetron/escolaDoLucas
 
 ### Gostou do meu projeto? :D Entre em contato comigo! 
