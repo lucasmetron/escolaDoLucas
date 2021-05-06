@@ -15,7 +15,7 @@
 #### *Firebase (Firestore Database e Storage)
 
 
-### Demostração da aplicação
+### Demonstração da aplicação
 ![Tela inicial](./assets/gifs/show2.gif)
 
 ### Turmas pré cadastradas para visualização de alunos: 3a e 3b
