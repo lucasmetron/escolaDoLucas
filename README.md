@@ -11,7 +11,7 @@
 #### *HTML.
 #### *CSS.
 #### *JavaScript
-#### *jQuey
+#### *jQuery
 #### *Firebase (Firestore Database e Storage)
 
 
