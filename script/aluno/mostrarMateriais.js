@@ -5,12 +5,11 @@ const storage = firebase.storage();
 
 db.collection(materialLocal).onSnapshot(snapshot => {
     let tela = document.querySelector("#mostradorMaterial");
-    tela.innerHTML = `
-                        <h4 class="titulos">Atividade</h3>
+    tela.innerHTML = `  <h4 class="titulos">Atividade</h3>
                         <h4 class="titulos">Matéria</h4>
                         <h4 class="titulos">Professor</h4>
                         <h4 class="titulos">Link</h4>`
-
+    console.log(tela)
 
     async function listaMaterial() {
 
@@ -71,7 +70,7 @@ db.collection(materialLocal).onSnapshot(snapshot => {
                 materialArea.append(tagMateria)
                 materialArea.append(tagProfe)
                 materialArea.append(tagLink)
-            }, 1000)
+            }, 2000)
 
             // let materialArea = document.querySelector("#mostradorMaterial")
 
