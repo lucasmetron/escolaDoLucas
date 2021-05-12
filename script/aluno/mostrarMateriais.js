@@ -72,42 +72,6 @@ db.collection(materialLocal).onSnapshot(snapshot => {
                 materialArea.append(tagLink)
             }, 2000)
 
-            // let materialArea = document.querySelector("#mostradorMaterial")
-
-            // let tagAtividade = document.createElement("div");
-            // let tagMateria = document.createElement("div");
-            // let tagProfe = document.createElement("div");
-            // let tagLink = document.createElement("a");
-
-            // let infoAtividade = document.createTextNode(item.nomeAtividade)
-            // let infoMateria = document.createTextNode(item.disciplina)
-            // let infoProfe = document.createTextNode(item.nomeProfessor)
-            // let infoLink = document.createTextNode("Acesse aqui")
-
-
-            // tagAtividade.append(infoAtividade)
-            // tagAtividade.setAttribute("id", "tituloMaterial")
-            // tagAtividade.setAttribute("class", "campo")
-
-            // tagMateria.append(infoMateria)
-            // tagMateria.setAttribute("id", "materiaMaterial")
-            // tagMateria.setAttribute("class", "campo")
-
-            // tagProfe.append(infoProfe)
-            // tagProfe.setAttribute("id", "professorMaterial")
-            // tagProfe.setAttribute("class", "campo")
-
-            // tagLink.append(infoLink)
-            // tagLink.href = URL;
-            // tagLink.setAttribute("class", "campo amarelo link ")
-            // tagLink.target = "_blanck"
-
-
-            // materialArea.append(tagAtividade)
-            // materialArea.append(tagMateria)
-            // materialArea.append(tagProfe)
-            // materialArea.append(tagLink)
-
 
         })
 
